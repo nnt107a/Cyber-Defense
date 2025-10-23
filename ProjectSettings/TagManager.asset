@@ -2,13 +2,13 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
+  serializedVersion: 3
   tags: []
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Grid
   - Water
   - UI
   - 
@@ -41,3 +41,17 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Internal
+    uniqueID: 2767175143
+    locked: 0
+  - name: Grid
+    uniqueID: 2207004017
+    locked: 0
+  - name: Boundary
+    uniqueID: 2286947101
+    locked: 0
+  - name: Unit
+    uniqueID: 1920991199
+    locked: 0
+  m_RenderingLayers:
+  - Default

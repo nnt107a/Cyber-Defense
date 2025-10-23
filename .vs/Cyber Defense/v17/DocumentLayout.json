@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\CODE\\Unity\\Cyber Defense\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3C77BFFD-F413-DBA4-B088-485D82DCBD72}|Assembly-CSharp.csproj|d:\\code\\unity\\cyber defense\\assets\\scripts\\manager\\grid\\gridcell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C77BFFD-F413-DBA4-B088-485D82DCBD72}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\manager\\grid\\gridcell.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C77BFFD-F413-DBA4-B088-485D82DCBD72}|Assembly-CSharp.csproj|d:\\code\\unity\\cyber defense\\assets\\scripts\\manager\\grid\\gridmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C77BFFD-F413-DBA4-B088-485D82DCBD72}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\manager\\grid\\gridmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C77BFFD-F413-DBA4-B088-485D82DCBD72}|Assembly-CSharp.csproj|D:\\CODE\\Unity\\Cyber Defense\\assets\\scripts\\manager\\shop\\shopelement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C77BFFD-F413-DBA4-B088-485D82DCBD72}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\manager\\shop\\shopelement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3C77BFFD-F413-DBA4-B088-485D82DCBD72}|Assembly-CSharp.csproj|d:\\code\\unity\\cyber defense\\assets\\scripts\\manager\\shop\\unitdraghandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3C77BFFD-F413-DBA4-B088-485D82DCBD72}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\manager\\shop\\unitdraghandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GridManager.cs",
+              "DocumentMoniker": "D:\\CODE\\Unity\\Cyber Defense\\Assets\\Scripts\\Manager\\Grid\\GridManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Manager\\Grid\\GridManager.cs",
+              "ToolTip": "D:\\CODE\\Unity\\Cyber Defense\\Assets\\Scripts\\Manager\\Grid\\GridManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Manager\\Grid\\GridManager.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-23T06:47:25.203Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GridCell.cs",
+              "DocumentMoniker": "D:\\CODE\\Unity\\Cyber Defense\\Assets\\Scripts\\Manager\\Grid\\GridCell.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Manager\\Grid\\GridCell.cs",
+              "ToolTip": "D:\\CODE\\Unity\\Cyber Defense\\Assets\\Scripts\\Manager\\Grid\\GridCell.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Manager\\Grid\\GridCell.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAxwBkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-23T06:46:33.433Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ShopElement.cs",
+              "DocumentMoniker": "D:\\CODE\\Unity\\Cyber Defense\\Assets\\Scripts\\Manager\\Shop\\ShopElement.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Manager\\Shop\\ShopElement.cs",
+              "ToolTip": "D:\\CODE\\Unity\\Cyber Defense\\Assets\\Scripts\\Manager\\Shop\\ShopElement.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Manager\\Shop\\ShopElement.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-23T06:22:20.544Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UnitDragHandler.cs",
+              "DocumentMoniker": "D:\\CODE\\Unity\\Cyber Defense\\Assets\\Scripts\\Manager\\Shop\\UnitDragHandler.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Manager\\Shop\\UnitDragHandler.cs",
+              "ToolTip": "D:\\CODE\\Unity\\Cyber Defense\\Assets\\Scripts\\Manager\\Shop\\UnitDragHandler.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Manager\\Shop\\UnitDragHandler.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-23T05:55:13.13Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
