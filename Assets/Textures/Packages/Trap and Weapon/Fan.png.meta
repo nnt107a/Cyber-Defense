@@ -58,7 +58,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -72,7 +72,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -179,16 +179,16 @@ TextureImporter:
         x: 0
         y: 0
         width: 32
-        height: 10
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 42a1bc59b3b415550800000000000000
+      spriteID: 0a99f2fa65d06de45b68457f4e98db79
       internalID: 6147777685625707044
       vertices: []
       indices: 
@@ -198,19 +198,19 @@ TextureImporter:
       name: Fan_1
       rect:
         serializedVersion: 2
-        x: 35
+        x: 32
         y: 0
-        width: 26
-        height: 10
+        width: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3a9a3e5484c20d980800000000000000
+      spriteID: afef307c1f62853429b9fff42851e1de
       internalID: -8516258206435792477
       vertices: []
       indices: 
@@ -220,19 +220,19 @@ TextureImporter:
       name: Fan_2
       rect:
         serializedVersion: 2
-        x: 70
+        x: 64
         y: 0
-        width: 20
-        height: 10
+        width: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 27b677aa1536cd6c0800000000000000
+      spriteID: e220ceac0e142d94e8aa70960fd3157c
       internalID: -4117306756920022158
       vertices: []
       indices: 
@@ -242,19 +242,19 @@ TextureImporter:
       name: Fan_3
       rect:
         serializedVersion: 2
-        x: 104
+        x: 96
         y: 0
-        width: 16
-        height: 10
+        width: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 715ecb3bbb01c8770800000000000000
+      spriteID: 5929729da6af47e428e20f29778fb834
       internalID: 8614278585613346071
       vertices: []
       indices: 
@@ -264,19 +264,19 @@ TextureImporter:
       name: Fan_4
       rect:
         serializedVersion: 2
-        x: 136
+        x: 128
         y: 0
-        width: 16
-        height: 10
+        width: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5d3150a3ab6ff2110800000000000000
+      spriteID: d2ca6068d5c211b44ade902031a64672
       internalID: 1238479702247936981
       vertices: []
       indices: 
@@ -286,19 +286,19 @@ TextureImporter:
       name: Fan_5
       rect:
         serializedVersion: 2
-        x: 166
+        x: 160
         y: 0
-        width: 20
-        height: 10
+        width: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 0ebbac093ed4dc6b0800000000000000
+      spriteID: acc5ea09ce6cde246b16d8d3628e0673
       internalID: -5274473948798862368
       vertices: []
       indices: 
@@ -308,19 +308,19 @@ TextureImporter:
       name: Fan_6
       rect:
         serializedVersion: 2
-        x: 195
+        x: 192
         y: 0
-        width: 26
-        height: 10
+        width: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 4a39762c232492090800000000000000
+      spriteID: 5cf006f09b5ac83468de6a7bbb17016f
       internalID: -8058837272425426012
       vertices: []
       indices: 
@@ -333,16 +333,16 @@ TextureImporter:
         x: 224
         y: 0
         width: 32
-        height: 10
+        height: 16
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 634ce3d98567981f0800000000000000
+      spriteID: 024c89d1ac871214a9c0ce8e65c64567
       internalID: -1042171715792223178
       vertices: []
       indices: 
@@ -352,7 +352,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: e07954f362d2ce644bde7e3600eee8a0
     internalID: 0
     vertices: []
     indices: 
@@ -360,7 +360,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries: []
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Fan_0: 6147777685625707044
       Fan_1: -8516258206435792477
