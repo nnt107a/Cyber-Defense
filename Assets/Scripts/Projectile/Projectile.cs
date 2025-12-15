@@ -23,17 +23,20 @@ public class Projectile : MonoBehaviour, IPoolable
             Destroy(gameObject);
         }
     }
-    protected void OnTriggerEnter2D(Collider2D collision)
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Projectile hit: " + collision.gameObject.name);
-        Attack();
+        if (collision.CompareTag("Enemy"))
+        {
+            Debug.Log("Projectile hit: " + collision.gameObject.name);
+            Attack(gameObject);
+        }
     }
     public void Init(GameObject prefab, float damage)
     {
         prefabRef = prefab;
         this.damage = damage;
     }
-    protected virtual void Attack()
+    protected virtual void Attack(GameObject gameObject)
     {
         ObjectPool.Instance.Despawn(prefabRef, gameObject);
     }

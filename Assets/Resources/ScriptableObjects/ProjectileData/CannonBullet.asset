@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: CannonBullet
   m_EditorClassIdentifier: Assembly-CSharp::ProjectileData
   speed: 5
-  damage: 10
+  radius: 0

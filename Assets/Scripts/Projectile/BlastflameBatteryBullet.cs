@@ -6,9 +6,21 @@ public class BlastflameBatteryBullet : Projectile
     {
         base.Update();
     }
-    protected override void Attack()
+    protected override void Attack(GameObject gameObject)
     {
-        base.Attack();
+        Collider2D[] hits = Physics2D.OverlapCircleAll(
+            transform.position,
+            projectileData.radius
+        );
+
+        foreach (var hit in hits)
+        {
+            if (hit.CompareTag("Enemy"))
+            {
+                Debug.Log($"Explosion hit enemy: {hit.name}, deal {damage}");
+            }
+        }
+        base.Attack(gameObject);
     }
     public override void OnSpawn()
     {
@@ -18,5 +30,10 @@ public class BlastflameBatteryBullet : Projectile
     public override void OnDespawn()
     {
         base.OnDespawn();
+    }
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, projectileData.radius);
     }
 }

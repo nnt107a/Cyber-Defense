@@ -6,4 +6,5 @@ using UnityEngine;
 public class ProjectileData : ScriptableObject
 {
     public float speed = 5f;
+    public float radius = 5f;
 }
