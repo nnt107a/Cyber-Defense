@@ -6,21 +6,31 @@ public class BlastflameBatteryBullet : Projectile
     {
         base.Update();
     }
-    protected override void Attack(GameObject gameObject)
+    protected override void Attack(GameObject gameObject, GridCell gridCell)
     {
         Collider2D[] hits = Physics2D.OverlapCircleAll(
             transform.position,
-            projectileData.radius
+            projectileData.radius * 1.5f
         );
 
         foreach (var hit in hits)
         {
-            if (hit.CompareTag("Enemy"))
+            if (!hit.CompareTag("Enemy"))
+                continue;
+
+            GridCell enemyCell = GetGridCellAt(hit.transform.position);
+
+            if (enemyCell == null)
+                continue;
+
+            if (IsWithinGridRadius(gridCell, enemyCell, (int)projectileData.radius))
             {
-                Debug.Log($"Explosion hit enemy: {hit.name}, deal {damage}");
+                Debug.Log(
+                    $"Explosion hit enemy {hit.name} at cell ({enemyCell.x},{enemyCell.y}), deal {damage}"
+                );
             }
         }
-        base.Attack(gameObject);
+        base.Attack(gameObject, gridCell);
     }
     public override void OnSpawn()
     {
@@ -30,10 +40,5 @@ public class BlastflameBatteryBullet : Projectile
     public override void OnDespawn()
     {
         base.OnDespawn();
-    }
-    private void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, projectileData.radius);
     }
 }

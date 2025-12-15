@@ -78,3 +78,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CannonBullet
   projectileData: {fileID: 11400000, guid: 059ce67055d00d54fb611751589cbdef, type: 2}
+  gridCellLayer:
+    serializedVersion: 2
+    m_Bits: 8

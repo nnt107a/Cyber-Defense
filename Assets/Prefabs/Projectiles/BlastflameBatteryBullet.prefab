@@ -94,3 +94,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BlastflameBatteryBullet
   projectileData: {fileID: 11400000, guid: 27f12d8f844e53240b3448b7c7351d2c, type: 2}
+  gridCellLayer:
+    serializedVersion: 2
+    m_Bits: 8

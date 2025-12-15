@@ -6,10 +6,10 @@ public class CannonBullet : Projectile
     {
         base.Update();
     }
-    protected override void Attack(GameObject gameObject)
+    protected override void Attack(GameObject gameObject, GridCell gridCell)
     {
         Debug.Log("Dealing " + damage + " damage to " + gameObject.name);
-        base.Attack(gameObject);
+        base.Attack(gameObject, gridCell);
     }
     public override void OnSpawn()
     {
