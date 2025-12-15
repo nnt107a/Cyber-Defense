@@ -2,21 +2,24 @@ using UnityEngine;
 
 public class Turret : MonoBehaviour
 {
-    [SerializeField] private float maxHealth = 100f;
-    [SerializeField] private float attackDamage = 10f;
+    [SerializeField] protected float maxHealth = 100f;
+    [SerializeField] protected float attackDamage = 10f;
     /*[SerializeField] private float attackRange = 5f;*/
-    [SerializeField] private float attackSpeed = 1f;
-    [SerializeField] private GameObject projectilePrefab;
+    [SerializeField] protected float attackSpeed = 1f;
+    [SerializeField] protected GameObject projectilePrefab;
+    [SerializeField] protected Transform firePoint;
 
-    private float currentHealth;
-    private float attackTimer = 0f;
-    private float attackInterval;
-    private int laneIndex = -1;
+    protected Animator animator;
+    protected float currentHealth;
+    protected float attackTimer = 0f;
+    protected float attackInterval;
+    protected int laneIndex = -1;
 
-    private bool enemiesInLane = true;
+    protected bool enemiesInLane = true;
 
     protected virtual void Awake()
     {
+        animator = GetComponent<Animator>();
         attackInterval = 1.0f / attackSpeed;
         currentHealth = maxHealth;
     }
@@ -29,17 +32,23 @@ public class Turret : MonoBehaviour
         attackTimer += Time.deltaTime;
         if (attackTimer >= attackInterval && enemiesInLane)
         {
-            Attack();
-            attackTimer = 0f;
+            InitAttack();
+            attackTimer = -10f;
         }
     }
     public void Place(int index)
     {
         laneIndex = index;
     }
+    protected virtual void InitAttack()
+    {
+        Debug.Log("Turret initiating attack.");
+        animator.SetTrigger("attack");
+    }
     protected virtual void Attack()
     {
-        GameObject go = Instantiate(projectilePrefab, transform.position + Vector3.right * .25f + Vector3.up * .25f, Quaternion.identity);
+        attackTimer = 0f;
+        GameObject go = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
         Debug.Log($"Attacking enemy for {attackDamage} damage.");
     }
 }

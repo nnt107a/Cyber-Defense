@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    [SerializeField] private float speed = 5f;
-    [SerializeField] private float damage = 10f;
+    [SerializeField] protected float speed = 5f;
+    [SerializeField] protected float damage = 10f;
 
-    private float lifetime = 5f;
-    private float lifeTimer = 0f;
+    protected float lifetime = 5f;
+    protected float lifeTimer = 0f;
 
     protected virtual void Update()
     {
@@ -17,9 +17,13 @@ public class Projectile : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    protected virtual void OnTriggerEnter2D(Collider2D collision)
+    protected void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log("Projectile hit: " + collision.gameObject.name);
+        Attack();
+    }
+    protected virtual void Attack()
+    {
         Destroy(gameObject);
     }
 }

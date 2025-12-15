@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: dee6ff739b85ca9429e9cebecc265825
+guid: 5baeb3c657ce41542a73ea1f601fc014
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7873248699890722974
-    second: autocannon_bullet_0
+      213: -9014066657370630283
+    second: Turret1-Sheet_0
+  - first:
+      213: -8150911930726848581
+    second: Turret1-Sheet_1
+  - first:
+      213: -591297522892040513
+    second: Turret1-Sheet_2
+  - first:
+      213: -1121380598102296720
+    second: Turret1-Sheet_3
+  - first:
+      213: -8737773568030405206
+    second: Turret1-Sheet_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 128
+  spritePixelsToUnits: 256
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -152,13 +164,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: autocannon_bullet_0
+      name: Turret1-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 13
-        width: 32
-        height: 19
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,30 +179,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e98ea417af5634d60800000000000000
-      internalID: 7873248699890722974
+      spriteID: 5771bb9322a97e280800000000000000
+      internalID: -9014066657370630283
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: autocannon_bullet_1
+      name: Turret1-Sheet_1
       rect:
         serializedVersion: 2
-        x: 32
+        x: 256
         y: 0
-        width: 32
-        height: 19
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: e687ebc3ed7193b44b0e9e2730ac19d1
-      internalID: 51249519
+      spriteID: bb7688dc8c422ee80800000000000000
+      internalID: -8150911930726848581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Turret1-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb69377290a4bc7f0800000000000000
+      internalID: -591297522892040513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Turret1-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 768
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 077f810994e0070f0800000000000000
+      internalID: -1121380598102296720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Turret1-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aad00cd0c313db680800000000000000
+      internalID: -8737773568030405206
       vertices: []
       indices: 
       edges: []
@@ -199,7 +277,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f8db49a06b6e2634b89e4f6ca9e6cb13
+    spriteID: d28378f53c253a84582e2e81d13b2fd7
     internalID: 0
     vertices: []
     indices: 
@@ -209,10 +287,13 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":256.0,"y":256.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      autocannon_bullet_0: 7873248699890722974
-      autocannon_bullet_1: 51249519
+      Turret1-Sheet_0: -9014066657370630283
+      Turret1-Sheet_1: -8150911930726848581
+      Turret1-Sheet_2: -591297522892040513
+      Turret1-Sheet_3: -1121380598102296720
+      Turret1-Sheet_4: -8737773568030405206
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
