@@ -1,22 +1,22 @@
 fileFormatVersion: 2
-guid: 5baeb3c657ce41542a73ea1f601fc014
+guid: a3600f54cb59fff4cb4cadc8d4978bd1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9014066657370630283
-    second: Turret1-Sheet_0
+      213: 3683603313324779622
+    second: Blastflame-Battery-Sheet_0
   - first:
-      213: -8150911930726848581
-    second: Turret1-Sheet_1
+      213: -3000706955469094991
+    second: Blastflame-Battery-Sheet_1
   - first:
-      213: -591297522892040513
-    second: Turret1-Sheet_2
+      213: -8227373314361852331
+    second: Blastflame-Battery-Sheet_2
   - first:
-      213: -1121380598102296720
-    second: Turret1-Sheet_3
+      213: -3932241521954808349
+    second: Blastflame-Battery-Sheet_3
   - first:
-      213: -8737773568030405206
-    second: Turret1-Sheet_4
+      213: 4583734995971006215
+    second: Blastflame-Battery-Sheet_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -164,7 +164,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Turret1-Sheet_0
+      name: Blastflame-Battery-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -179,14 +179,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5771bb9322a97e280800000000000000
-      internalID: -9014066657370630283
+      spriteID: 668ec2862b9ce1330800000000000000
+      internalID: 3683603313324779622
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Turret1-Sheet_1
+      name: Blastflame-Battery-Sheet_1
       rect:
         serializedVersion: 2
         x: 256
@@ -201,14 +201,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bb7688dc8c422ee80800000000000000
-      internalID: -8150911930726848581
+      spriteID: 1bf78342ce85b56d0800000000000000
+      internalID: -3000706955469094991
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Turret1-Sheet_2
+      name: Blastflame-Battery-Sheet_2
       rect:
         serializedVersion: 2
         x: 512
@@ -223,14 +223,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fb69377290a4bc7f0800000000000000
-      internalID: -591297522892040513
+      spriteID: 55efee2af8f72dd80800000000000000
+      internalID: -8227373314361852331
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Turret1-Sheet_3
+      name: Blastflame-Battery-Sheet_3
       rect:
         serializedVersion: 2
         x: 768
@@ -245,14 +245,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 077f810994e0070f0800000000000000
-      internalID: -1121380598102296720
+      spriteID: 3ed97d07b2fdd69c0800000000000000
+      internalID: -3932241521954808349
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Turret1-Sheet_4
+      name: Blastflame-Battery-Sheet_4
       rect:
         serializedVersion: 2
         x: 1024
@@ -267,8 +267,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: aad00cd0c313db680800000000000000
-      internalID: -8737773568030405206
+      spriteID: 70fd06371b2bc9f30800000000000000
+      internalID: 4583734995971006215
       vertices: []
       indices: 
       edges: []
@@ -277,7 +277,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d28378f53c253a84582e2e81d13b2fd7
+    spriteID: 4f30a4b2cafa2aa41a659204a1af8111
     internalID: 0
     vertices: []
     indices: 
@@ -289,11 +289,11 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":256.0,"y":256.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      Turret1-Sheet_0: -9014066657370630283
-      Turret1-Sheet_1: -8150911930726848581
-      Turret1-Sheet_2: -591297522892040513
-      Turret1-Sheet_3: -1121380598102296720
-      Turret1-Sheet_4: -8737773568030405206
+      Blastflame-Battery-Sheet_0: 3683603313324779622
+      Blastflame-Battery-Sheet_1: -3000706955469094991
+      Blastflame-Battery-Sheet_2: -8227373314361852331
+      Blastflame-Battery-Sheet_3: -3932241521954808349
+      Blastflame-Battery-Sheet_4: 4583734995971006215
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

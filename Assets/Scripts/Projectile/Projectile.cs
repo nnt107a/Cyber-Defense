@@ -4,6 +4,7 @@ public class Projectile : MonoBehaviour, IPoolable
 {
     [SerializeField] protected ProjectileData projectileData;
 
+    protected float damage;
     protected float lifetime = 5f;
     protected float lifeTimer = 0f;
     protected GameObject prefabRef;
@@ -27,9 +28,10 @@ public class Projectile : MonoBehaviour, IPoolable
         Debug.Log("Projectile hit: " + collision.gameObject.name);
         Attack();
     }
-    public void Init(GameObject prefab)
+    public void Init(GameObject prefab, float damage)
     {
         prefabRef = prefab;
+        this.damage = damage;
     }
     protected virtual void Attack()
     {

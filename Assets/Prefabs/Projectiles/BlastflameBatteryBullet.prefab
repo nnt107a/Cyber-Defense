@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &3342060205297902743
+--- !u!1001 &3397281448248725346
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -8,6 +8,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 385115160370996011, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
+      propertyPath: m_Size.y
+      value: 0.18803068
+      objectReference: {fileID: 0}
+    - target: {fileID: 385115160370996011, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.00061356276
+      objectReference: {fileID: 0}
+    - target: {fileID: 385115160370996011, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.1875
+      objectReference: {fileID: 0}
     - target: {fileID: 2850359216508835460, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -50,31 +62,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3198337243915658708, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
       propertyPath: m_Name
-      value: CannonBullet
+      value: BlastflameBatteryBullet
       objectReference: {fileID: 0}
+    - target: {fileID: 4335766280571317793, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 9076270712103804755, guid: 8cd5e75d8301fbc46ab7e6dc5946688f, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3198337243915658708, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 969808831913889523}
+      addedObject: {fileID: -2896964738234905381}
   m_SourcePrefab: {fileID: 100100000, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
---- !u!1 &145140807572029763 stripped
+--- !u!1 &236253976257718966 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3198337243915658708, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
-  m_PrefabInstance: {fileID: 3342060205297902743}
+  m_PrefabInstance: {fileID: 3397281448248725346}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &969808831913889523
+--- !u!114 &-2896964738234905381
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 145140807572029763}
+  m_GameObject: {fileID: 236253976257718966}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccf892e2f14850041a1fba1bd35680d2, type: 3}
+  m_Script: {fileID: 11500000, guid: d21f1932d4d6e0b4abd91a90a8b0ee26, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CannonBullet
-  projectileData: {fileID: 11400000, guid: 059ce67055d00d54fb611751589cbdef, type: 2}
+  m_EditorClassIdentifier: Assembly-CSharp::BlastflameBatteryBullet
+  projectileData: {fileID: 11400000, guid: 27f12d8f844e53240b3448b7c7351d2c, type: 2}

@@ -2701,7 +2701,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be2e29523aa18ec4ab61112e4503042b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShopElement
-  towerPrefab: {fileID: 6794782243712387487, guid: 04065730bddd93144b3b7e5767b8fc44, type: 3}
+  towerPrefab: {fileID: 1239614873695953708, guid: 353aed5ce4ff7904e962026e7bd77f29, type: 3}
   cost: 0
 --- !u!114 &491860772
 MonoBehaviour:
@@ -11448,7 +11448,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be2e29523aa18ec4ab61112e4503042b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShopElement
-  towerPrefab: {fileID: 8704965369541951032, guid: 85f83a7bc3e50e9428dbe1a3951d4357, type: 3}
+  towerPrefab: {fileID: 818442344481266315, guid: d91b08a1692fefe48b0dac018e0e2334, type: 3}
   cost: 0
 --- !u!114 &1677785190
 MonoBehaviour:

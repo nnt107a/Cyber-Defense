@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eaab8eb3dc6ad394b99cfec4f19dfccc, type: 3}
-  m_Name: Cannon
+  m_Name: BlastflameBattery
   m_EditorClassIdentifier: Assembly-CSharp::TurretData
   maxHealth: 100
-  attackDamage: 10
-  attackSpeed: 1.25
-  projectilePrefab: {fileID: 145140807572029763, guid: b7a178c3b30cceb4fa7e32eb29068a45, type: 3}
+  attackDamage: 20
+  attackSpeed: 0.4
+  projectilePrefab: {fileID: 236253976257718966, guid: 548b94ca59ddf1249be2f69a2959e194, type: 3}

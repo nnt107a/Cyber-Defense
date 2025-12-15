@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 8cd5e75d8301fbc46ab7e6dc5946688f
+guid: 9eb70f15707070a4ea52ac8d162ae71b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 529536668121203006
-    second: flak_bullet_0
-  - first:
-      213: 9076270712103804755
-    second: flak_bullet_1
+      213: -4647969342688943527
+    second: Turret3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -54,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 128
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -155,45 +152,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: flak_bullet_0
+      name: Turret3_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 0
-        width: 24
-        height: 32
+        x: 51
+        y: 38
+        width: 186
+        height: 174
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e3188e64bca495700800000000000000
-      internalID: 529536668121203006
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: flak_bullet_1
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 24
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 35f9a30ef1465fd70800000000000000
-      internalID: 9076270712103804755
+      spriteID: 952ae1242881f7fb0800000000000000
+      internalID: -4647969342688943527
       vertices: []
       indices: 
       edges: []
@@ -202,7 +177,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 0b2a988424869a1458ade9d5be697dcf
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -210,12 +185,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      flak_bullet_0: 529536668121203006
-      flak_bullet_1: 9076270712103804755
+      Turret3_0: -4647969342688943527
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

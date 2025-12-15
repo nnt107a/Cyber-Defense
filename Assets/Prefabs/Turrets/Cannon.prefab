@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &5805159091589266489
+--- !u!1001 &5402171927358801310
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -10,11 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4729886022953770773, guid: f8e8c8f797d9978418782f5501442732, type: 3}
       propertyPath: m_Name
-      value: Blastflame Battery
-      objectReference: {fileID: 0}
-    - target: {fileID: 5272733223785437704, guid: f8e8c8f797d9978418782f5501442732, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+      value: Cannon
       objectReference: {fileID: 0}
     - target: {fileID: 5658169871847916091, guid: f8e8c8f797d9978418782f5501442732, type: 3}
       propertyPath: m_LocalPosition.x
@@ -59,23 +55,19 @@ PrefabInstance:
     - target: {fileID: 7262502083870398813, guid: f8e8c8f797d9978418782f5501442732, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: a716131dc2e43554380348280877fc10, type: 2}
-    - target: {fileID: 7492059043266273874, guid: f8e8c8f797d9978418782f5501442732, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.576
-      objectReference: {fileID: 0}
-    - target: {fileID: 7492059043266273874, guid: f8e8c8f797d9978418782f5501442732, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.226
+      objectReference: {fileID: 9100000, guid: 0342e396cbcc9a0458c3353061dc1797, type: 2}
+    - target: {fileID: 8385421993835491145, guid: f8e8c8f797d9978418782f5501442732, type: 3}
+      propertyPath: m_Size.x
+      value: 1.92
       objectReference: {fileID: 0}
     - target: {fileID: 8385421993835491145, guid: f8e8c8f797d9978418782f5501442732, type: 3}
       propertyPath: m_Size.y
-      value: 1
+      value: 2.04
       objectReference: {fileID: 0}
     - target: {fileID: 8385421993835491145, guid: f8e8c8f797d9978418782f5501442732, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 3683603313324779622, guid: a3600f54cb59fff4cb4cadc8d4978bd1, type: 3}
+      objectReference: {fileID: 4065643661873835231, guid: e936def3694503f458042b629743f17e, type: 3}
     - target: {fileID: 8385421993835491145, guid: f8e8c8f797d9978418782f5501442732, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -86,29 +78,29 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 4729886022953770773, guid: f8e8c8f797d9978418782f5501442732, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -7562205362450788779}
+      addedObject: {fileID: 5538375625878776813}
   m_SourcePrefab: {fileID: 100100000, guid: f8e8c8f797d9978418782f5501442732, type: 3}
---- !u!1 &1239614873695953708 stripped
+--- !u!1 &818442344481266315 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4729886022953770773, guid: f8e8c8f797d9978418782f5501442732, type: 3}
-  m_PrefabInstance: {fileID: 5805159091589266489}
+  m_PrefabInstance: {fileID: 5402171927358801310}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &-7562205362450788779
+--- !u!114 &5538375625878776813
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1239614873695953708}
+  m_GameObject: {fileID: 818442344481266315}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3d07eca50e535b4db06f0b3a36fa162, type: 3}
+  m_Script: {fileID: 11500000, guid: 7397a83d392fd1846bb877da57fd76db, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BlastflameBattery
-  turretData: {fileID: 11400000, guid: 94b726f2b45ea5f4b8346ed1a9ef0852, type: 2}
-  firePoint: {fileID: 3992781293769006699}
---- !u!4 &3992781293769006699 stripped
+  m_EditorClassIdentifier: Assembly-CSharp::Cannon
+  turretData: {fileID: 11400000, guid: 6ebe2dd268e31ce45966986f79625ea2, type: 2}
+  firePoint: {fileID: 3243008170392332236}
+--- !u!4 &3243008170392332236 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7492059043266273874, guid: f8e8c8f797d9978418782f5501442732, type: 3}
-  m_PrefabInstance: {fileID: 5805159091589266489}
+  m_PrefabInstance: {fileID: 5402171927358801310}
   m_PrefabAsset: {fileID: 0}
