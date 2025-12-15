@@ -1,16 +1,21 @@
 using UnityEngine;
 
-public class Projectile : MonoBehaviour
+public class Projectile : MonoBehaviour, IPoolable
 {
-    [SerializeField] protected float speed = 5f;
-    [SerializeField] protected float damage = 10f;
+    [SerializeField] protected ProjectileData projectileData;
 
     protected float lifetime = 5f;
     protected float lifeTimer = 0f;
+    protected GameObject prefabRef;
+    protected bool alive = false;
 
     protected virtual void Update()
     {
-        transform.Translate(Vector3.right * speed * Time.deltaTime);
+        if (!alive)
+        {
+            return;
+        }
+        transform.Translate(Vector3.right * projectileData.speed * Time.deltaTime);
         lifeTimer += Time.deltaTime;
         if (lifeTimer >= lifetime)
         {
@@ -22,8 +27,23 @@ public class Projectile : MonoBehaviour
         Debug.Log("Projectile hit: " + collision.gameObject.name);
         Attack();
     }
+    public void Init(GameObject prefab)
+    {
+        prefabRef = prefab;
+    }
     protected virtual void Attack()
     {
-        Destroy(gameObject);
+        ObjectPool.Instance.Despawn(prefabRef, gameObject);
+    }
+
+    public virtual void OnSpawn()
+    {
+        lifeTimer = 0f;
+        alive = true;
+    }
+
+    public virtual void OnDespawn()
+    {
+        alive = false;
     }
 }

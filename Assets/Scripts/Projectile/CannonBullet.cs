@@ -10,4 +10,13 @@ public class CannonBullet : Projectile
     {
         base.Attack();
     }
+    public override void OnSpawn()
+    {
+        base.OnSpawn();
+    }
+
+    public override void OnDespawn()
+    {
+        base.OnDespawn();
+    }
 }

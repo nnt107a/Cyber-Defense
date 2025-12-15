@@ -2,11 +2,7 @@ using UnityEngine;
 
 public class Turret : MonoBehaviour
 {
-    [SerializeField] protected float maxHealth = 100f;
-    [SerializeField] protected float attackDamage = 10f;
-    /*[SerializeField] private float attackRange = 5f;*/
-    [SerializeField] protected float attackSpeed = 1f;
-    [SerializeField] protected GameObject projectilePrefab;
+    [SerializeField] protected TurretData turretData;
     [SerializeField] protected Transform firePoint;
 
     protected Animator animator;
@@ -20,8 +16,8 @@ public class Turret : MonoBehaviour
     protected virtual void Awake()
     {
         animator = GetComponent<Animator>();
-        attackInterval = 1.0f / attackSpeed;
-        currentHealth = maxHealth;
+        attackInterval = 1.0f / turretData.attackSpeed;
+        currentHealth = turretData.maxHealth;
     }
     protected virtual void Update()
     {
@@ -48,7 +44,8 @@ public class Turret : MonoBehaviour
     protected virtual void Attack()
     {
         attackTimer = 0f;
-        GameObject go = Instantiate(projectilePrefab, firePoint.position, Quaternion.identity);
-        Debug.Log($"Attacking enemy for {attackDamage} damage.");
+        GameObject go = ObjectPool.Instance.Spawn(turretData.projectilePrefab, firePoint.position, Quaternion.identity);
+        go.GetComponent<Projectile>().Init(turretData.projectilePrefab);
+        Debug.Log($"Attacking enemy for {turretData.attackDamage} damage.");
     }
 }

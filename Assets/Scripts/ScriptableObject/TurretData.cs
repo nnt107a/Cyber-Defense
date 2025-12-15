@@ -1,0 +1,12 @@
+using System;
+using UnityEngine;
+
+[Serializable]
+[CreateAssetMenu(fileName = "NewTurretData", menuName = "ScriptableObjects/TurretData", order = 1)]
+public class TurretData : ScriptableObject
+{
+    public float maxHealth = 100f;
+    public float attackDamage = 10f;
+    public float attackSpeed = 1f;
+    public GameObject projectilePrefab;
+}
