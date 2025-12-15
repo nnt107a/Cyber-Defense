@@ -9,4 +9,5 @@ public class TurretData : ScriptableObject
     public float attackDamage = 10f;
     public float attackSpeed = 1f;
     public GameObject projectilePrefab;
+    public int eCoreCost = 50;
 }

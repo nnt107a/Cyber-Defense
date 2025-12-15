@@ -8,23 +8,35 @@ public class GridCell : MonoBehaviour
     public GameObject unit;
     public void OnMouseDown()
     {
-        Debug.Log("Gone here");
-        if (PlaceTower())
+        if (HandleClick())
         {
             UnitDragHandler.Instance.dragging = false;
             Destroy(UnitDragHandler.Instance.dragPreview);
         }
     }
-    private bool PlaceTower()
+    private bool HandleClick()
     {
-        if (unitPlaced)
+        if (unitPlaced && !UnitDragHandler.Instance.isSellAction)
         {
             return false;
+        }
+        else if (!unitPlaced && UnitDragHandler.Instance.isSellAction)
+        {
+            return false;
+        }
+        if (UnitDragHandler.Instance.isSellAction)
+        {
+            LevelManager.Instance.ChangeECoreCount((int)(unit.GetComponent<Turret>().turretData.eCoreCost * 0.7f));
+            Destroy(unit);
+            unit = null;
+            unitPlaced = false;
+            return true;
         }
         unit = Instantiate(UnitDragHandler.Instance.shopElement.GetComponent<ShopElement>().towerPrefab, transform);
         unit.GetComponent<Turret>().Place(y);
         unit.transform.localPosition = Vector3.zero;
         unitPlaced = true;
+        LevelManager.Instance.ChangeECoreCount(-unit.GetComponent<Turret>().turretData.eCoreCost);
         return true;
     }
 }

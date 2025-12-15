@@ -11,6 +11,7 @@ public class UnitDragHandler : MonoBehaviour
     private RectTransform dragRect;
     public GameObject shopElement;
     public bool dragging = false;
+    public bool isSellAction = false;
     private void Awake()
     {
         Instance = this;
@@ -20,16 +21,29 @@ public class UnitDragHandler : MonoBehaviour
         // Find the parent canvas (required for proper positioning)
         canvas = GetComponentInParent<Canvas>();
     }
-    public void BeginDrag(ShopElement shopElement)
+    public void BeginDrag(GameObject _gameObject, bool isSellAction = false)
     {
+        this.isSellAction = isSellAction;
         // Simulate the drag events
-        this.shopElement = shopElement.gameObject;
+        shopElement = _gameObject;
         // Create a copy (duplicate this UI element)
-        dragPreview = Instantiate(this.shopElement, canvas.transform);
+        dragPreview = Instantiate(shopElement, canvas.transform);
         dragRect = dragPreview.GetComponent<RectTransform>();
-        dragRect.sizeDelta = shopElement.GetComponent<RectTransform>().sizeDelta;
+        dragRect.sizeDelta = _gameObject.GetComponent<RectTransform>().sizeDelta;
 
-        // Optional: make it semi-transparent to show it’s a preview
+        RectTransform source = _gameObject.GetComponent<RectTransform>();
+        RectTransform target = dragRect;
+
+        Vector3[] corners = new Vector3[4];
+        source.GetWorldCorners(corners);
+
+        Vector3 worldSize = corners[2] - corners[0];
+
+        Vector2 localSize = target.parent.InverseTransformVector(worldSize);
+
+        target.SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, localSize.x * 1.2f);
+        target.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, localSize.y * 1.2f);
+
         CanvasGroup cg = dragPreview.AddComponent<CanvasGroup>();
         cg.alpha = 0.8f;
         cg.blocksRaycasts = false;
@@ -42,6 +56,17 @@ public class UnitDragHandler : MonoBehaviour
             if (!dragging)
             {
                 dragging = true;
+            }
+        }
+        if (Input.GetMouseButtonDown(1))
+        {
+            if (dragging)
+            {
+                dragging = false;
+                if (dragPreview != null)
+                {
+                    Destroy(dragPreview);
+                }
             }
         }
         if (dragRect == null || !dragging) return;

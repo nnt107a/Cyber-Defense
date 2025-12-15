@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Turret : MonoBehaviour
 {
-    [SerializeField] protected TurretData turretData;
+    [SerializeField] public TurretData turretData;
     [SerializeField] protected Transform firePoint;
 
     protected Animator animator;
