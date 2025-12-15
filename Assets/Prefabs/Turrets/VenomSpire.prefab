@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4266382607157697023
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4729886022953770773, guid: f8e8c8f797d9978418782f5501442732, type: 3}
+      propertyPath: m_Name
+      value: VenomSpire
+      objectReference: {fileID: 0}
+    - target: {fileID: 5272733223785437704, guid: f8e8c8f797d9978418782f5501442732, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5658169871847916091, guid: f8e8c8f797d9978418782f5501442732, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.64801
+      objectReference: {fileID: 0}
+    - target: {fileID: 5658169871847916091, guid: f8e8c8f797d9978418782f5501442732, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.35926
+      objectReference: {fileID: 0}
+    - target: {fileID: 5658169871847916091, guid: f8e8c8f797d9978418782f5501442732, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5658169871847916091, guid: f8e8c8f797d9978418782f5501442732, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5658169871847916091, guid: f8e8c8f797d9978418782f5501442732, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5658169871847916091, guid: f8e8c8f797d9978418782f5501442732, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5658169871847916091, guid: f8e8c8f797d9978418782f5501442732, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5658169871847916091, guid: f8e8c8f797d9978418782f5501442732, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5658169871847916091, guid: f8e8c8f797d9978418782f5501442732, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5658169871847916091, guid: f8e8c8f797d9978418782f5501442732, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7262502083870398813, guid: f8e8c8f797d9978418782f5501442732, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 2b734171e4f85424489a3646f84e6d27, type: 2}
+    - target: {fileID: 7492059043266273874, guid: f8e8c8f797d9978418782f5501442732, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.632
+      objectReference: {fileID: 0}
+    - target: {fileID: 7492059043266273874, guid: f8e8c8f797d9978418782f5501442732, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.178
+      objectReference: {fileID: 0}
+    - target: {fileID: 8385421993835491145, guid: f8e8c8f797d9978418782f5501442732, type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8385421993835491145, guid: f8e8c8f797d9978418782f5501442732, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 953458495345154289, guid: 923254033639e67428c88dfe2bac117a, type: 3}
+    - target: {fileID: 8385421993835491145, guid: f8e8c8f797d9978418782f5501442732, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4729886022953770773, guid: f8e8c8f797d9978418782f5501442732, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3587273202946752939}
+  m_SourcePrefab: {fileID: 100100000, guid: f8e8c8f797d9978418782f5501442732, type: 3}
+--- !u!4 &6686746352328227757 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7492059043266273874, guid: f8e8c8f797d9978418782f5501442732, type: 3}
+  m_PrefabInstance: {fileID: 4266382607157697023}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &8833478785651476202 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4729886022953770773, guid: f8e8c8f797d9978418782f5501442732, type: 3}
+  m_PrefabInstance: {fileID: 4266382607157697023}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3587273202946752939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8833478785651476202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50069a83b2bf9054fb123a6a6724ccbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VenomSpire
+  turretData: {fileID: 11400000, guid: b7e3cd88f116eaa4c8e9881fce684243, type: 2}
+  firePoint: {fileID: 6686746352328227757}

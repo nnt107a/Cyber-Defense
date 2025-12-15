@@ -1,9 +1,9 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Projectile : MonoBehaviour, IPoolable
 {
-    [SerializeField] protected ProjectileData projectileData; 
-    [SerializeField] private LayerMask gridCellLayer;
+    [SerializeField] protected ProjectileData projectileData;
 
     protected float damage;
     protected float lifetime = 5f;
@@ -29,7 +29,7 @@ public class Projectile : MonoBehaviour, IPoolable
         if (collision.CompareTag("Enemy"))
         {
             Debug.Log("Projectile hit: " + collision.gameObject.name);
-            GridCell enemyCell = GetGridCellAt(collision.transform.position);
+            GridCell enemyCell = Utils.GetGridCellAt(collision.transform.position);
             Debug.Log("Enemy is at cell: " + enemyCell.x + ", " + enemyCell.y);
             Attack(gameObject, enemyCell);
         }
@@ -42,18 +42,6 @@ public class Projectile : MonoBehaviour, IPoolable
     protected virtual void Attack(GameObject gameObject, GridCell gridCell)
     {
         ObjectPool.Instance.Despawn(prefabRef, gameObject);
-    }
-    protected GridCell GetGridCellAt(Vector3 worldPos)
-    {
-        Collider2D hit = Physics2D.OverlapPoint(worldPos, gridCellLayer);
-        return hit ? hit.GetComponent<GridCell>() : null;
-    }
-    protected bool IsWithinGridRadius(GridCell center, GridCell other, int radius)
-    {
-        int dx = Mathf.Abs(center.x - other.x);
-        int dy = Mathf.Abs(center.y - other.y);
-
-        return Mathf.Max(dx, dy) <= radius;
     }
 
     public virtual void OnSpawn()

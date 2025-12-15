@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a77d5ae5a6e8bc4da90a72de9cf1cc2, type: 3}
+  m_Name: VenomSpireBullet
+  m_EditorClassIdentifier: Assembly-CSharp::ProjectileData
+  speed: 4
+  radius: 1
+  effectPrefab: {fileID: 5933828401417387144, guid: a9fba9c41007e8f4d8a623ee7dc9f9cf, type: 3}

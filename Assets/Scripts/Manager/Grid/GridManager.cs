@@ -5,8 +5,8 @@ using UnityEngine;
 public class GridManager : MonoBehaviour
 {
     [SerializeField] private GridCell[] gridCells;
-    private int width = 10;
-    private int height = 5;
+    public static int width = 10;
+    public static int height = 5;
     private Dictionary<Tuple<int, int>, GridCell> gridCellsDict = new();
     private void Awake()
     {
