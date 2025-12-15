@@ -53,5 +53,8 @@ TagManager:
   - name: Unit
     uniqueID: 1920991199
     locked: 0
+  - name: Projectile
+    uniqueID: 1775166377
+    locked: 0
   m_RenderingLayers:
   - Default

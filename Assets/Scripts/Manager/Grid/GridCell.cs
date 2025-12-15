@@ -22,6 +22,7 @@ public class GridCell : MonoBehaviour
             return false;
         }
         unit = Instantiate(UnitDragHandler.Instance.shopElement.GetComponent<ShopElement>().towerPrefab, transform);
+        unit.GetComponent<Turret>().Place(y);
         unit.transform.localPosition = Vector3.zero;
         unitPlaced = true;
         return true;
