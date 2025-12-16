@@ -11,6 +11,8 @@ public class Enemy : MonoBehaviour, IPoolable
     protected float attackInterval;
     protected int laneIndex = -1;
 
+    public EffectController effectController;
+
     protected virtual void Awake()
     {
         animator = GetComponent<Animator>();
@@ -39,7 +41,7 @@ public class Enemy : MonoBehaviour, IPoolable
     protected void Run()
     {
         animator.SetBool("isRunning", true);
-        Vector2 newPosition = rb.position + Vector2.left * enemyData.moveSpeed * Time.deltaTime;
+        Vector2 newPosition = rb.position + Vector2.left * enemyData.moveSpeed * Time.deltaTime * effectController.CurrentSlowMultiplier;
         rb.MovePosition(newPosition);
     }
 
@@ -59,10 +61,11 @@ public class Enemy : MonoBehaviour, IPoolable
         ObjectPool.Instance.Despawn(enemyData.enemyPrefab, gameObject);
     }
 
-    public void TakeDamage(int amount)
+    public void TakeDamage(int amount, bool isPhysical = false)
     {
-        Debug.Log("Enemy took damage: " + amount);
-        currentHealth -= amount;
+        float damageTaken = amount * (isPhysical ? (1 - Mathf.Clamp01(/*- enemyData.physicalResistance*/ - effectController.TotalDefenseReduction)) : (1 - Mathf.Clamp01(/*- enemyData.magicalResistance*/ - effectController.TotalResistanceReduction)));
+        Debug.Log("Enemy took " + (isPhysical ? "physic" : "magic") + " damage: " + damageTaken);
+        currentHealth -= damageTaken;
         animator.SetTrigger("takeHit");
         if (currentHealth <= 0)
         {

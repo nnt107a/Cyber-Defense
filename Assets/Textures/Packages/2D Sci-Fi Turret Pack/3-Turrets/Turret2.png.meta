@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 26e62266af3a1f4488bd063d00bc9a26
+guid: 8b03a25ae29d4064d847a92f95a5b57e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -447595703856916584
-    second: plasma_cannon_bullet_0
-  - first:
-      213: 1299570631986622391
-    second: plasma_cannon_bullet_1
+      213: -352198177103576309
+    second: Turret2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -54,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -155,45 +152,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: plasma_cannon_bullet_0
+      name: Turret2_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 4
-        width: 16
-        height: 24
+        x: 52
+        y: 44
+        width: 185
+        height: 171
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8971e9c2412d9c9f0800000000000000
-      internalID: -447595703856916584
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: plasma_cannon_bullet_1
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 8
-        width: 24
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7bfa718ba90090210800000000000000
-      internalID: 1299570631986622391
+      spriteID: b03833bbf9dbc1bf0800000000000000
+      internalID: -352198177103576309
       vertices: []
       indices: 
       edges: []
@@ -202,7 +177,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: a911590f1de20d44383ad73e55fbc658
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -210,12 +185,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      plasma_cannon_bullet_0: -447595703856916584
-      plasma_cannon_bullet_1: 1299570631986622391
+      Turret2_0: -352198177103576309
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

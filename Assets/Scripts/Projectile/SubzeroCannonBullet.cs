@@ -1,7 +1,8 @@
 using UnityEngine;
 
-public class CannonBullet : Projectile
+public class SubzeroCannonBullet : Projectile
 {
+    [SerializeField] private EffectData slowEffectData;
     protected override void Update()
     {
         base.Update();
@@ -10,6 +11,7 @@ public class CannonBullet : Projectile
     {
         Debug.Log("Dealing " + damage + " damage to " + gameObject.name);
         enemy.GetComponent<Enemy>()?.TakeDamage((int)damage, true);
+        enemy.GetComponent<Enemy>()?.effectController.ApplyEffect(slowEffectData);
         base.Attack(enemy, gameObject, gridCell);
     }
     public override void OnSpawn()
