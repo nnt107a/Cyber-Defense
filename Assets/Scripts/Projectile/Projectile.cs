@@ -30,9 +30,11 @@ public class Projectile : MonoBehaviour, IPoolable
         {
             Debug.Log("Projectile hit: " + collision.gameObject.name);
             GridCell enemyCell = Utils.GetGridCellAt(collision.transform.position);
-            Debug.Log("Enemy is at cell: " + enemyCell.x + ", " + enemyCell.y);
-            Attack(gameObject, enemyCell);
-            collision.gameObject.GetComponent<Enemy>()?.TakeDamage((int)damage);
+            if (enemyCell == null)
+            {
+                return;
+            }
+            Attack(collision.gameObject, gameObject, enemyCell);
         }
     }
     public void Init(GameObject prefab, float damage)
@@ -40,7 +42,7 @@ public class Projectile : MonoBehaviour, IPoolable
         prefabRef = prefab;
         this.damage = damage;
     }
-    protected virtual void Attack(GameObject gameObject, GridCell gridCell)
+    protected virtual void Attack(GameObject enemy, GameObject gameObject, GridCell gridCell)
     {
         ObjectPool.Instance.Despawn(prefabRef, gameObject);
     }

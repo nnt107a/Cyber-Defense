@@ -6,7 +6,7 @@ public class BlastflameBatteryBullet : Projectile
     {
         base.Update();
     }
-    protected override void Attack(GameObject gameObject, GridCell gridCell)
+    protected override void Attack(GameObject enemy, GameObject gameObject, GridCell gridCell)
     {
         Collider2D[] hits = Physics2D.OverlapCircleAll(
             transform.position,
@@ -25,12 +25,13 @@ public class BlastflameBatteryBullet : Projectile
 
             if (Utils.IsWithinGridRadius(gridCell, enemyCell, (int)projectileData.radius))
             {
+                hit.GetComponent<Enemy>()?.TakeDamage((int)damage);
                 Debug.Log(
                     $"Explosion hit enemy {hit.name} at cell ({enemyCell.x},{enemyCell.y}), deal {damage}"
                 );
             }
         }
-        base.Attack(gameObject, gridCell);
+        base.Attack(enemy, gameObject, gridCell);
     }
     public override void OnSpawn()
     {

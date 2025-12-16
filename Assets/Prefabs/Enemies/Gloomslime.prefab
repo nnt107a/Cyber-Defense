@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2066279727056910740}
   - component: {fileID: 4709234036794932721}
   - component: {fileID: 2068251997331800032}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Gloomslime
   m_TagString: Enemy
   m_Icon: {fileID: 0}

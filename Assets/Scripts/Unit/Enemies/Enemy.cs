@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+public class Enemy : MonoBehaviour, IPoolable
 {
     [SerializeField]
     public EnemyData enemyData;
@@ -10,8 +10,6 @@ public class Enemy : MonoBehaviour
     protected float attackTimer = 0f;
     protected float attackInterval;
     protected int laneIndex = -1;
-
-    protected bool enemiesInLane = true;
 
     protected virtual void Awake()
     {
@@ -23,12 +21,8 @@ public class Enemy : MonoBehaviour
 
     protected virtual void Update()
     {
-        // if (laneIndex == -1)
-        // {
-        //     return;
-        // }
         attackTimer += Time.deltaTime;
-        if (attackTimer >= attackInterval && enemiesInLane)
+        if (attackTimer >= attackInterval)
         {
             Attack();
             attackTimer = -10f;
@@ -61,7 +55,8 @@ public class Enemy : MonoBehaviour
     {
         LevelManager.Instance.ChangeECoreCount(enemyData.eCoreDrop);
         Debug.Log("Enemy died.");
-        Destroy(gameObject);
+        GameManager.Instance.enemiesInLane[laneIndex].Remove(this);
+        ObjectPool.Instance.Despawn(enemyData.enemyPrefab, gameObject);
     }
 
     public void TakeDamage(int amount)
@@ -73,6 +68,26 @@ public class Enemy : MonoBehaviour
         {
             animator.ResetTrigger("takeHit");
             animator.SetTrigger("death");
+            Death();
         }
+    }
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.CompareTag("Grid"))
+        {
+            if (collider.GetComponent<GridCell>().x == GridManager.width - 1)
+            {
+                GameManager.Instance.enemiesInLane[laneIndex].Add(this);
+            }
+        }
+    }
+    public void OnSpawn()
+    {
+        currentHealth = enemyData.maxHealth;
+        attackTimer = 0f;
+    }
+
+    public void OnDespawn()
+    {
     }
 }

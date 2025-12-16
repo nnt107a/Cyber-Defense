@@ -11,8 +11,6 @@ public class Turret : MonoBehaviour
     protected float attackInterval;
     protected int laneIndex = -1;
 
-    protected bool enemiesInLane = true;
-
     protected virtual void Awake()
     {
         animator = GetComponent<Animator>();
@@ -25,12 +23,24 @@ public class Turret : MonoBehaviour
         {
             return;
         }
+        Debug.Log("Turret in lane " + laneIndex + " checking for enemies.");
         attackTimer += Time.deltaTime;
-        if (attackTimer >= attackInterval && enemiesInLane)
+        if (attackTimer >= attackInterval && HasEnemyInFront())
         {
             InitAttack();
             attackTimer = -10f;
         }
+    }
+    bool HasEnemyInFront()
+    {
+        var enemies = GameManager.Instance.enemiesInLane[laneIndex];
+
+        foreach (var enemy in enemies)
+        {
+            if (enemy.transform.position.x > transform.position.x)
+                return true;
+        }
+        return false;
     }
     public void Place(int index)
     {

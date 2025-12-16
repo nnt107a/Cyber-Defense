@@ -70,6 +70,7 @@ public class VenomSpireZone : MonoBehaviour, IPoolable
         {
             foreach (var enemyCollider in enemiesInRange.ToList())
             {
+                enemyCollider.GetComponent<Enemy>()?.TakeDamage((int)venomEffectData.effectValue);
                 Debug.Log("Venom Spire Zone applying damage to " + enemyCollider.name + " for " + venomEffectData.effectValue + " damage");
             }
             yield return new WaitForSeconds(1f);
