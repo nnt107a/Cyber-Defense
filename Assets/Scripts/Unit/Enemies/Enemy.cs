@@ -24,7 +24,11 @@ public class Enemy : MonoBehaviour, IPoolable
     protected virtual void Update()
     {
         attackTimer += Time.deltaTime;
-        if (attackTimer >= attackInterval)
+        RaycastHit2D hit = Physics2D.Raycast(rb.position, Vector2.left, 0.5f, 0);
+        Debug.Log("Enemy Raycast Hit: " + hit.collider);
+        Debug.DrawLine(rb.position, hit.point, Color.red);
+
+        if (attackTimer >= attackInterval && hit.collider?.GetComponent<Turret>())
         {
             Attack();
             attackTimer = -10f;

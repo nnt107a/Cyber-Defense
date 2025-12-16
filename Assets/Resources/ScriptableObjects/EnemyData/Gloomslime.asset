@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Gloomslime
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
   enemyPrefab: {fileID: 786259452517031228, guid: 7de5d2c59557dd4459a85b6d6575c4ea, type: 3}
-  maxHealth: 100
+  maxHealth: 75
   moveSpeed: 2
   attackDamage: 10
   attackSpeed: 1
