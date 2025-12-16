@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4078eefe2913944458e267c1387e6378, type: 3}
   m_Name: Gloomslime
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
-  maxHealth: 100
+  maxHealth: 75
   moveSpeed: 2
   attackDamage: 10
   attackSpeed: 1
