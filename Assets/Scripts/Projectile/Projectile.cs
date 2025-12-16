@@ -32,6 +32,7 @@ public class Projectile : MonoBehaviour, IPoolable
             GridCell enemyCell = Utils.GetGridCellAt(collision.transform.position);
             Debug.Log("Enemy is at cell: " + enemyCell.x + ", " + enemyCell.y);
             Attack(gameObject, enemyCell);
+            collision.gameObject.GetComponent<Enemy>()?.TakeDamage((int)damage);
         }
     }
     public void Init(GameObject prefab, float damage)
