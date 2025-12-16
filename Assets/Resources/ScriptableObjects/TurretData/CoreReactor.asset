@@ -9,8 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6672647c7822dc94dbdaf97177ced3de, type: 3}
-  m_Name: VenomSpireZone
-  m_EditorClassIdentifier: Assembly-CSharp::EffectData
-  duration: 2
-  effectValue: 10
+  m_Script: {fileID: 11500000, guid: eaab8eb3dc6ad394b99cfec4f19dfccc, type: 3}
+  m_Name: CoreReactor
+  m_EditorClassIdentifier: Assembly-CSharp::TurretData
+  maxHealth: 100
+  attackDamage: 50
+  attackSpeed: 0.05
+  projectilePrefab: {fileID: 0}
+  eCoreCost: 50

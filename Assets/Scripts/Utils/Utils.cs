@@ -17,10 +17,10 @@ public class Utils
     }
     public static bool IsTopLane(GridCell cell)
     {
-        return cell != null && cell.x >= 0 && cell.x < GridManager.width && cell.y >= 0 && cell.y < GridManager.height;
+        return cell != null && cell.y == GridManager.height - 1;
     }
     public static bool IsBottomLane(GridCell cell)
     {
-        return cell != null && cell.x >= GridManager.width && cell.x < GridManager.width * 2 && cell.y >= 0 && cell.y < GridManager.height;
+        return cell != null && cell.y == 0;
     }
 }
