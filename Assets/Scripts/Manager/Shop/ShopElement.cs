@@ -11,7 +11,8 @@ public class ShopElement : MonoBehaviour
     {
         GetComponent<Image>().sprite = towerPrefab.GetComponent<SpriteRenderer>().sprite;
         GetComponent<Button>().onClick.AddListener(() => 
-        { 
+        {
+            UnitDragHandler.Instance.shopElement = null;
             if (LevelManager.Instance.eCoreCount < towerPrefab.GetComponent<Turret>().turretData.eCoreCost)
             {
                 return;

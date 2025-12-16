@@ -16,6 +16,10 @@ public class GridCell : MonoBehaviour
     }
     private bool HandleClick()
     {
+        if (UnitDragHandler.Instance.shopElement == null)
+        {
+            return false;
+        }
         if (unitPlaced && !UnitDragHandler.Instance.isSellAction)
         {
             return false;
