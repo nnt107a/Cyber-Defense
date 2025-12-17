@@ -8,6 +8,66 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3001067857338821745, guid: f8e8c8f797d9978418782f5501442732, type: 3}
+      propertyPath: m_Size.x
+      value: 0.73310727
+      objectReference: {fileID: 0}
+    - target: {fileID: -3001067857338821745, guid: f8e8c8f797d9978418782f5501442732, type: 3}
+      propertyPath: m_Size.y
+      value: 0.6747946
+      objectReference: {fileID: 0}
+    - target: {fileID: -3001067857338821745, guid: f8e8c8f797d9978418782f5501442732, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.06167689
+      objectReference: {fileID: 0}
+    - target: {fileID: -3001067857338821745, guid: f8e8c8f797d9978418782f5501442732, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.010092586
+      objectReference: {fileID: 0}
+    - target: {fileID: 1882553970513739467, guid: f8e8c8f797d9978418782f5501442732, type: 3}
+      propertyPath: m_Size.x
+      value: 0.726766
+      objectReference: {fileID: 0}
+    - target: {fileID: 1882553970513739467, guid: f8e8c8f797d9978418782f5501442732, type: 3}
+      propertyPath: m_Size.y
+      value: 0.6751816
+      objectReference: {fileID: 0}
+    - target: {fileID: 1882553970513739467, guid: f8e8c8f797d9978418782f5501442732, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.065041065
+      objectReference: {fileID: 0}
+    - target: {fileID: 1882553970513739467, guid: f8e8c8f797d9978418782f5501442732, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.007849753
+      objectReference: {fileID: 0}
+    - target: {fileID: 1882553970513739467, guid: f8e8c8f797d9978418782f5501442732, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1882553970513739467, guid: f8e8c8f797d9978418782f5501442732, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1882553970513739467, guid: f8e8c8f797d9978418782f5501442732, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1882553970513739467, guid: f8e8c8f797d9978418782f5501442732, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1882553970513739467, guid: f8e8c8f797d9978418782f5501442732, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1882553970513739467, guid: f8e8c8f797d9978418782f5501442732, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1882553970513739467, guid: f8e8c8f797d9978418782f5501442732, type: 3}
+      propertyPath: m_SpriteTilingProperty.adaptiveTilingThreshold
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4729886022953770773, guid: f8e8c8f797d9978418782f5501442732, type: 3}
       propertyPath: m_Name
       value: Blastflame Battery

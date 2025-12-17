@@ -9,16 +9,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 385115160370996011, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
+      propertyPath: m_Size.x
+      value: 0.32562497
+      objectReference: {fileID: 0}
+    - target: {fileID: 385115160370996011, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
       propertyPath: m_Size.y
-      value: 0.18724078
+      value: 0.24403432
+      objectReference: {fileID: 0}
+    - target: {fileID: 385115160370996011, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.00041024387
       objectReference: {fileID: 0}
     - target: {fileID: 385115160370996011, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
       propertyPath: m_Offset.y
-      value: -0.00056123734
+      value: 0.0016231351
+      objectReference: {fileID: 0}
+    - target: {fileID: 385115160370996011, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.32
       objectReference: {fileID: 0}
     - target: {fileID: 385115160370996011, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.1875
+      value: 0.24
       objectReference: {fileID: 0}
     - target: {fileID: 2850359216508835460, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
       propertyPath: m_LocalPosition.x
@@ -94,7 +106,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VenomSpireProjectile
   projectileData: {fileID: 11400000, guid: 4bc0b9cf10679364999461913bba1d14, type: 2}
-  gridCellLayer:
-    serializedVersion: 2
-    m_Bits: 8
   venomSpireZonePrefab: {fileID: 5933828401417387144, guid: a9fba9c41007e8f4d8a623ee7dc9f9cf, type: 3}

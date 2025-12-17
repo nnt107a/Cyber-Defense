@@ -9,16 +9,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 385115160370996011, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
+      propertyPath: m_Size.x
+      value: 0.32020468
+      objectReference: {fileID: 0}
+    - target: {fileID: 385115160370996011, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
       propertyPath: m_Size.y
-      value: 0.18803068
+      value: 0.24118184
+      objectReference: {fileID: 0}
+    - target: {fileID: 385115160370996011, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0007592961
       objectReference: {fileID: 0}
     - target: {fileID: 385115160370996011, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
       propertyPath: m_Offset.y
-      value: 0.00061356276
+      value: -0.0001457259
+      objectReference: {fileID: 0}
+    - target: {fileID: 385115160370996011, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.32
       objectReference: {fileID: 0}
     - target: {fileID: 385115160370996011, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.1875
+      value: 0.24
       objectReference: {fileID: 0}
     - target: {fileID: 2850359216508835460, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
       propertyPath: m_LocalPosition.x
@@ -94,6 +106,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BlastflameBatteryBullet
   projectileData: {fileID: 11400000, guid: 27f12d8f844e53240b3448b7c7351d2c, type: 2}
-  gridCellLayer:
-    serializedVersion: 2
-    m_Bits: 8
