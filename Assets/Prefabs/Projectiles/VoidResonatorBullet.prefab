@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7694431231635852554
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 385115160370996011, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
+      propertyPath: m_Size.x
+      value: 0.5067879
+      objectReference: {fileID: 0}
+    - target: {fileID: 385115160370996011, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
+      propertyPath: m_Size.y
+      value: 0.3788557
+      objectReference: {fileID: 0}
+    - target: {fileID: 385115160370996011, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0014150739
+      objectReference: {fileID: 0}
+    - target: {fileID: 385115160370996011, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
+      propertyPath: m_Offset.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 385115160370996011, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 385115160370996011, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.375
+      objectReference: {fileID: 0}
+    - target: {fileID: 2850359216508835460, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.6461
+      objectReference: {fileID: 0}
+    - target: {fileID: 2850359216508835460, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.07122
+      objectReference: {fileID: 0}
+    - target: {fileID: 2850359216508835460, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2850359216508835460, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2850359216508835460, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2850359216508835460, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2850359216508835460, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2850359216508835460, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2850359216508835460, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2850359216508835460, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3198337243915658708, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
+      propertyPath: m_Name
+      value: VoidResonatorBullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 4335766280571317793, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 2756546837795874410, guid: 21434f64710a8c9458916cd0608be64e, type: 3}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3198337243915658708, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7443821466972889811}
+  m_SourcePrefab: {fileID: 100100000, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
+--- !u!1 &5092122808900462814 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3198337243915658708, guid: ecd3668e6c367f34bb1cb9d36d404647, type: 3}
+  m_PrefabInstance: {fileID: 7694431231635852554}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7443821466972889811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5092122808900462814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4fda3837acdda8d488f425fad9a54bbe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VoidResonatorBullet
+  projectileData: {fileID: 11400000, guid: 1de2693222ae4384f990685330cd39d9, type: 2}
+  penEffectData: {fileID: 11400000, guid: 57a64463837a4fe4d9f03bd7ada092ea, type: 2}

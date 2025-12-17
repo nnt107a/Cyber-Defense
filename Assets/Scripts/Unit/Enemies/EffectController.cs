@@ -88,6 +88,10 @@ public class EffectController : MonoBehaviour
                     break;
             }
         }
+        if (TotalDefenseReduction > 0f || TotalResistanceReduction > 0f)
+        {
+            enemy.GetComponent<SpriteRenderer>().color = Color.purple;
+        }
     }
 
 }

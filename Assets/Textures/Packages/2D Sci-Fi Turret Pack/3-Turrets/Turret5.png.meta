@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 21434f64710a8c9458916cd0608be64e
+guid: dad9d73ca2b4c30498cf9a0d85e50a78
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2756546837795874410
-    second: heavy_laser_cannon_bullet_0
-  - first:
-      213: -4308387162876605964
-    second: heavy_laser_cannon_bullet_1
+      213: 2652145008628421161
+    second: Turret5_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -155,45 +152,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: heavy_laser_cannon_bullet_0
+      name: Turret5_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 4
-        width: 32
-        height: 24
+        x: 64
+        y: 41
+        width: 184
+        height: 167
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a66ac818eb8314620800000000000000
-      internalID: 2756546837795874410
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: heavy_laser_cannon_bullet_1
-      rect:
-        serializedVersion: 2
-        x: 36
-        y: 0
-        width: 24
-        height: 32
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4f903e1c3b88534c0800000000000000
-      internalID: -4308387162876605964
+      spriteID: 9225f1c65df4ec420800000000000000
+      internalID: 2652145008628421161
       vertices: []
       indices: 
       edges: []
@@ -202,7 +177,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2607e7b1661e84d4cbef4fa6df8ff242
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -210,12 +185,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      heavy_laser_cannon_bullet_0: 2756546837795874410
-      heavy_laser_cannon_bullet_1: -4308387162876605964
+      Turret5_0: 2652145008628421161
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
