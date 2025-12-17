@@ -55,6 +55,6 @@ public class Turret : MonoBehaviour
     {
         attackTimer = 0f;
         GameObject go = ObjectPool.Instance.Spawn(turretData.projectilePrefab, firePoint.position, Quaternion.identity);
-        go.GetComponent<Projectile>().Init(turretData.projectilePrefab, turretData.attackDamage);
+        go.GetComponent<Projectile>().Init(turretData.projectilePrefab, turretData.attackDamage, this);
     }
 }

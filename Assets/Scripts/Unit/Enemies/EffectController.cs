@@ -5,10 +5,12 @@ public class ActiveEffect
 {
     public EffectData data;
     public float expirationTime;
-    public void SetData(EffectData data)
+    public int instanceId;
+    public void SetData(EffectData data, int instanceId)
     {
         this.data = data;
         this.expirationTime = Time.time + data.duration;
+        this.instanceId = instanceId;
     }
 }
 
@@ -21,10 +23,17 @@ public class EffectController : MonoBehaviour
     public float TotalDefenseReduction { get; private set; } = 0f;
     public float TotalResistanceReduction { get; private set; } = 0f;
 
-    public void ApplyEffect(EffectData data)
+    public void ApplyEffect(EffectData data, Turret turret)
     {
         ActiveEffect effect = new ActiveEffect();
-        effect.SetData(data);
+        effect.SetData(data, turret.GetInstanceID());
+        if (activeEffects.Exists(e => e.data.effectType == data.effectType && e.instanceId == effect.instanceId))
+        {
+            var existingEffect = activeEffects.Find(e => e.data.effectType == data.effectType && e.instanceId == effect.instanceId);
+            existingEffect.expirationTime = Time.time + data.duration;
+            RecalculateStats();
+            return;
+        }
         activeEffects.Add(effect);
         RecalculateStats();
     }
@@ -44,10 +53,12 @@ public class EffectController : MonoBehaviour
 
         if (changed)
             RecalculateStats();
+        Debug.Log("Num of effects on " + enemy.name + ": " + activeEffects.Count);
     }
 
     private void RecalculateStats()
     {
+        enemy.GetComponent<SpriteRenderer>().color = Color.white;
         ApplySlow();
         ApplyReductions();
     }
@@ -92,7 +103,12 @@ public class EffectController : MonoBehaviour
         {
             enemy.GetComponent<SpriteRenderer>().color = Color.purple;
         }
+        Debug.Log("Res decreased: " + TotalResistanceReduction);
     }
-
+    public void ClearEffects()
+    {
+        activeEffects.Clear();
+        RecalculateStats();
+    }
 }
 

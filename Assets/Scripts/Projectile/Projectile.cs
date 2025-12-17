@@ -10,6 +10,7 @@ public class Projectile : MonoBehaviour, IPoolable
     protected float lifeTimer = 0f;
     protected GameObject prefabRef;
     protected bool alive = false;
+    protected Turret initator;
 
     protected virtual void Update()
     {
@@ -37,10 +38,11 @@ public class Projectile : MonoBehaviour, IPoolable
             Attack(collision.gameObject, gameObject, enemyCell);
         }
     }
-    public void Init(GameObject prefab, float damage)
+    public void Init(GameObject prefab, float damage, Turret turret)
     {
         prefabRef = prefab;
         this.damage = damage;
+        initator = turret;
     }
     protected virtual void Attack(GameObject enemy, GameObject gameObject, GridCell gridCell)
     {

@@ -11,7 +11,7 @@ public class SubzeroCannonBullet : Projectile
     {
         Debug.Log("Dealing " + damage + " damage to " + gameObject.name);
         enemy.GetComponent<Enemy>()?.TakeDamage((int)damage, true);
-        enemy.GetComponent<Enemy>()?.effectController.ApplyEffect(slowEffectData);
+        enemy.GetComponent<Enemy>()?.effectController.ApplyEffect(slowEffectData, initator);
         base.Attack(enemy, gameObject, gridCell);
     }
     public override void OnSpawn()

@@ -11,7 +11,7 @@ public class VoidResonatorBullet : Projectile
     {
         Debug.Log("Dealing " + damage + " damage to " + gameObject.name);
         enemy.GetComponent<Enemy>()?.TakeDamage((int)damage, true);
-        enemy.GetComponent<Enemy>()?.effectController.ApplyEffect(penEffectData);
+        enemy.GetComponent<Enemy>()?.effectController.ApplyEffect(penEffectData, initator);
         base.Attack(enemy, gameObject, gridCell);
     }
     public override void OnSpawn()

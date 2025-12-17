@@ -86,6 +86,7 @@ public class Enemy : MonoBehaviour, IPoolable
     }
     public void OnSpawn()
     {
+        effectController.ClearEffects();
         currentHealth = enemyData.maxHealth;
         attackTimer = 0f;
     }
