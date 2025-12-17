@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a77d5ae5a6e8bc4da90a72de9cf1cc2, type: 3}
   m_Name: CannonBullet
   m_EditorClassIdentifier: Assembly-CSharp::ProjectileData
-  speed: 5
+  speed: 6
   radius: 0

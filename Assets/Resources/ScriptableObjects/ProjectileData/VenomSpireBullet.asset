@@ -12,6 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a77d5ae5a6e8bc4da90a72de9cf1cc2, type: 3}
   m_Name: VenomSpireBullet
   m_EditorClassIdentifier: Assembly-CSharp::ProjectileData
-  speed: 4
+  speed: 5
   radius: 1
-  effectPrefab: {fileID: 5933828401417387144, guid: a9fba9c41007e8f4d8a623ee7dc9f9cf, type: 3}
