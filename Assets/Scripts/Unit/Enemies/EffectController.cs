@@ -5,7 +5,7 @@ public class ActiveEffect
 {
     public EffectData data;
     public float expirationTime;
-    public ActiveEffect(EffectData data)
+    public void SetData(EffectData data)
     {
         this.data = data;
         this.expirationTime = Time.time + data.duration;
@@ -23,7 +23,9 @@ public class EffectController : MonoBehaviour
 
     public void ApplyEffect(EffectData data)
     {
-        activeEffects.Add(new ActiveEffect(data));
+        ActiveEffect effect = new ActiveEffect();
+        effect.SetData(data);
+        activeEffects.Add(effect);
         RecalculateStats();
     }
 
