@@ -53,7 +53,6 @@ public class EffectController : MonoBehaviour
 
         if (changed)
             RecalculateStats();
-        Debug.Log("Num of effects on " + enemy.name + ": " + activeEffects.Count);
     }
 
     private void RecalculateStats()
@@ -78,8 +77,6 @@ public class EffectController : MonoBehaviour
         }
 
         CurrentSlowMultiplier = 1f - strongestSlow;
-
-        Debug.Log(enemy.name + " slow multiplier: " + CurrentSlowMultiplier);
     }
     private void ApplyReductions()
     {
@@ -103,7 +100,6 @@ public class EffectController : MonoBehaviour
         {
             enemy.GetComponent<SpriteRenderer>().color = Color.purple;
         }
-        Debug.Log("Res decreased: " + TotalResistanceReduction);
     }
     public void ClearEffects()
     {

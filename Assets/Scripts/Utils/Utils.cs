@@ -23,4 +23,20 @@ public class Utils
     {
         return cell != null && cell.y == 0;
     }
+    public static SpawnEvent GetLastSpawnEvent(WaveData wave)
+    {
+        SpawnEvent last = null;
+        float maxTime = float.MinValue;
+
+        foreach (var e in wave.spawnEvents)
+        {
+            if (e.time > maxTime)
+            {
+                maxTime = e.time;
+                last = e;
+            }
+        }
+
+        return last;
+    }
 }

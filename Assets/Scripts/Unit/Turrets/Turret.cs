@@ -23,7 +23,6 @@ public class Turret : MonoBehaviour
         {
             return;
         }
-        Debug.Log("Turret in lane " + laneIndex + " checking for enemies.");
         attackTimer += Time.deltaTime;
         if (attackTimer >= attackInterval && HasEnemyInFront())
         {

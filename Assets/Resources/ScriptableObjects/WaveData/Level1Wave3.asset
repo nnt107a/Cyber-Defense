@@ -10,46 +10,49 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 97af87513943be04591888601b8179d0, type: 3}
-  m_Name: WaveDataLevel1
+  m_Name: Level1Wave3
   m_EditorClassIdentifier: Assembly-CSharp::WaveData
   spawnEvents:
   - time: 7
     enemyPool:
     - {fileID: 11400000, guid: 67aeeb67f83c3454489dd238e6b9391a, type: 2}
+    - {fileID: 11400000, guid: 7b65c1c007df52946a4e16a58c5514ee, type: 2}
     allowDuplicate: 1
     randomLane: 1
     fixedLane: 0
     minLane: 0
     maxLane: 4
     randomCount: 0
-    fixedCount: 1
-    countRange: {x: 0, y: 0}
-    interval: 0
-  - time: 15
-    enemyPool:
-    - {fileID: 11400000, guid: 67aeeb67f83c3454489dd238e6b9391a, type: 2}
-    allowDuplicate: 1
-    randomLane: 1
-    fixedLane: 0
-    minLane: 0
-    maxLane: 4
-    randomCount: 0
-    fixedCount: 1
-    countRange: {x: 0, y: 0}
-    interval: 0
-  - time: 25
-    enemyPool:
-    - {fileID: 11400000, guid: 67aeeb67f83c3454489dd238e6b9391a, type: 2}
-    allowDuplicate: 1
-    randomLane: 1
-    fixedLane: 0
-    minLane: 0
-    maxLane: 4
-    randomCount: 0
-    fixedCount: 2
+    fixedCount: 3
     countRange: {x: 0, y: 0}
     interval: 1
-  - time: 40
+  - time: 20
+    enemyPool:
+    - {fileID: 11400000, guid: 67aeeb67f83c3454489dd238e6b9391a, type: 2}
+    - {fileID: 11400000, guid: 7b65c1c007df52946a4e16a58c5514ee, type: 2}
+    allowDuplicate: 1
+    randomLane: 1
+    fixedLane: 0
+    minLane: 0
+    maxLane: 4
+    randomCount: 0
+    fixedCount: 3
+    countRange: {x: 0, y: 0}
+    interval: 1
+  - time: 35
+    enemyPool:
+    - {fileID: 11400000, guid: 67aeeb67f83c3454489dd238e6b9391a, type: 2}
+    - {fileID: 11400000, guid: 7b65c1c007df52946a4e16a58c5514ee, type: 2}
+    allowDuplicate: 1
+    randomLane: 1
+    fixedLane: 0
+    minLane: 0
+    maxLane: 4
+    randomCount: 0
+    fixedCount: 4
+    countRange: {x: 0, y: 0}
+    interval: 2
+  - time: 50
     enemyPool:
     - {fileID: 11400000, guid: 67aeeb67f83c3454489dd238e6b9391a, type: 2}
     - {fileID: 11400000, guid: 7b65c1c007df52946a4e16a58c5514ee, type: 2}
@@ -60,5 +63,5 @@ MonoBehaviour:
     maxLane: 4
     randomCount: 1
     fixedCount: 2
-    countRange: {x: 2, y: 3}
-    interval: 1
+    countRange: {x: 4, y: 5}
+    interval: 3
