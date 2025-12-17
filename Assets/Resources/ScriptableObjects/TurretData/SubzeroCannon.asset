@@ -17,3 +17,4 @@ MonoBehaviour:
   attackSpeed: 0.5
   projectilePrefab: {fileID: 2462159358173782720, guid: 4f27c07f47977f740b6f32a329992064, type: 3}
   eCoreCost: 75
+  rechargeTime: 8

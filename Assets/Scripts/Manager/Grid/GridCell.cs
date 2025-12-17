@@ -41,6 +41,7 @@ public class GridCell : MonoBehaviour
         unit.transform.localPosition = Vector3.zero;
         unitPlaced = true;
         LevelManager.Instance.ChangeECoreCount(-unit.GetComponent<Turret>().turretData.eCoreCost);
+        UnitDragHandler.Instance.shopElement.GetComponent<ShopElement>().Recharge();
         UnitDragHandler.Instance.shopElement = null;
         return true;
     }

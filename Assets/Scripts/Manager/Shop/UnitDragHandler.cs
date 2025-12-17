@@ -67,6 +67,7 @@ public class UnitDragHandler : MonoBehaviour
                 {
                     Destroy(dragPreview);
                 }
+                shopElement = null;
             }
         }
         if (dragRect == null || !dragging) return;
