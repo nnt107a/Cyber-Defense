@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour, IPoolable
@@ -84,9 +85,14 @@ public class Enemy : MonoBehaviour, IPoolable
         {
             if (collider.GetComponent<GridCell>().x == GridManager.width - 1)
             {
-                GameManager.Instance.enemiesInLane[laneIndex].Add(this);
+                StartCoroutine(DelayALittle());
             }
         }
+    }
+    private IEnumerator DelayALittle()
+    {
+        yield return new WaitForSeconds(2.5f / enemyData.moveSpeed);
+        GameManager.Instance.enemiesInLane[laneIndex].Add(this);
     }
     public void OnSpawn()
     {

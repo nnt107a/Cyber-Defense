@@ -27,7 +27,7 @@ MonoBehaviour:
     interval: 0
   - time: 20
     enemyPool:
-    - {fileID: 11400000, guid: 67aeeb67f83c3454489dd238e6b9391a, type: 2}
+    - {fileID: 11400000, guid: 7b65c1c007df52946a4e16a58c5514ee, type: 2}
     allowDuplicate: 1
     randomLane: 1
     fixedLane: 0
@@ -40,6 +40,7 @@ MonoBehaviour:
   - time: 35
     enemyPool:
     - {fileID: 11400000, guid: 67aeeb67f83c3454489dd238e6b9391a, type: 2}
+    - {fileID: 11400000, guid: 7b65c1c007df52946a4e16a58c5514ee, type: 2}
     allowDuplicate: 1
     randomLane: 1
     fixedLane: 0
@@ -51,14 +52,13 @@ MonoBehaviour:
     interval: 1
   - time: 50
     enemyPool:
-    - {fileID: 11400000, guid: 67aeeb67f83c3454489dd238e6b9391a, type: 2}
-    - {fileID: 11400000, guid: 7b65c1c007df52946a4e16a58c5514ee, type: 2}
+    - {fileID: 11400000, guid: b64c91fa199197b4e8f9fcb068067d55, type: 2}
     allowDuplicate: 1
     randomLane: 1
     fixedLane: 0
     minLane: 0
     maxLane: 4
-    randomCount: 1
-    fixedCount: 2
+    randomCount: 0
+    fixedCount: 1
     countRange: {x: 2, y: 3}
     interval: 1

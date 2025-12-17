@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 5936840771444538386}
   - component: {fileID: 6864923693436654972}
   - component: {fileID: 8942868548984865734}
-  m_Layer: 0
+  - component: {fileID: -3397452947487618130}
+  m_Layer: 6
   m_Name: Vorrath
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -129,6 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Vorrath
   enemyData: {fileID: 11400000, guid: b64c91fa199197b4e8f9fcb068067d55, type: 2}
+  effectController: {fileID: -3397452947487618130}
 --- !u!70 &6864923693436654972
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -193,3 +195,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &-3397452947487618130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1069452620176511096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a430abc9c95a7074e86f5825dd1d3fb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EffectController
+  enemy: {fileID: 5936840771444538386}

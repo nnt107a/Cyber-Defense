@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Level1
   m_EditorClassIdentifier: Assembly-CSharp::LevelData
   waves:
-  - wave: {fileID: 11400000, guid: f6914c48554822c418674cfcd0d0e9d2, type: 2}
+  - wave: {fileID: 11400000, guid: 331a767970944f54cbc821ab46c8f945, type: 2}
     intervalAfterWave: 2
-  - wave: {fileID: 11400000, guid: a7c779fcc4d06044b9d02307c1a025b4, type: 2}
+  - wave: {fileID: 11400000, guid: 44e48e6247c147f4ea1539cfc42602f3, type: 2}
     intervalAfterWave: 5
-  - wave: {fileID: 11400000, guid: 800e2401e30b0f74895da3545cb92ee0, type: 2}
+  - wave: {fileID: 11400000, guid: 8e2aa54f009b8de41bc2d0d5bae1f055, type: 2}
     intervalAfterWave: 10
