@@ -4,12 +4,14 @@ public class Turret : MonoBehaviour
 {
     [SerializeField] public TurretData turretData;
     [SerializeField] protected Transform firePoint;
+    [SerializeField] protected Transform floatingTextPoint;
 
     protected Animator animator;
     protected float currentHealth;
     protected float attackTimer = 0f;
     protected float attackInterval;
     protected int laneIndex = -1;
+    protected GridCell gridCell;
 
     protected virtual void Awake()
     {
@@ -41,9 +43,10 @@ public class Turret : MonoBehaviour
         }
         return false;
     }
-    public void Place(int index)
+    public void Place(int index, GridCell gridCell)
     {
         laneIndex = index;
+        this.gridCell = gridCell;
     }
     protected virtual void InitAttack()
     {
@@ -55,5 +58,13 @@ public class Turret : MonoBehaviour
         attackTimer = 0f;
         GameObject go = ObjectPool.Instance.Spawn(turretData.projectilePrefab, firePoint.position, Quaternion.identity);
         go.GetComponent<Projectile>().Init(turretData.projectilePrefab, turretData.attackDamage, this);
+    }
+    public void ShowFloatingText(string text, Color color)
+    {
+        UIFloatingText.Instance.ShowFloatingText(text, floatingTextPoint.position, color);
+    }
+    private void OnMouseDown()
+    {
+        gridCell.OnMouseDown();
     }
 }

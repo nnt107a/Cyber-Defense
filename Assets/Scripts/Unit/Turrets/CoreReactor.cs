@@ -21,7 +21,7 @@ public class CoreReactor : Turret
     protected override void InitAttack()
     {
         Debug.Log("Core Reactor spawn ECore.");
-        UIFloatingText.Instance.ShowFloatingText(turretData.attackDamage.ToString(), firePoint.position, Color.gold);
+        UIFloatingText.Instance.ShowFloatingText("+" + turretData.attackDamage.ToString(), firePoint.position, Color.gold);
         LevelManager.Instance.ChangeECoreCount((int)turretData.attackDamage);
         attackTimer = 0f;
     }

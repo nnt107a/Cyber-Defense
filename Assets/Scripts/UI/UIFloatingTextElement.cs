@@ -14,7 +14,7 @@ public class UIFloatingTextElement : MonoBehaviour
     }
     private void Update()
     {
-        transform.Translate(Vector3.up * floatSpeed * Time.deltaTime);
+        transform.Translate(Vector2.up * floatSpeed * Time.deltaTime);
         timer += Time.deltaTime;
         if (timer >= duration)
         {

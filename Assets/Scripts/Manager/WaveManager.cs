@@ -35,17 +35,11 @@ public class WaveManager : MonoBehaviour
              currentWaveIndex < levelData.waves.Count;
              currentWaveIndex++)
         {
-            newWaveStart = false;
             WaveEntry entry = levelData.waves[currentWaveIndex];
             bool isFinalWave =
                 currentWaveIndex == levelData.waves.Count - 1;
 
             yield return StartCoroutine(RunWave(entry.wave, isFinalWave));
-
-            while (newWaveStart == false)
-            {
-                yield return null;
-            }
 
             yield return new WaitForSeconds(entry.intervalAfterWave);
         }
@@ -80,10 +74,19 @@ public class WaveManager : MonoBehaviour
                     );
 
                     OnWaveWarning?.Invoke(isFinalWave);
+
+                    while (newWaveStart == false)
+                    {
+                        yield return null;
+                    }
                 }
 
                 StartCoroutine(SpawnEvent(e));
                 eventIndex++;
+                if (eventIndex == events.Count - 1)
+                {
+                    newWaveStart = false;
+                }
             }
 
             yield return null;

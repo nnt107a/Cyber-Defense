@@ -51,6 +51,9 @@ public class UnitDragHandler : MonoBehaviour
     }
     private void Update()
     {
+        Debug.Log("Dragging: " + dragging);
+        Debug.Log("Is sell action: " + isSellAction);
+        Debug.Log("shopElement: " + shopElement);
         if (Input.GetMouseButtonDown(0))
         {
             if (!dragging)

@@ -116,3 +116,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::VoidResonator
   turretData: {fileID: 11400000, guid: 782045048dc8a09449ddd744e9e600a7, type: 2}
   firePoint: {fileID: 4821073168129639246}
+  floatingTextPoint: {fileID: 8301873998133480374}
+--- !u!4 &8301873998133480374 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6208474779488823978, guid: f8e8c8f797d9978418782f5501442732, type: 3}
+  m_PrefabInstance: {fileID: 2674786891146682652}
+  m_PrefabAsset: {fileID: 0}
