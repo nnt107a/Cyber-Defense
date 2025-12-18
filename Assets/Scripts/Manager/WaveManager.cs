@@ -21,7 +21,7 @@ public class WaveManager : MonoBehaviour
     {
         Instance = this;
     }
-    void Start()
+    public void StartWaveSpawn()
     {
         UILevelStateBar.Instance.Build(levelData);
         UITextWarningEndWave.Instance.OnWaveWarningEnd += () =>
