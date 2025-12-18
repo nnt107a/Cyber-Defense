@@ -23,6 +23,14 @@ public class Utils
     {
         return cell != null && cell.y == 0;
     }
+    public static bool IsFirstColumn(GridCell cell)
+    {
+        return cell != null && cell.x == 0;
+    }
+    public static bool IsLastColumn(GridCell cell)
+    {
+        return cell != null && cell.x == GridManager.width - 1;
+    }
     public static SpawnEvent GetLastSpawnEvent(WaveData wave)
     {
         SpawnEvent last = null;

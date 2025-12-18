@@ -6,6 +6,7 @@ using UnityEngine;
 public class VenomSpireZone : MonoBehaviour, IPoolable
 {
     [SerializeField] private EffectData venomEffectData;
+    [SerializeField] private Transform particleEffectTransform;
     private GameObject prefabRef;
     private float timer = 0f;
     private bool alive = false;
@@ -19,6 +20,7 @@ public class VenomSpireZone : MonoBehaviour, IPoolable
     {
         prefabRef = prefab;
         timer = -0.1f;
+        particleEffectTransform.localScale = transform.localScale;
     }
     private void Update()
     {

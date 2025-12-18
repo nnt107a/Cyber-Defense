@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6672647c7822dc94dbdaf97177ced3de, type: 3}
   m_Name: VenomSpireZone
   m_EditorClassIdentifier: Assembly-CSharp::EffectData
-  duration: 2
+  effectType: 0
+  duration: 4
   effectValue: 10
