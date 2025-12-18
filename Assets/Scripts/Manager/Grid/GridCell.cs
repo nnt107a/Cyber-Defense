@@ -8,7 +8,6 @@ public class GridCell : MonoBehaviour
     public GameObject unit;
     public void OnMouseDown()
     {
-        Debug.Log("CLICKED GRID CELL AT: " + x + ", " + y);
         if (HandleClick())
         {
             UnitDragHandler.Instance.dragging = false;

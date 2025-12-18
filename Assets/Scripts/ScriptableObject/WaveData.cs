@@ -5,6 +5,40 @@ using UnityEngine;
 public class WaveData : ScriptableObject
 {
     public List<SpawnEvent> spawnEvents;
+    public float GetLastSpawnTime()
+    {
+        if (spawnEvents.Count == 0) return 0f;
+        float lastTime = 0f;
+        foreach (var spawnEvent in spawnEvents)
+        {
+            if (spawnEvent.time > lastTime)
+            {
+                lastTime = spawnEvent.time;
+            }
+        }
+        return lastTime;
+    }
+    public float GetDuration()
+    {
+        if (spawnEvents.Count == 0) return 0f;
+        float lastTime = 0f;
+        foreach (var spawnEvent in spawnEvents)
+        {
+            float eventEndTime = spawnEvent.time;
+            int count = spawnEvent.randomCount
+                ? Random.Range(spawnEvent.countRange.x, spawnEvent.countRange.y + 1)
+                : spawnEvent.fixedCount;
+            if (count > 1)
+            {
+                eventEndTime += spawnEvent.interval * (count - 1);
+            }
+            if (eventEndTime > lastTime)
+            {
+                lastTime = eventEndTime;
+            }
+        }
+        return lastTime;
+    }
 }
 
 [System.Serializable]

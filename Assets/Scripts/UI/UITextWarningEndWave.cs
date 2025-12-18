@@ -37,7 +37,7 @@ public class UITextWarningEndWave : MonoBehaviour
         }
         else
         {
-            warningText.text = "A huge wave is coming!";
+            warningText.text = "A Huge Wave Is Coming~";
         }
         warningText.alpha = 1f;
         PlayWarningWave();

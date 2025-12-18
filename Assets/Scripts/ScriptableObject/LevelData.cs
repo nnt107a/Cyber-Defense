@@ -5,6 +5,20 @@ using UnityEngine;
 public class LevelData : ScriptableObject
 {
     public List<WaveEntry> waves;
+    public float GetTotalDuration()
+    {
+        float total = 0f;
+
+        for (int i = 0; i < waves.Count; i++)
+        {
+            total += waves[i].wave.GetDuration();
+
+            if (i < waves.Count - 1)
+                total += waves[i].intervalAfterWave;
+        }
+
+        return total;
+    }
 }
 
 [System.Serializable]

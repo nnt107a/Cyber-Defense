@@ -14,7 +14,8 @@ public class WaveManager : MonoBehaviour
 
     private int currentWaveIndex;
 
-    public Action<bool> OnWaveWarning;
+    public Action<bool> OnWaveWarning; 
+    public event Action<int> OnWaveLastSpawnEvent;
     private bool newWaveStart = true;
     private void Awake()
     {
@@ -22,6 +23,7 @@ public class WaveManager : MonoBehaviour
     }
     void Start()
     {
+        UILevelStateBar.Instance.Build(levelData);
         UITextWarningEndWave.Instance.OnWaveWarningEnd += () =>
         {
             newWaveStart = true;
@@ -79,8 +81,8 @@ public class WaveManager : MonoBehaviour
                     {
                         yield return null;
                     }
+                    OnWaveLastSpawnEvent?.Invoke(currentWaveIndex);
                 }
-
                 StartCoroutine(SpawnEvent(e));
                 eventIndex++;
                 if (eventIndex == events.Count - 1)
