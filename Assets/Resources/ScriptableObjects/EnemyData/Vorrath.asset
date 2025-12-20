@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4078eefe2913944458e267c1387e6378, type: 3}
   m_Name: Vorrath
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
-  enemyPrefab: {fileID: 1069452620176511096, guid: 20fba16999086c24b80119dbd937ddfb, type: 3}
-  maxHealth: 200
+  enemyPrefab: {fileID: 5126731720254174242, guid: b413d373160f7d643baada8bc095d15f, type: 3}
+  maxHealth: 300
   moveSpeed: 2
   attackDamage: 10
   attackSpeed: 1
+  physicalResistance: 0
+  magicalResistance: 0
   eCoreDrop: 50

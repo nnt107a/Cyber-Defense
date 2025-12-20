@@ -8,9 +8,12 @@ public class Enemy : MonoBehaviour, IPoolable
     protected Rigidbody2D rb;
     protected Animator animator;
     protected float currentHealth;
-    protected float attackTimer = 0f;
+
     protected float attackInterval;
+    public float AttackInterval { get { return attackInterval; } }
     protected int laneIndex = -1;
+
+    private EnemyState currentState;
 
     public EffectController effectController;
 
@@ -20,22 +23,15 @@ public class Enemy : MonoBehaviour, IPoolable
         rb = GetComponent<Rigidbody2D>();
         attackInterval = 1.0f / enemyData.attackSpeed;
         currentHealth = enemyData.maxHealth;
+        EnemyState.stateRun = gameObject.GetComponent<StateRun>();
+        EnemyState.stateAttack = gameObject.GetComponent<StateAttack>();
+        currentState = GetComponent<EnemyState>();
+        Debug.Log("Current state: " + currentState);
     }
 
     protected virtual void Update()
     {
-        attackTimer += Time.deltaTime;
-        RaycastHit2D hit = Physics2D.Raycast(rb.position, Vector2.left, 0.5f, 0);
-        Debug.Log("Enemy Raycast Hit: " + hit.collider);
-        Debug.DrawLine(rb.position, hit.point, Color.red);
-
-        if (attackTimer >= attackInterval && hit.collider?.GetComponent<Turret>())
-        {
-            Attack();
-            attackTimer = -10f;
-            return;
-        }
-        Run();
+        currentState.Act(this);
     }
 
     public void Place(int index)
@@ -43,18 +39,17 @@ public class Enemy : MonoBehaviour, IPoolable
         laneIndex = index;
     }
 
-    protected void Run()
+    public void Run()
     {
         animator.SetBool("isRunning", true);
         Vector2 newPosition = rb.position + Vector2.left * enemyData.moveSpeed * Time.deltaTime * effectController.CurrentSlowMultiplier;
         rb.MovePosition(newPosition);
     }
 
-    protected virtual void Attack()
+    public virtual void Attack()
     {
         animator.SetBool("isRunning", false);
         Debug.Log("Enemy attacks.");
-        attackTimer = 0f;
         animator.SetTrigger("attack");
     }
 
@@ -68,7 +63,7 @@ public class Enemy : MonoBehaviour, IPoolable
 
     public void TakeDamage(int amount, bool isPhysical = false)
     {
-        float damageTaken = amount * (isPhysical ? (1 - Mathf.Clamp01(/*- enemyData.physicalResistance*/ - effectController.TotalDefenseReduction)) : (1 - Mathf.Clamp01(/*- enemyData.magicalResistance*/ - effectController.TotalResistanceReduction)));
+        float damageTaken = amount * (isPhysical ? (1 - Mathf.Clamp01(- enemyData.physicalResistance - effectController.TotalDefenseReduction)) : (1 - Mathf.Clamp01(- enemyData.magicalResistance - effectController.TotalResistanceReduction)));
         Debug.Log("Enemy took " + (isPhysical ? "physic" : "magic") + " damage: " + damageTaken);
         currentHealth -= damageTaken;
         animator.SetTrigger("takeHit");
@@ -89,6 +84,23 @@ public class Enemy : MonoBehaviour, IPoolable
             }
         }
     }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.GetComponent<Turret>() != null)
+        {
+            ChangeState(EnemyState.stateAttack);
+        }
+    }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.GetComponent<Turret>() != null)
+        {
+            ChangeState(EnemyState.stateRun);
+        }
+    }
+
     private IEnumerator DelayALittle()
     {
         yield return new WaitForSeconds(2.5f / enemyData.moveSpeed);
@@ -98,10 +110,16 @@ public class Enemy : MonoBehaviour, IPoolable
     {
         effectController.ClearEffects();
         currentHealth = enemyData.maxHealth;
-        attackTimer = 0f;
+        currentState = EnemyState.stateRun;
+        Debug.Log("Current state: " + currentState);
     }
 
     public void OnDespawn()
     {
+    }
+
+    private void ChangeState(EnemyState newState)
+    {
+        currentState = newState;
     }
 }

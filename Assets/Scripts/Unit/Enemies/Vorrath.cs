@@ -12,7 +12,7 @@ public class Vorrath : Enemy
         base.Update();
     }
 
-    protected override void Attack()
+    public override void Attack()
     {
         base.Attack();
     }

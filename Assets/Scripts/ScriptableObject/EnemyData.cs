@@ -10,5 +10,7 @@ public class EnemyData : ScriptableObject
     public float moveSpeed = 2f;
     public float attackDamage = 10f;
     public float attackSpeed = 1f;
+    public float physicalResistance = 0f;
+    public float magicalResistance = 0f;
     public int eCoreDrop = 50;
 }

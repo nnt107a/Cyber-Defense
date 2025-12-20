@@ -12,9 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4078eefe2913944458e267c1387e6378, type: 3}
   m_Name: Blightstool
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
-  enemyPrefab: {fileID: 2118149412841427711, guid: 86096797b253a2944b380141fbb71101, type: 3}
-  maxHealth: 100
+  enemyPrefab: {fileID: 2838149179291942230, guid: 731f1b85c90d24f47a3ece94fe0f411d, type: 3}
+  maxHealth: 150
   moveSpeed: 1
   attackDamage: 15
   attackSpeed: 1
+  physicalResistance: 10
+  magicalResistance: 0.5
   eCoreDrop: 50
