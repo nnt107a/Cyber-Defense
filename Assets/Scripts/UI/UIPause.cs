@@ -10,15 +10,9 @@ using UnityEngine.UI;
 public class UIPause : MonoBehaviour
 {
     [SerializeField] private CanvasGroup panel;
-    [SerializeField] private Button[] languages;
     private void Start()
     {
         GameManager.Instance.OnPause += Show;
-        for (int i = 0; i < languages.Length; i++)
-        {
-            int index = i;
-            languages[i].onClick.AddListener(() => SetLanguage(index));
-        }
     }
     private void OnDestroy()
     {

@@ -38,6 +38,10 @@ MonoBehaviour:
     m_Localized: REWARDS
     m_Metadata:
       m_Items: []
+  - m_Id: 14830990336000
+    m_Localized: START
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

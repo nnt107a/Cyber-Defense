@@ -2208,6 +2208,7 @@ GameObject:
   - component: {fileID: 262620831}
   - component: {fileID: 262620833}
   - component: {fileID: 262620832}
+  - component: {fileID: 262620834}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -2287,7 +2288,7 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 17
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -2333,6 +2334,46 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 262620830}
   m_CullTransparentMesh: 1
+--- !u!114 &262620834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262620830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb0353ae6e5124bb35b17aff880f16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Components.LocalizeStringEvent
+  m_StringReference:
+    m_TableReference:
+      m_TableCollectionName: GUID:3e6c29e31ba6fcf4d812f64a6d56e28d
+    m_TableEntryReference:
+      m_KeyId: 14830990336000
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  m_FormatArguments: []
+  m_UpdateString:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 262620832}
+        m_TargetAssemblyTypeName: TMPro.TextMeshProUGUI, Unity.TextMeshPro
+        m_MethodName: set_text
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  references:
+    version: 2
+    RefIds: []
 --- !u!1 &270854076
 GameObject:
   m_ObjectHideFlags: 0
@@ -3034,7 +3075,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 346594288}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8909585430075764183}
+        m_TargetAssemblyTypeName: UIPause, Assembly-CSharp
+        m_MethodName: SetLanguage
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &361389874
 GameObject:
   m_ObjectHideFlags: 0
@@ -16242,7 +16295,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1838232592}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 8909585430075764183}
+        m_TargetAssemblyTypeName: UIPause, Assembly-CSharp
+        m_MethodName: SetLanguage
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1840056375
 GameObject:
   m_ObjectHideFlags: 0
@@ -16345,6 +16410,7 @@ GameObject:
   - component: {fileID: 1869043642}
   - component: {fileID: 1869043641}
   - component: {fileID: 1869043643}
+  - component: {fileID: 1869043644}
   m_Layer: 5
   m_Name: PauseButton
   m_TagString: Untagged
@@ -16452,19 +16518,20 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1869043641}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1366104068}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: Pause
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &1869043644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1869043639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff7348a5d586139458a4c90848109783, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIPauseButton
+  button: {fileID: 1869043643}
 --- !u!1 &1878938088
 GameObject:
   m_ObjectHideFlags: 0
@@ -23572,9 +23639,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIPause
   panel: {fileID: 1016715228547946238}
-  languages:
-  - {fileID: 346594290}
-  - {fileID: 1838232594}
 --- !u!224 &9037490602949918302
 RectTransform:
   m_ObjectHideFlags: 0

@@ -38,6 +38,10 @@ MonoBehaviour:
     m_Localized: "PH\u1EA6N TH\u01AF\u1EDENG"
     m_Metadata:
       m_Items: []
+  - m_Id: 14830990336000
+    m_Localized: "CH\u01A0I"
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

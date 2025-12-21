@@ -35,6 +35,10 @@ MonoBehaviour:
     m_Key: TXT_REWARDS
     m_Metadata:
       m_Items: []
+  - m_Id: 14830990336000
+    m_Key: TXT_START
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
