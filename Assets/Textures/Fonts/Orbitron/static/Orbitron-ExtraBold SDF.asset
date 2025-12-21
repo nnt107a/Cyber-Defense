@@ -598,8 +598,8 @@ MonoBehaviour:
       m_HorizontalBearingY: 64.796875
       m_HorizontalAdvance: 74.703125
     m_GlyphRect:
-      m_X: 83
-      m_Y: 166
+      m_X: 162
+      m_Y: 10
       m_Width: 65
       m_Height: 65
     m_Scale: 1
@@ -635,7 +635,7 @@ MonoBehaviour:
     m_Scale: 1
     m_AtlasIndex: 0
     m_ClassDefinitionType: 0
-  - m_Index: 205
+  - m_Index: 18
     m_Metrics:
       m_Width: 37.171875
       m_Height: 12.875
@@ -787,8 +787,8 @@ MonoBehaviour:
     m_ClassDefinitionType: 0
   m_CharacterTable:
   - m_ElementType: 1
-    m_Unicode: 32
-    m_GlyphIndex: 215
+    m_Unicode: 8230
+    m_GlyphIndex: 188
     m_Scale: 1
   - m_ElementType: 1
     m_Unicode: 43
@@ -1009,87 +1009,16 @@ MonoBehaviour:
     m_Y: 72
     m_Width: 73
     m_Height: 72
-  - m_X: 432
-    m_Y: 0
-    m_Width: 85
-    m_Height: 84
-  - m_X: 517
-    m_Y: 0
-    m_Width: 53
-    m_Height: 87
-  - m_X: 432
-    m_Y: 84
-    m_Width: 62
-    m_Height: 72
-  - m_X: 315
-    m_Y: 144
-    m_Width: 74
-    m_Height: 84
-  - m_X: 73
-    m_Y: 156
-    m_Width: 84
-    m_Height: 84
+  m_FreeGlyphRects:
   - m_X: 0
     m_Y: 188
-    m_Width: 53
-    m_Height: 84
-  - m_X: 157
-    m_Y: 156
-    m_Width: 84
-    m_Height: 84
-  - m_X: 241
-    m_Y: 156
-    m_Width: 57
-    m_Height: 33
-  - m_X: 241
-    m_Y: 189
-    m_Width: 57
-    m_Height: 58
-  - m_X: 53
-    m_Y: 240
-    m_Width: 85
-    m_Height: 84
-  - m_X: 138
-    m_Y: 240
-    m_Width: 86
-    m_Height: 84
-  - m_X: 570
-    m_Y: 0
-    m_Width: 73
-    m_Height: 72
-  - m_X: 643
-    m_Y: 0
-    m_Width: 73
-    m_Height: 93
-  - m_X: 494
-    m_Y: 87
-    m_Width: 119
-    m_Height: 84
-  - m_X: 389
-    m_Y: 89
-    m_Width: 33
-    m_Height: 84
-  - m_X: 716
-    m_Y: 0
-    m_Width: 73
-    m_Height: 72
-  - m_X: 789
-    m_Y: 0
-    m_Width: 84
-    m_Height: 84
-  - m_X: 716
-    m_Y: 72
-    m_Width: 73
-    m_Height: 72
-  - m_X: 613
-    m_Y: 93
-    m_Width: 97
-    m_Height: 72
-  - m_X: 0
-    m_Y: 272
-    m_Width: 53
-    m_Height: 35
-  - m_X: 873
+    m_Width: 1023
+    m_Height: 835
+  - m_X: 73
+    m_Y: 116
+    m_Width: 11
+    m_Height: 907
+  - m_X: 432
     m_Y: 0
     m_Width: 81
     m_Height: 84
@@ -1127,9 +1056,9 @@ MonoBehaviour:
     m_Width: 35
     m_Height: 52
   - m_X: 73
-    m_Y: 116
-    m_Width: 11
-    m_Height: 40
+    m_Y: 156
+    m_Width: 950
+    m_Height: 867
   - m_X: 73
     m_Y: 121
     m_Width: 44
