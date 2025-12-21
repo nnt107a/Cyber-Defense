@@ -31,7 +31,6 @@ public class GameManager : MonoBehaviour
     }*/
     public void Init()
     {
-        isLevelOnGoing = false;
         for (int i = 0; i < GridManager.height; i++)
             enemiesInLane[i].Clear();
         LevelManager.Instance.Init();

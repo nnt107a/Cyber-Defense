@@ -16,6 +16,7 @@ public class LevelIntroFlow : MonoBehaviour
     bool waitingForStart;
     void Start()
     {
+        GameManager.Instance.isLevelOnGoing = false;
         StartCoroutine(IntroSequence());
     }
 
