@@ -7,15 +7,7 @@ public class LevelManager : MonoBehaviour
     public Action<int> OnECoreCountChanged;
     private void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        Instance = this;
     }
 
     [SerializeField] private int eCoreCountInit = 100;

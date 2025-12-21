@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,9 +21,19 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-    }
+    }/*
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            SceneManager.LoadScene(0);
+        }
+    }*/
     public void Init()
     {
+        isLevelOnGoing = false;
+        for (int i = 0; i < GridManager.height; i++)
+            enemiesInLane[i].Clear();
         LevelManager.Instance.Init();
     }
 }

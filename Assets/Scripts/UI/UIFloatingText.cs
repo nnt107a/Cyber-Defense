@@ -5,15 +5,7 @@ public class UIFloatingText : MonoBehaviour
     public static UIFloatingText Instance;
     private void Awake()
     {
-        if (Instance == null)
-        {
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        Instance = this;
     }
     [SerializeField] private GameObject floatingTextPrefab;
     public void ShowFloatingText(string text, Vector3 position, Color color)
