@@ -11,8 +11,11 @@ public class GameManager : MonoBehaviour
     public bool isLevelOnGoing = false;
     public LevelData[] allLevelDatas;
     public int currentLevelIndex = 0;
+    public int health = 5;
 
     public Action OnLevelCompleted;
+    public Action OnLevelLosed;
+    public Action<int> OnHealthChanged;
 
     public bool enemiesSpawnedCompletely = false;
     private void Awake()
@@ -71,8 +74,26 @@ public class GameManager : MonoBehaviour
     }
     public void Init()
     {
+        health = 5;
         for (int i = 0; i < GridManager.height; i++)
             enemiesInLane[i].Clear();
         LevelManager.Instance.Init();
+    }
+    public void ChangeHealth(int amount)
+    {
+        health = Mathf.Max(health + amount, 0);
+        OnHealthChanged?.Invoke(health);
+
+        StartCoroutine(DelayBeforeLose());
+    }
+    private IEnumerator DelayBeforeLose()
+    {
+        yield return new WaitForSeconds(1f);
+
+        if (health <= 0)
+        {
+            isLevelOnGoing = false;
+            OnLevelLosed?.Invoke();
+        }
     }
 }

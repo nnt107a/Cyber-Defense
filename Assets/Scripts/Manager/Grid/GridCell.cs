@@ -8,6 +8,10 @@ public class GridCell : MonoBehaviour
     public GameObject unit;
     public void OnMouseDown()
     {
+        if (GameManager.Instance.isLevelOnGoing == false)
+        {
+            return;
+        }
         if (HandleClick())
         {
             UnitDragHandler.Instance.dragging = false;

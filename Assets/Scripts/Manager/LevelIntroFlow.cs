@@ -66,6 +66,7 @@ public class LevelIntroFlow : MonoBehaviour
         Debug.Log("Gameplay started! Level " + GameManager.Instance.currentLevelIndex);
         LoadoutManager.Instance.RefreshShopBar();
         gameplayUI.SetActive(true);
+        gameplayUI.GetComponent<CanvasGroup>().DOFade(1f, 0.5f).From(0f);
         GameManager.Instance.Init();
         WaveManager.Instance.StartWaveSpawn();
     }

@@ -33,6 +33,10 @@ public class Enemy : MonoBehaviour, IPoolable
 
     protected virtual void Update()
     {
+        if (!GameManager.Instance.isLevelOnGoing)
+        {
+            return;
+        }
         currentState.Act(this);
     }
 
@@ -77,16 +81,14 @@ public class Enemy : MonoBehaviour, IPoolable
             Death();
         }
     }
-    /*private void OnTriggerEnter2D(Collider2D collider)
+    private void OnTriggerEnter2D(Collider2D collider)
     {
-        if (collider.CompareTag("Grid"))
+        if (collider.CompareTag("House"))
         {
-            if (collider.GetComponent<GridCell>().x == GridManager.width - 1)
-            {
-                StartCoroutine(DelayALittle());
-            }
+            GameManager.Instance.ChangeHealth(-1);
+            Death();
         }
-    }*/
+    }
 
     void OnCollisionEnter2D(Collision2D collision)
     {

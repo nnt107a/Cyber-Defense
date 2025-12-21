@@ -118,6 +118,10 @@ public class WaveManager : MonoBehaviour
     }
     private void SpawnEnemy(EnemyData enemyData, int lane)
     {
+        if (!GameManager.Instance.isLevelOnGoing)
+        {
+            return;
+        }
         Vector3 spawnPosition = spawnPos[lane].position;
         GameObject go = ObjectPool.Instance.Spawn(enemyData.enemyPrefab, spawnPosition, Quaternion.identity);
         Enemy enemy = go.GetComponent<Enemy>();
