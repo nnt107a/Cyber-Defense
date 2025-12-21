@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public Action OnLevelCompleted;
     public Action OnLevelLosed;
     public Action<int> OnHealthChanged;
+    public Action OnPause;
 
     public bool enemiesSpawnedCompletely = false;
     private void Awake()
@@ -95,5 +96,10 @@ public class GameManager : MonoBehaviour
             isLevelOnGoing = false;
             OnLevelLosed?.Invoke();
         }
+    }
+    public void Pause()
+    {
+        Time.timeScale = 0f;
+        OnPause?.Invoke();
     }
 }
