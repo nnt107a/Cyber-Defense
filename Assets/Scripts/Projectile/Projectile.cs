@@ -31,10 +31,10 @@ public class Projectile : MonoBehaviour, IPoolable
         {
             Debug.Log("Projectile hit: " + collision.gameObject.name);
             GridCell enemyCell = Utils.GetGridCellAt(collision.transform.position);
-            if (enemyCell == null)
+            /*if (enemyCell == null)
             {
                 return;
-            }
+            }*/
             Attack(collision.gameObject, gameObject, enemyCell);
         }
     }

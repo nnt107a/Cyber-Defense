@@ -13,22 +13,29 @@ public class BlastflameBatteryBullet : Projectile
             projectileData.radius * 1.5f
         );
 
-        foreach (var hit in hits)
+        if (gridCell == null)
         {
-            if (!hit.CompareTag("Enemy"))
-                continue;
-
-            GridCell enemyCell = Utils.GetGridCellAt(hit.transform.position);
-
-            if (enemyCell == null)
-                continue;
-
-            if (Utils.IsWithinGridRadius(gridCell, enemyCell, (int)projectileData.radius))
+            enemy.GetComponent<Enemy>()?.TakeDamage((int)damage, true);
+        }
+        else
+        {
+            foreach (var hit in hits)
             {
-                hit.GetComponent<Enemy>()?.TakeDamage((int)damage);
-                Debug.Log(
-                    $"Explosion hit enemy {hit.name} at cell ({enemyCell.x},{enemyCell.y}), deal {damage}"
-                );
+                if (!hit.CompareTag("Enemy"))
+                    continue;
+
+                GridCell enemyCell = Utils.GetGridCellAt(hit.transform.position);
+
+                if (enemyCell == null)
+                    continue;
+
+                if (Utils.IsWithinGridRadius(gridCell, enemyCell, (int)projectileData.radius))
+                {
+                    hit.GetComponent<Enemy>()?.TakeDamage((int)damage);
+                    Debug.Log(
+                        $"Explosion hit enemy {hit.name} at cell ({enemyCell.x},{enemyCell.y}), deal {damage}"
+                    );
+                }
             }
         }
         base.Attack(enemy, gameObject, gridCell);

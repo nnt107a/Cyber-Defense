@@ -45,6 +45,7 @@ public class WaveManager : MonoBehaviour
 
             yield return new WaitForSeconds(entry.intervalAfterWave);
         }
+        GameManager.Instance.enemiesSpawnedCompletely = true;
     }
 
     IEnumerator RunWave(WaveData wave, bool isFinalWave)

@@ -21,6 +21,10 @@ public class Turret : MonoBehaviour
     }
     protected virtual void Update()
     {
+        if (!GameManager.Instance.isLevelOnGoing)
+        {
+            return;
+        }
         if (laneIndex == -1)
         {
             return;
@@ -58,6 +62,15 @@ public class Turret : MonoBehaviour
         attackTimer = 0f;
         GameObject go = ObjectPool.Instance.Spawn(turretData.projectilePrefab, firePoint.position, Quaternion.identity);
         go.GetComponent<Projectile>().Init(turretData.projectilePrefab, turretData.attackDamage, this);
+    }
+    public void TakeDamage(float damage)
+    {
+        //Add effect
+        currentHealth -= damage;
+        if (currentHealth <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
     public void ShowFloatingText(string text, Color color)
     {

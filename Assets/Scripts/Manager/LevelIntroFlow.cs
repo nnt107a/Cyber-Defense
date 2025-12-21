@@ -17,6 +17,7 @@ public class LevelIntroFlow : MonoBehaviour
     void Start()
     {
         GameManager.Instance.isLevelOnGoing = false;
+        WaveManager.Instance.levelData = GameManager.Instance.allLevelDatas[GameManager.Instance.currentLevelIndex];
         StartCoroutine(IntroSequence());
     }
 
@@ -60,8 +61,9 @@ public class LevelIntroFlow : MonoBehaviour
 
     void StartGameplay()
     {
+        GameManager.Instance.enemiesSpawnedCompletely = false;
         GameManager.Instance.isLevelOnGoing = true;
-        Debug.Log("Gameplay started!");
+        Debug.Log("Gameplay started! Level " + GameManager.Instance.currentLevelIndex);
         LoadoutManager.Instance.RefreshShopBar();
         gameplayUI.SetActive(true);
         GameManager.Instance.Init();

@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Security.Authentication.ExtendedProtection;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour, IPoolable
@@ -14,6 +15,7 @@ public class Enemy : MonoBehaviour, IPoolable
     protected int laneIndex = -1;
 
     private EnemyState currentState;
+    protected Turret target;
 
     public EffectController effectController;
 
@@ -37,6 +39,7 @@ public class Enemy : MonoBehaviour, IPoolable
     public void Place(int index)
     {
         laneIndex = index;
+        GameManager.Instance.enemiesInLane[laneIndex].Add(this);
     }
 
     public void Run()
@@ -74,7 +77,7 @@ public class Enemy : MonoBehaviour, IPoolable
             Death();
         }
     }
-    private void OnTriggerEnter2D(Collider2D collider)
+    /*private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.CompareTag("Grid"))
         {
@@ -83,13 +86,14 @@ public class Enemy : MonoBehaviour, IPoolable
                 StartCoroutine(DelayALittle());
             }
         }
-    }
+    }*/
 
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.GetComponent<Turret>() != null)
         {
             ChangeState(EnemyState.stateAttack);
+            target = collision.gameObject.GetComponent<Turret>();
         }
     }
 
@@ -98,14 +102,15 @@ public class Enemy : MonoBehaviour, IPoolable
         if (collision.gameObject.GetComponent<Turret>() != null)
         {
             ChangeState(EnemyState.stateRun);
+            target = null;
         }
     }
 
-    private IEnumerator DelayALittle()
+    /*private IEnumerator DelayALittle()
     {
         yield return new WaitForSeconds(2.5f / enemyData.moveSpeed);
         GameManager.Instance.enemiesInLane[laneIndex].Add(this);
-    }
+    }*/
     public void OnSpawn()
     {
         effectController.ClearEffects();

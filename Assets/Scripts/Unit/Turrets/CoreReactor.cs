@@ -8,6 +8,10 @@ public class CoreReactor : Turret
     }
     protected override void Update()
     {
+        if (!GameManager.Instance.isLevelOnGoing)
+        {
+            return;
+        }
         if (laneIndex == -1)
         {
             return;
