@@ -15,8 +15,8 @@ MonoBehaviour:
   enemyPrefab: {fileID: 2838149179291942230, guid: 731f1b85c90d24f47a3ece94fe0f411d, type: 3}
   maxHealth: 150
   moveSpeed: 1
-  attackDamage: 15
+  attackDamage: 50
   attackSpeed: 1
-  physicalResistance: 10
-  magicalResistance: 0.5
+  physicalResistance: 0.1
+  magicalResistance: 0.25
   eCoreDrop: 50

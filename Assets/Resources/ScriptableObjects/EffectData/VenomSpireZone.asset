@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EffectData
   effectType: 0
   duration: 4
-  effectValue: 10
+  effectValue: 20

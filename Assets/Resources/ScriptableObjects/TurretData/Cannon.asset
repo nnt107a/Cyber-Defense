@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TurretData
   turretPrefab: {fileID: 818442344481266315, guid: d91b08a1692fefe48b0dac018e0e2334, type: 3}
   maxHealth: 100
-  attackDamage: 10
+  attackDamage: 25
   attackSpeed: 1.25
   projectilePrefab: {fileID: 145140807572029763, guid: b7a178c3b30cceb4fa7e32eb29068a45, type: 3}
   eCoreCost: 50

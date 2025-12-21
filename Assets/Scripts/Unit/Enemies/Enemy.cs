@@ -63,7 +63,7 @@ public class Enemy : MonoBehaviour, IPoolable
 
     public void TakeDamage(int amount, bool isPhysical = false)
     {
-        float damageTaken = amount * (isPhysical ? (1 - Mathf.Clamp01(- enemyData.physicalResistance - effectController.TotalDefenseReduction)) : (1 - Mathf.Clamp01(- enemyData.magicalResistance - effectController.TotalResistanceReduction)));
+        float damageTaken = amount * (isPhysical ? (1 - Mathf.Clamp(enemyData.physicalResistance - effectController.TotalDefenseReduction, 0f, 0.7f)) : (1 - Mathf.Clamp(enemyData.magicalResistance - effectController.TotalResistanceReduction, 0f, 0.7f)));
         Debug.Log("Enemy took " + (isPhysical ? "physic" : "magic") + " damage: " + damageTaken);
         currentHealth -= damageTaken;
         animator.SetTrigger("takeHit");
