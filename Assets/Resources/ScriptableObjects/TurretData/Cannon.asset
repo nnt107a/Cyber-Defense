@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaab8eb3dc6ad394b99cfec4f19dfccc, type: 3}
   m_Name: Cannon
   m_EditorClassIdentifier: Assembly-CSharp::TurretData
+  turretPrefab: {fileID: 818442344481266315, guid: d91b08a1692fefe48b0dac018e0e2334, type: 3}
   maxHealth: 100
   attackDamage: 10
   attackSpeed: 1.25

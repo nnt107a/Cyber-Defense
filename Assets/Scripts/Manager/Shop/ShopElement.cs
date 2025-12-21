@@ -19,10 +19,14 @@ public class ShopElement : MonoBehaviour
 
     private void Start()
     {
-        GetComponent<Image>().sprite = towerPrefab.GetComponent<SpriteRenderer>().sprite;
         GetComponent<Button>().onClick.AddListener(() => 
         {
-            if (LevelManager.Instance.eCoreCount < towerPrefab.GetComponent<Turret>().turretData.eCoreCost || rechargeTimer < rechargeTime)
+            if (GameManager.Instance.isLevelOnGoing == false)
+            {
+                LoadoutManager.Instance.UnselectTurret(towerPrefab?.GetComponent<Turret>().turretData);
+                return;
+            }
+            if (LevelManager.Instance.eCoreCount < towerPrefab?.GetComponent<Turret>().turretData.eCoreCost || rechargeTimer < rechargeTime)
             {
                 return;
             }
@@ -33,14 +37,14 @@ public class ShopElement : MonoBehaviour
             }
             UnitDragHandler.Instance.BeginDrag(gameObject);
         });
-        towerCostText.text = towerPrefab.GetComponent<Turret>().turretData.eCoreCost.ToString();
+        towerCostText.text = towerPrefab?.GetComponent<Turret>().turretData.eCoreCost.ToString();
     }
     private void Update()
     {
         rechargeTimer += Time.deltaTime;
         filler.fillAmount = Mathf.Clamp01(1f - rechargeTimer / rechargeTime);
 
-        if (LevelManager.Instance.eCoreCount < towerPrefab.GetComponent<Turret>().turretData.eCoreCost)
+        if (LevelManager.Instance.eCoreCount < towerPrefab?.GetComponent<Turret>().turretData.eCoreCost && GameManager.Instance.isLevelOnGoing)
         {
             towerCostText.color = Color.darkRed;
         }
@@ -53,4 +57,22 @@ public class ShopElement : MonoBehaviour
     {
         rechargeTimer = 0f;
     }
+    public void Setup(TurretData data)
+    {
+        towerPrefab = data.turretPrefab;
+
+        rechargeTime = data.rechargeTime;
+        rechargeTimer = rechargeTime;
+
+        GetComponent<Image>().sprite =
+            data.turretPrefab.GetComponent<SpriteRenderer>().sprite;
+
+        towerCostText.text = data.eCoreCost.ToString();
+    }
+
+    public void Clear()
+    {
+        towerPrefab = null;
+    }
+
 }

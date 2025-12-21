@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaab8eb3dc6ad394b99cfec4f19dfccc, type: 3}
   m_Name: VoidResonator
   m_EditorClassIdentifier: Assembly-CSharp::TurretData
+  turretPrefab: {fileID: 7259009605057248777, guid: 9ca16e401be4c6d46a798a26d6d0a486, type: 3}
   maxHealth: 100
   attackDamage: 20
   attackSpeed: 0.8

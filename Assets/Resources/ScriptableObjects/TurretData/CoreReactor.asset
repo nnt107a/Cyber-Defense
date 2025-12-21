@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaab8eb3dc6ad394b99cfec4f19dfccc, type: 3}
   m_Name: CoreReactor
   m_EditorClassIdentifier: Assembly-CSharp::TurretData
+  turretPrefab: {fileID: 3552695032973166042, guid: 0cfd36ac19b220b4487869f92e3b447c, type: 3}
   maxHealth: 100
   attackDamage: 50
   attackSpeed: 0.05

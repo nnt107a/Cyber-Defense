@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eaab8eb3dc6ad394b99cfec4f19dfccc, type: 3}
   m_Name: BlastflameBattery
   m_EditorClassIdentifier: Assembly-CSharp::TurretData
+  turretPrefab: {fileID: 1239614873695953708, guid: 353aed5ce4ff7904e962026e7bd77f29, type: 3}
   maxHealth: 100
   attackDamage: 20
   attackSpeed: 0.4

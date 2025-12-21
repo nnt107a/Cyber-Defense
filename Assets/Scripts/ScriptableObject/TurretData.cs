@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NewTurretData", menuName = "ScriptableObjects/TurretData", order = 1)]
 public class TurretData : ScriptableObject
 {
+    public GameObject turretPrefab;
     public float maxHealth = 100f;
     public float attackDamage = 10f;
     public float attackSpeed = 1f;

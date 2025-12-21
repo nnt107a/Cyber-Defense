@@ -1,0 +1,37 @@
+using TMPro;
+using UnityEngine;
+using UnityEngine.UI;
+
+public class LoadoutSlot : MonoBehaviour
+{
+    public TurretData turretData;
+    public Image icon;
+    public TextMeshProUGUI eCoreCost;
+    public Image selectedOverlay;
+
+    void Start()
+    {
+        icon.sprite =
+            turretData.turretPrefab.GetComponent<SpriteRenderer>().sprite;
+        eCoreCost.text = turretData.eCoreCost.ToString();
+
+        GetComponent<Button>().onClick.AddListener(OnClick);
+        Refresh();
+    }
+
+    void OnClick()
+    {
+        if (LoadoutManager.Instance.IsSelected(turretData))
+            LoadoutManager.Instance.UnselectTurret(turretData);
+        else
+            LoadoutManager.Instance.SelectTurret(turretData);
+
+        Refresh();
+    }
+
+    public void Refresh()
+    {
+        selectedOverlay.enabled =
+            LoadoutManager.Instance.IsSelected(turretData);
+    }
+}
