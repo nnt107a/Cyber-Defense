@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4078eefe2913944458e267c1387e6378, type: 3}
   m_Name: Windrazor
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
-  enemyPrefab: {fileID: 0}
+  enemyPrefab: {fileID: 7624256713184337812, guid: 9bda1447b98143f4fbc90cd0552e9c43, type: 3}
   maxHealth: 90
-  moveSpeed: 3.5
-  attackDamage: 10
+  moveSpeed: 3
+  attackDamage: 40
   attackSpeed: 1
-  physicalResistance: 2
-  magicalResistance: 1
+  physicalResistance: 0.1
+  magicalResistance: 0.1
   eCoreDrop: 50

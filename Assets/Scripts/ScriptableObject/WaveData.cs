@@ -26,7 +26,7 @@ public class WaveData : ScriptableObject
         {
             float eventEndTime = spawnEvent.time;
             int count = spawnEvent.randomCount
-                ? Random.Range(spawnEvent.countRange.x, spawnEvent.countRange.y + 1)
+                ? spawnEvent.countRange.x
                 : spawnEvent.fixedCount;
             if (count > 1)
             {

@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Rustplate
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
   enemyPrefab: {fileID: 4700680802654681910, guid: e1991f8f683b7464683e159a8e88de34, type: 3}
-  maxHealth: 120
+  maxHealth: 200
   moveSpeed: 1
-  attackDamage: 7
-  attackSpeed: 1
-  physicalResistance: 10
-  magicalResistance: 5
+  attackDamage: 20
+  attackSpeed: 0.5
+  physicalResistance: 0.4
+  magicalResistance: 0.1
   eCoreDrop: 50
