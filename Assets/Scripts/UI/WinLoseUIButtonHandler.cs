@@ -26,7 +26,6 @@ public class WinLoseUIButtonHandler : MonoBehaviour
         {
             continueButton.SetActive(false);
         }
-        panel.gameObject.SetActive(true);
         panel.interactable = true;
         panel.blocksRaycasts = true;
         panel.DOFade(1f, 0.5f);
@@ -40,7 +39,6 @@ public class WinLoseUIButtonHandler : MonoBehaviour
         {
             continueButton.SetActive(false);
         }
-        panel.gameObject.SetActive(true);
         panel.interactable = true;
         panel.blocksRaycasts = true;
         panel.DOFade(1f, 0.5f);

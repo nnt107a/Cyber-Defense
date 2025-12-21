@@ -42,7 +42,6 @@ public class GameManager : MonoBehaviour
         }
         if ((Time.frameCount & 31) == 0)
         {
-            Debug.Log("Enemies counter: " + EnemiesCount() + ", Spawned completely: " + enemiesSpawnedCompletely);
             if (enemiesSpawnedCompletely && !EnemiesRemaining() && isLevelOnGoing)
             {
                 isLevelOnGoing = false;

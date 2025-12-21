@@ -1,14 +1,24 @@
 using DG.Tweening;
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Localization.Components;
+using UnityEngine.Localization.Settings;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UIPause : MonoBehaviour
 {
     [SerializeField] private CanvasGroup panel;
+    [SerializeField] private Button[] languages;
     private void Start()
     {
         GameManager.Instance.OnPause += Show;
+        for (int i = 0; i < languages.Length; i++)
+        {
+            int index = i;
+            languages[i].onClick.AddListener(() => SetLanguage(index));
+        }
     }
     private void OnDestroy()
     {
@@ -16,7 +26,6 @@ public class UIPause : MonoBehaviour
     }
     private void Show()
     {
-        panel.gameObject.SetActive(true);
         panel.interactable = true;
         panel.blocksRaycasts = true;
         panel.DOFade(1f, 0.5f).SetUpdate(true);
@@ -35,9 +44,28 @@ public class UIPause : MonoBehaviour
         panel.DOFade(0f, 0.5f).SetUpdate(true).OnComplete(() =>
         {
             Time.timeScale = 1f;
-            panel.gameObject.SetActive(false);
             panel.interactable = false;
             panel.blocksRaycasts = false;
         });
+    }
+    public void SetLanguage(int localeIndex)
+    {
+        StartCoroutine(SetLocale(localeIndex));
+    }
+
+    IEnumerator SetLocale(int index)
+    {
+        yield return LocalizationSettings.InitializationOperation;
+        LocalizationSettings.SelectedLocale =
+            LocalizationSettings.AvailableLocales.Locales[index];
+
+        yield return null;
+
+        LocalizeStringEvent[] allLocalizeComponents = FindObjectsByType<LocalizeStringEvent>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        foreach (var localizeComponent in allLocalizeComponents)
+        {
+            localizeComponent.RefreshString();
+        }
+        Debug.Log("Language set to: " + LocalizationSettings.SelectedLocale.LocaleName);
     }
 }
