@@ -30,3 +30,6 @@ Thumbs.db
 # Crash reports
 *.stacktrace
 .vs/
+
+# Others
+Assets/Textures/Fonts/Orbitron/**/*.asset
