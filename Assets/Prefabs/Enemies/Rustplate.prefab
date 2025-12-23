@@ -97,7 +97,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   enemyData: {fileID: 11400000, guid: 56ce6923c1fbe6b4b8f4e7c4b595b3a0, type: 2}
-  effectController: {fileID: 0}
+  effectController: {fileID: -3347895069233394323}
 --- !u!114 &-3347895069233394323
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,4 +110,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a430abc9c95a7074e86f5825dd1d3fb9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EffectController
-  enemy: {fileID: 0}
+  enemy: {fileID: 338861632953553717}
