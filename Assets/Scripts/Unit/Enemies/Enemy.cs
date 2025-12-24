@@ -58,9 +58,10 @@ public class Enemy : MonoBehaviour, IPoolable
         animator.SetBool("isRunning", false);
         Debug.Log("Enemy attacks.");
         animator.SetTrigger("attack");
+        target.TakeDamage(enemyData.attackDamage);
     }
 
-    protected void Death()
+    protected virtual void Death()
     {
         LevelManager.Instance.ChangeECoreCount(enemyData.eCoreDrop);
         Debug.Log("Enemy died.");

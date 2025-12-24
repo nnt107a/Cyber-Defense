@@ -110,6 +110,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Gloomslime
   enemyData: {fileID: 11400000, guid: 7b65c1c007df52946a4e16a58c5514ee, type: 2}
   effectController: {fileID: 1645754494043453855}
+  childPrefab: {fileID: 4538286258434966499, guid: 629258ea9306768438bc3c38a5c9c316, type: 3}
+  isParent: 1
 --- !u!114 &1645754494043453855
 MonoBehaviour:
   m_ObjectHideFlags: 0
