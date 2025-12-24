@@ -27,13 +27,15 @@ public class Gloomslime : Enemy
         if (isParent)
         {
             Gloomslime child1 = ObjectPool
-                .Instance.Spawn(childPrefab, transform.position, Quaternion.identity)
+                .Instance.Spawn(childPrefab, transform.position + Vector3.left * 0.2f, Quaternion.identity)
                 .GetComponent<Gloomslime>();
+            child1.Place(laneIndex);
             child1.isParent = false;
 
             Gloomslime child2 = ObjectPool
-                .Instance.Spawn(childPrefab, transform.position, Quaternion.identity)
+                .Instance.Spawn(childPrefab, transform.position + Vector3.right * 0.2f, Quaternion.identity)
                 .GetComponent<Gloomslime>();
+            child2.Place(laneIndex);
             child2.isParent = false;
         }
         base.Death();
