@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
     public Action OnPause;
 
     public bool enemiesSpawnedCompletely = false;
+    public bool isTransitioningAfterChoosingLoadout = false;
     private void Awake()
     {
         enemiesInLane = new HashSet<Enemy>[GridManager.height];

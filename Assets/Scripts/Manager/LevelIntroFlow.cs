@@ -41,6 +41,8 @@ public class LevelIntroFlow : MonoBehaviour
         while (waitingForStart)
             yield return null;
 
+        GameManager.Instance.isTransitioningAfterChoosingLoadout = true;
+
         startButton.GetComponent<CanvasGroup>().DOFade(0f, 0.5f).OnComplete(() =>
         {
             startButton.SetActive(false);
@@ -50,6 +52,8 @@ public class LevelIntroFlow : MonoBehaviour
         yield return new WaitForSeconds(0.6f);
 
         yield return cameraController.MoveToYard(cameraMoveTime).WaitForCompletion();
+
+        GameManager.Instance.isTransitioningAfterChoosingLoadout = false;
 
         StartGameplay();
     }
