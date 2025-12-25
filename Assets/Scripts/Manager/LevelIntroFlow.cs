@@ -9,7 +9,8 @@ public class LevelIntroFlow : MonoBehaviour
     [SerializeField] private LoadoutBoardController loadoutBoard;
     [SerializeField] private GameObject gameplayUI;
     [SerializeField] private GameObject startButton;
-    [SerializeField] private GameObject shopContainer;
+    [SerializeField] private GameObject shopContainer; 
+    [SerializeField] LoadoutEnemyPreviewSpawner previewSpawner;
 
     [SerializeField] private float cameraMoveTime = 1.2f;
 
@@ -26,6 +27,8 @@ public class LevelIntroFlow : MonoBehaviour
         gameplayUI.SetActive(false);
         yield return new WaitForSeconds(0.5f);
 
+        previewSpawner.SpawnPreviews();
+
         yield return cameraController.MoveToEnemy(cameraMoveTime).WaitForCompletion();
 
         loadoutBoard.Show();
@@ -41,6 +44,8 @@ public class LevelIntroFlow : MonoBehaviour
         while (waitingForStart)
             yield return null;
 
+        GameManager.Instance.isTransitioningAfterChoosingLoadout = true;
+
         startButton.GetComponent<CanvasGroup>().DOFade(0f, 0.5f).OnComplete(() =>
         {
             startButton.SetActive(false);
@@ -50,6 +55,8 @@ public class LevelIntroFlow : MonoBehaviour
         yield return new WaitForSeconds(0.6f);
 
         yield return cameraController.MoveToYard(cameraMoveTime).WaitForCompletion();
+
+        GameManager.Instance.isTransitioningAfterChoosingLoadout = false;
 
         StartGameplay();
     }
@@ -61,6 +68,7 @@ public class LevelIntroFlow : MonoBehaviour
 
     void StartGameplay()
     {
+        previewSpawner.Clear();
         GameManager.Instance.enemiesSpawnedCompletely = false;
         GameManager.Instance.isLevelOnGoing = true;
         Debug.Log("Gameplay started! Level " + GameManager.Instance.currentLevelIndex);

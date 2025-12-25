@@ -9,6 +9,7 @@ public class Enemy : MonoBehaviour, IPoolable
     protected Rigidbody2D rb;
     protected Animator animator;
     protected float currentHealth;
+    protected Collider2D enemyCollider;
 
     protected float attackInterval;
     public float AttackInterval { get { return attackInterval; } }
@@ -16,11 +17,13 @@ public class Enemy : MonoBehaviour, IPoolable
 
     private EnemyState currentState;
     protected Turret target;
+    protected bool isDying = false;
 
     public EffectController effectController;
 
     protected virtual void Awake()
     {
+        enemyCollider = GetComponent<Collider2D>();
         animator = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         attackInterval = 1.0f / enemyData.attackSpeed;
@@ -31,9 +34,18 @@ public class Enemy : MonoBehaviour, IPoolable
         Debug.Log("Current state: " + currentState);
     }
 
+    public void EnterPreviewMode()
+    {
+        enabled = false;
+    }
+
     protected virtual void Update()
     {
         if (!GameManager.Instance.isLevelOnGoing)
+        {
+            return;
+        }
+        if (isDying)
         {
             return;
         }
@@ -42,8 +54,10 @@ public class Enemy : MonoBehaviour, IPoolable
 
     public void Place(int index)
     {
+        isDying = false;
         laneIndex = index;
         GameManager.Instance.enemiesInLane[laneIndex].Add(this);
+        enemyCollider.enabled = true;
     }
 
     public void Run()
@@ -61,14 +75,49 @@ public class Enemy : MonoBehaviour, IPoolable
         target.TakeDamage(enemyData.attackDamage);
     }
 
-    protected virtual void Death()
+    protected virtual void Death(bool defeated = true)
     {
-        LevelManager.Instance.ChangeECoreCount(enemyData.eCoreDrop);
+        if (this is Gloomslime gloomslime)
+        {
+
+            if (gloomslime.isParent)
+            {
+                Gloomslime child1 = ObjectPool
+                    .Instance.Spawn(gloomslime.childPrefab, transform.position + Vector3.left * 0.2f, Quaternion.identity)
+                    .GetComponent<Gloomslime>();
+                child1.Place(laneIndex);
+                child1.isParent = false;
+
+                Gloomslime child2 = ObjectPool
+                    .Instance.Spawn(gloomslime.childPrefab, transform.position + Vector3.right * 0.2f, Quaternion.identity)
+                    .GetComponent<Gloomslime>();
+                child2.Place(laneIndex);
+                child2.isParent = false;
+            }
+        }
+        if (defeated)
+        {
+            LevelManager.Instance.ChangeECoreCount(enemyData.eCoreDrop);
+        }
         Debug.Log("Enemy died.");
         GameManager.Instance.enemiesInLane[laneIndex].Remove(this);
         ObjectPool.Instance.Despawn(enemyData.enemyPrefab, gameObject);
     }
-
+    public void OnDeathAnimEnd()
+    {
+        Death();
+    }
+    protected void PlayDeathAnim()
+    {
+        if (isDying)
+        {
+            return;
+        }
+        enemyCollider.enabled = false;
+        isDying = true;
+        animator.ResetTrigger("takeHit");
+        animator.SetTrigger("death");
+    }
     public void TakeDamage(int amount, bool isPhysical = false)
     {
         float damageTaken = amount * (isPhysical ? (1 - Mathf.Clamp(enemyData.physicalResistance - effectController.TotalDefenseReduction, 0f, 0.7f)) : (1 - Mathf.Clamp(enemyData.magicalResistance - effectController.TotalResistanceReduction, 0f, 0.7f)));
@@ -77,9 +126,7 @@ public class Enemy : MonoBehaviour, IPoolable
         animator.SetTrigger("takeHit");
         if (currentHealth <= 0)
         {
-            animator.ResetTrigger("takeHit");
-            animator.SetTrigger("death");
-            Death();
+            PlayDeathAnim();
         }
     }
     private void OnTriggerEnter2D(Collider2D collider)
@@ -87,7 +134,7 @@ public class Enemy : MonoBehaviour, IPoolable
         if (collider.CompareTag("House"))
         {
             GameManager.Instance.ChangeHealth(-1);
-            Death();
+            Death(false);
         }
     }
 

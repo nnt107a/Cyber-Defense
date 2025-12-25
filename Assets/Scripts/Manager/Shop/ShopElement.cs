@@ -21,6 +21,10 @@ public class ShopElement : MonoBehaviour
     {
         GetComponent<Button>().onClick.AddListener(() => 
         {
+            if (GameManager.Instance.isTransitioningAfterChoosingLoadout)
+            {
+                return;
+            }
             if (GameManager.Instance.isLevelOnGoing == false)
             {
                 LoadoutManager.Instance.UnselectTurret(towerPrefab?.GetComponent<Turret>().turretData);

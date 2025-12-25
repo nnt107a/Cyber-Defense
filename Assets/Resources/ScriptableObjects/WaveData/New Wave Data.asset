@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: New Wave Data
   m_EditorClassIdentifier: Assembly-CSharp::WaveData
   spawnEvents:
-  - time: 2
+  - time: 5
     enemyPool:
     - {fileID: 11400000, guid: 7b65c1c007df52946a4e16a58c5514ee, type: 2}
     allowDuplicate: 0

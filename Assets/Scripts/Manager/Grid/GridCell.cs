@@ -32,6 +32,7 @@ public class GridCell : MonoBehaviour
         {
             return false;
         }
+        SoundManager.Instance.PlayUnitPlacedRemoved();
         if (UnitDragHandler.Instance.isSellAction)
         {
             unit.GetComponent<Turret>().ShowFloatingText("+" + ((int)(unit.GetComponent<Turret>().turretData.eCoreCost * 0.7f)).ToString(), Color.gold);
