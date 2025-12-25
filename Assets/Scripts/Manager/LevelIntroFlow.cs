@@ -9,7 +9,8 @@ public class LevelIntroFlow : MonoBehaviour
     [SerializeField] private LoadoutBoardController loadoutBoard;
     [SerializeField] private GameObject gameplayUI;
     [SerializeField] private GameObject startButton;
-    [SerializeField] private GameObject shopContainer;
+    [SerializeField] private GameObject shopContainer; 
+    [SerializeField] LoadoutEnemyPreviewSpawner previewSpawner;
 
     [SerializeField] private float cameraMoveTime = 1.2f;
 
@@ -25,6 +26,8 @@ public class LevelIntroFlow : MonoBehaviour
     {
         gameplayUI.SetActive(false);
         yield return new WaitForSeconds(0.5f);
+
+        previewSpawner.SpawnPreviews();
 
         yield return cameraController.MoveToEnemy(cameraMoveTime).WaitForCompletion();
 
@@ -65,6 +68,7 @@ public class LevelIntroFlow : MonoBehaviour
 
     void StartGameplay()
     {
+        previewSpawner.Clear();
         GameManager.Instance.enemiesSpawnedCompletely = false;
         GameManager.Instance.isLevelOnGoing = true;
         Debug.Log("Gameplay started! Level " + GameManager.Instance.currentLevelIndex);

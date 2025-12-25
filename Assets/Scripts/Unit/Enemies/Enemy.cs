@@ -34,6 +34,11 @@ public class Enemy : MonoBehaviour, IPoolable
         Debug.Log("Current state: " + currentState);
     }
 
+    public void EnterPreviewMode()
+    {
+        enabled = false;
+    }
+
     protected virtual void Update()
     {
         if (!GameManager.Instance.isLevelOnGoing)

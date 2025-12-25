@@ -4,7 +4,10 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "ScriptableObjects/Level Data")]
 public class LevelData : ScriptableObject
 {
-    public List<WaveEntry> waves;
+    public List<WaveEntry> waves; 
+    
+    [Header("Loadout Preview")]
+    public int previewEnemyCount = 10;
     public float GetTotalDuration()
     {
         float total = 0f;
