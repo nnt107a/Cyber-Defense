@@ -54,6 +54,14 @@ MonoBehaviour:
     m_Localized: SOUND EFFECT
     m_Metadata:
       m_Items: []
+  - m_Id: 1613899072348160
+    m_Localized: EXIT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1614116962246656
+    m_Localized: PLAY
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
