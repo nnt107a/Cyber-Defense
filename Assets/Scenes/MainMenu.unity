@@ -1986,10 +1986,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   isLevelOnGoing: 0
   allLevelDatas:
-  - {fileID: 11400000, guid: c4937cb68cffeff43904bd6088f8c2da, type: 2}
   - {fileID: 11400000, guid: a3f7cb6577b07584cbbce6af6df81b47, type: 2}
+  - {fileID: 11400000, guid: c4937cb68cffeff43904bd6088f8c2da, type: 2}
   currentLevelIndex: 0
-  health: 5
+  maxHealth: 5
   enemiesSpawnedCompletely: 0
   isTransitioningAfterChoosingLoadout: 0
 --- !u!4 &4388769165678771817

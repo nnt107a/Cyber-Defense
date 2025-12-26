@@ -63,8 +63,7 @@ public class Enemy : MonoBehaviour, IPoolable
     public void Run()
     {
         animator.SetBool("isRunning", true);
-        Vector2 newPosition = rb.position + Vector2.left * enemyData.moveSpeed * Time.deltaTime * effectController.CurrentSlowMultiplier;
-        rb.MovePosition(newPosition);
+        transform.position = transform.position + Vector3.left * enemyData.moveSpeed * Time.deltaTime * effectController.CurrentSlowMultiplier;
     }
 
     public virtual void Attack()
@@ -86,7 +85,6 @@ public class Enemy : MonoBehaviour, IPoolable
     {
         if (this is Gloomslime gloomslime)
         {
-
             if (gloomslime.isParent)
             {
                 Gloomslime child1 = ObjectPool

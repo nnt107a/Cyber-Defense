@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
   enemyPrefab: {fileID: 2838149179291942230, guid: 731f1b85c90d24f47a3ece94fe0f411d, type: 3}
   maxHealth: 150
-  moveSpeed: 1
+  moveSpeed: 0.3
   attackDamage: 70
   attackSpeed: 0.75
   physicalResistance: 0.1
