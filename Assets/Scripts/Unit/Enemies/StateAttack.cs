@@ -11,8 +11,12 @@ public class StateAttack : EnemyState
         if (attackTimer >= enemy.AttackInterval)
         {
             enemy.Attack();
-            attackTimer = 0;
+            attackTimer = -10f;
             return;
         }
+    }
+    public void ResetAttackTimer()
+    {
+        attackTimer = 0f;
     }
 }

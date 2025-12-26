@@ -70,9 +70,16 @@ public class Enemy : MonoBehaviour, IPoolable
     public virtual void Attack()
     {
         animator.SetBool("isRunning", false);
-        Debug.Log("Enemy attacks.");
         animator.SetTrigger("attack");
-        target.TakeDamage(enemyData.attackDamage);
+    }
+    public void DealDamage()
+    {
+        Debug.Log("Enemy attacks.");
+        target?.TakeDamage(enemyData.attackDamage);
+        if (currentState is StateAttack stateAttack)
+        {
+            stateAttack.ResetAttackTimer();
+        }
     }
 
     protected virtual void Death(bool defeated = true)
@@ -142,6 +149,7 @@ public class Enemy : MonoBehaviour, IPoolable
     {
         if (collision.gameObject.GetComponent<Turret>() != null)
         {
+            animator.SetBool("isRunning", false);
             ChangeState(EnemyState.stateAttack);
             target = collision.gameObject.GetComponent<Turret>();
         }

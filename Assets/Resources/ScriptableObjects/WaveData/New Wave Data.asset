@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: New Wave Data
   m_EditorClassIdentifier: Assembly-CSharp::WaveData
   spawnEvents:
-  - time: 5
+  - time: 7
     enemyPool:
-    - {fileID: 11400000, guid: 7b65c1c007df52946a4e16a58c5514ee, type: 2}
+    - {fileID: 11400000, guid: 186dd0d8a3d5d084791eb5ed36921db1, type: 2}
     allowDuplicate: 0
     randomLane: 1
     fixedLane: 0
     minLane: 0
     maxLane: 4
     randomCount: 0
-    fixedCount: 1
+    fixedCount: 2
     countRange: {x: 0, y: 0}
-    interval: 0
+    interval: 10

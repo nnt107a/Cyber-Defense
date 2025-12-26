@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e022d5270afc6464aa160d308256c817, type: 3}
+  m_Name: Level0
+  m_EditorClassIdentifier: Assembly-CSharp::LevelData
+  waves:
+  - wave: {fileID: 11400000, guid: f6914c48554822c418674cfcd0d0e9d2, type: 2}
+    intervalAfterWave: 2
+  - wave: {fileID: 11400000, guid: a7c779fcc4d06044b9d02307c1a025b4, type: 2}
+    intervalAfterWave: 2
+  - wave: {fileID: 11400000, guid: 800e2401e30b0f74895da3545cb92ee0, type: 2}
+    intervalAfterWave: 0
+  previewEnemyCount: 3

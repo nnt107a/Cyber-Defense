@@ -70,6 +70,7 @@ public class Turret : MonoBehaviour
         if (currentHealth <= 0)
         {
             Destroy(gameObject);
+            gridCell.RemoveTurret();
         }
     }
     public void ShowFloatingText(string text, Color color)
