@@ -169,7 +169,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5753221667279038310, guid: 68496d80eaa327d4a8a7d93bc65577fd, type: 3}
       propertyPath: m_Name
-      value: GlobalUIButtonSound
+      value: GlobalUIHandler
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     public Action OnLevelLosed;
     public Action<int> OnHealthChanged;
     public Action OnPause;
+    public Action OnGoToSetting;
 
     public bool enemiesSpawnedCompletely = false;
     public bool isTransitioningAfterChoosingLoadout = false;
@@ -101,5 +102,9 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 0f;
         OnPause?.Invoke();
+    }
+    public void GoToSetting()
+    {
+        OnGoToSetting?.Invoke();
     }
 }

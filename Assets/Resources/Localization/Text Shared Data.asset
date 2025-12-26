@@ -39,6 +39,18 @@ MonoBehaviour:
     m_Key: TXT_START
     m_Metadata:
       m_Items: []
+  - m_Id: 1608283935285248
+    m_Key: TXT_SETTING
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1608337681096704
+    m_Key: TXT_MUSIC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1608540916097024
+    m_Key: TXT_SFX
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
