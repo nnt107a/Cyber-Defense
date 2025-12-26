@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using static Unity.Burst.Intrinsics.X86.Avx;
 
 
 public class MainMenu : MonoBehaviour
@@ -16,8 +17,10 @@ public class MainMenu : MonoBehaviour
     // Update is called once per frame
     public void Exit()
     {
-        SceneManager.LoadScene(0);
-        
-        
+        #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+        #else
+            Application.Quit();
+        #endif
     }
 }
