@@ -80,5 +80,7 @@ public class UIPause : MonoBehaviour
             localizeComponent.RefreshString();
         }
         Debug.Log("Language set to: " + LocalizationSettings.SelectedLocale.LocaleName);
+        PlayerPrefs.SetInt("LocaleIndex", index);
+        PlayerPrefs.Save();
     }
 }

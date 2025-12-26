@@ -36,6 +36,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rustplate
       objectReference: {fileID: 0}
+    - target: {fileID: 8321924851408239348, guid: 77c6d730adee01048aa5337e8a96a672, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.074
+      objectReference: {fileID: 0}
+    - target: {fileID: 8321924851408239348, guid: 77c6d730adee01048aa5337e8a96a672, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.376
+      objectReference: {fileID: 0}
     - target: {fileID: 8708143255353034037, guid: 77c6d730adee01048aa5337e8a96a672, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.504
@@ -75,6 +83,14 @@ PrefabInstance:
     - target: {fileID: 8708143255353034037, guid: 77c6d730adee01048aa5337e8a96a672, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8755623302585741398, guid: 77c6d730adee01048aa5337e8a96a672, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.074
+      objectReference: {fileID: 0}
+    - target: {fileID: 8755623302585741398, guid: 77c6d730adee01048aa5337e8a96a672, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.475
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
