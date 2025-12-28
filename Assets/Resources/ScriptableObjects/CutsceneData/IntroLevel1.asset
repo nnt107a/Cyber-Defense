@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f0270995b78b08499239e6f7c22adc3, type: 3}
+  m_Name: IntroLevel1
+  m_EditorClassIdentifier: Assembly-CSharp::CutsceneData
+  lines:
+  - speakerIcon: {fileID: 9184683540041684037, guid: a1bfe8228758dec42960a9220933ffd3, type: 3}
+    text: This is my sajds dn  ad asjdasdnsa djandakjndaj dnsajkdansjdasndaks najk
+      da sdsd s
+  - speakerIcon: {fileID: -3358647591155879279, guid: 3cf94bad25a735849818f383972dc6f6, type: 3}
+    text: aDd sad sadaw q qww eg re ert grt grhr hrt htr This is my sajds dn  ad
+      asjdasdnsa djandakjndaj dnsajkdansjdasndaks najk da sdsd s
+  - speakerIcon: {fileID: 8856822166903049042, guid: 8bb7d48340457b14aab7878f790df828, type: 3}
+    text: aDd sad sadaw q qww eg re ert grt grhr hrt htr This is my sajds dn  ad
+      asjdasdnsa djandakjndaj dnsajkdansjdasndaks najk da sdsd  This is my sajds
+      dn  ad asjdasdnsa djandakjndaj dnsajkdansjdasndaks najk da sdsd s
+  - speakerIcon: {fileID: 21300000, guid: 42544a43522a672408a0cf8cb5455bec, type: 3}
+    text: aDd sad sadaw q qww eg re ert grt grhr hrt htr This is my sajds dn  ad
+      asjdasdnsa djandakjndaj dnsajkdansjdasndaks najk da sdsd  This is my sajds
+      dn  ad asjdasdnsa djandakjndaj dnsajkdansjdasndaks najk da sdsd s This is my
+      sajds dn  ad asjdasdnsa djandakjndaj dnsajkdansjdasndaks najk da sdsd sThis
+      is my sajds dn  ad asjdasdnsa djandakjndaj dnsajkdansjdasndaks najk da sdsd
+      s
