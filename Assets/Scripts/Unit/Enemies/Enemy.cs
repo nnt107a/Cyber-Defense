@@ -18,6 +18,7 @@ public class Enemy : MonoBehaviour, IPoolable
     private EnemyState currentState;
     protected Turret target;
     protected bool isDying = false;
+    protected bool hit = false;
 
     public EffectController effectController;
 
@@ -45,7 +46,7 @@ public class Enemy : MonoBehaviour, IPoolable
         {
             return;
         }
-        if (isDying)
+        if (isDying || hit)
         {
             return;
         }
@@ -54,6 +55,7 @@ public class Enemy : MonoBehaviour, IPoolable
 
     public void Place(int index)
     {
+        hit = false;
         isDying = false;
         laneIndex = index;
         GameManager.Instance.enemiesInLane[laneIndex].Add(this);
@@ -63,23 +65,28 @@ public class Enemy : MonoBehaviour, IPoolable
     public void Run()
     {
         animator.SetBool("isRunning", true);
-        Vector2 newPosition = rb.position + Vector2.left * enemyData.moveSpeed * Time.deltaTime * effectController.CurrentSlowMultiplier;
-        rb.MovePosition(newPosition);
+        transform.position = transform.position + Vector3.left * enemyData.moveSpeed * Time.deltaTime * effectController.CurrentSlowMultiplier;
     }
 
     public virtual void Attack()
     {
         animator.SetBool("isRunning", false);
-        Debug.Log("Enemy attacks.");
         animator.SetTrigger("attack");
-        target.TakeDamage(enemyData.attackDamage);
+    }
+    public void DealDamage()
+    {
+        Debug.Log("Enemy attacks.");
+        target?.TakeDamage(enemyData.attackDamage);
+        if (currentState is StateAttack stateAttack)
+        {
+            stateAttack.ResetAttackTimer();
+        }
     }
 
     protected virtual void Death(bool defeated = true)
     {
         if (this is Gloomslime gloomslime)
         {
-
             if (gloomslime.isParent)
             {
                 Gloomslime child1 = ObjectPool
@@ -120,14 +127,27 @@ public class Enemy : MonoBehaviour, IPoolable
     }
     public void TakeDamage(int amount, bool isPhysical = false)
     {
+        if (!hit)
+        {
+            animator.SetTrigger("takeHit");
+            hit = true;
+        }
         float damageTaken = amount * (isPhysical ? (1 - Mathf.Clamp(enemyData.physicalResistance - effectController.TotalDefenseReduction, 0f, 0.7f)) : (1 - Mathf.Clamp(enemyData.magicalResistance - effectController.TotalResistanceReduction, 0f, 0.7f)));
         Debug.Log("Enemy took " + (isPhysical ? "physic" : "magic") + " damage: " + damageTaken);
         currentHealth -= damageTaken;
-        animator.SetTrigger("takeHit");
         if (currentHealth <= 0)
         {
             PlayDeathAnim();
         }
+    }
+    public void ResetHitState()
+    {
+        hit = false;
+        animator.SetBool("isRunning", false);
+    }
+    public void ResetHitStateToMove()
+    {
+        /*hit = false;*/
     }
     private void OnTriggerEnter2D(Collider2D collider)
     {

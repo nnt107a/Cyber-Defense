@@ -22,7 +22,12 @@ public class EffectController : MonoBehaviour
     public float CurrentSlowMultiplier { get; private set; } = 1f;
     public float TotalDefenseReduction { get; private set; } = 0f;
     public float TotalResistanceReduction { get; private set; } = 0f;
-
+    
+    private StatusEffectHandler statusEffectHandler;
+    private void Awake()
+    {
+        statusEffectHandler = GetComponent<StatusEffectHandler>();
+    }
     public void ApplyEffect(EffectData data, Turret turret)
     {
         ActiveEffect effect = new ActiveEffect();
@@ -77,6 +82,8 @@ public class EffectController : MonoBehaviour
         }
 
         CurrentSlowMultiplier = 1f - strongestSlow;
+
+        statusEffectHandler?.PlaySlowEffect(strongestSlow > 0f);
     }
     private void ApplyReductions()
     {
@@ -100,6 +107,8 @@ public class EffectController : MonoBehaviour
         {
             enemy.GetComponent<SpriteRenderer>().color = Color.purple;
         }
+
+        statusEffectHandler?.PlayReduceResEffect(TotalDefenseReduction > 0f || TotalResistanceReduction > 0f);
     }
     public void ClearEffects()
     {

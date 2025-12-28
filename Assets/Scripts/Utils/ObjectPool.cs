@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -22,12 +23,19 @@ public class ObjectPool : MonoBehaviour
 
         GameObject obj;
 
-        if (poolDictionary[prefab].Count > 0)
+        try
         {
-            obj = poolDictionary[prefab].Dequeue();
-            obj.transform.SetPositionAndRotation(position, rotation);
+            if (poolDictionary[prefab].Count > 5)
+            {
+                obj = poolDictionary[prefab].Dequeue();
+                obj.transform.SetPositionAndRotation(position, rotation);
+            }
+            else
+            {
+                obj = Instantiate(prefab, position, rotation);
+            }
         }
-        else
+        catch (MissingReferenceException e)
         {
             obj = Instantiate(prefab, position, rotation);
         }

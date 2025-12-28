@@ -10,9 +10,28 @@ using UnityEngine.UI;
 public class UIPause : MonoBehaviour
 {
     [SerializeField] private CanvasGroup panel;
+    [SerializeField] private Slider musicVolumeSlider;
+    [SerializeField] private Slider sfxVolumeSlider;
     private void Start()
     {
         GameManager.Instance.OnPause += Show;
+        musicVolumeSlider.value = SoundManager.Instance.musicSource.volume;
+        sfxVolumeSlider.value = SoundManager.Instance.sfxSource.volume;
+
+        musicVolumeSlider.onValueChanged.AddListener((value) =>
+        {
+            SoundManager.Instance.musicSource.volume = value;
+            PlayerPrefs.SetFloat("MusicVolume", value);
+            PlayerPrefs.Save();
+        });
+        sfxVolumeSlider.onValueChanged.AddListener((value) =>
+        {
+            SoundManager.Instance.sfxSource.volume = value;
+            SoundManager.Instance.uiSource.volume = value;
+            PlayerPrefs.SetFloat("SFXVolume", value);
+            PlayerPrefs.SetFloat("UIVolume", value);
+            PlayerPrefs.Save();
+        });
     }
     private void OnDestroy()
     {
@@ -61,5 +80,7 @@ public class UIPause : MonoBehaviour
             localizeComponent.RefreshString();
         }
         Debug.Log("Language set to: " + LocalizationSettings.SelectedLocale.LocaleName);
+        PlayerPrefs.SetInt("LocaleIndex", index);
+        PlayerPrefs.Save();
     }
 }

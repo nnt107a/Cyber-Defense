@@ -15,13 +15,14 @@ MonoBehaviour:
   spawnEvents:
   - time: 10
     enemyPool:
-    - {fileID: 11400000, guid: 7b65c1c007df52946a4e16a58c5514ee, type: 2}
+    - {fileID: 11400000, guid: 56ce6923c1fbe6b4b8f4e7c4b595b3a0, type: 2}
+    - {fileID: 11400000, guid: 67aeeb67f83c3454489dd238e6b9391a, type: 2}
     allowDuplicate: 0
     randomLane: 1
     fixedLane: 0
     minLane: 0
     maxLane: 4
     randomCount: 0
-    fixedCount: 1
+    fixedCount: 3
     countRange: {x: 0, y: 0}
-    interval: 0
+    interval: 5

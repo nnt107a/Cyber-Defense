@@ -10,8 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1979228482955331388}
   - component: {fileID: 7792233597321928094}
+  - component: {fileID: 4378474932564923425}
   m_Layer: 0
-  m_Name: GlobalUIButtonSound
+  m_Name: GlobalUIHandler
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,3 +45,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1be3fff7d6ed09342a883a0a17726cc2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GlobalUIButtonSound
+--- !u!114 &4378474932564923425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5753221667279038310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e937b4ccf9cc9024c92dcf9b7d629bbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LocalizationManager

@@ -6,9 +6,9 @@ public class SoundManager : MonoBehaviour
     public static SoundManager Instance;
 
     [Header("Audio Sources")]
-    [SerializeField] private AudioSource sfxSource;
-    [SerializeField] private AudioSource uiSource;
-    [SerializeField] private AudioSource musicSource;
+    [SerializeField] public AudioSource sfxSource;
+    [SerializeField] public AudioSource uiSource;
+    [SerializeField] public AudioSource musicSource;
 
     [Header("UI Clips")]
     public AudioClip uiClick;
@@ -25,19 +25,20 @@ public class SoundManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+        LoadVolume();
     }
 
     public void PlayUIClick()
     {
-        PlayUI(uiClick, 0.2f);
+        PlayUI(uiClick, 0.16f);
     }
     public void PlayUnitSelectClick()
     {
-        PlayUI(unitSlotClick, 1.2f);
+        PlayUI(unitSlotClick, 0.48f);
     }
     public void PlayUnitPlacedRemoved()
     {
-        PlayUI(unitPlacedRemoved, 1.5f);
+        PlayUI(unitPlacedRemoved, 0.6f);
     }
 
     private void PlayUI(AudioClip clip, float volumeScale = 1f)
@@ -64,5 +65,11 @@ public class SoundManager : MonoBehaviour
     public void StopMusic()
     {
         musicSource.Stop();
+    }
+    private void LoadVolume()
+    {
+        sfxSource.volume = PlayerPrefs.GetFloat("SFXVolume", 0.5f);
+        uiSource.volume = PlayerPrefs.GetFloat("UIVolume", 0.5f);
+        musicSource.volume = PlayerPrefs.GetFloat("MusicVolume", 0.5f);
     }
 }

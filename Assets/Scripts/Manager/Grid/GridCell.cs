@@ -38,8 +38,7 @@ public class GridCell : MonoBehaviour
             unit.GetComponent<Turret>().ShowFloatingText("+" + ((int)(unit.GetComponent<Turret>().turretData.eCoreCost * 0.7f)).ToString(), Color.gold);
             LevelManager.Instance.ChangeECoreCount((int)(unit.GetComponent<Turret>().turretData.eCoreCost * 0.7f));
             Destroy(unit);
-            unit = null;
-            unitPlaced = false;
+            RemoveTurret();
             return true;
         }
         unit = Instantiate(UnitDragHandler.Instance.shopElement.GetComponent<ShopElement>().towerPrefab, transform);
@@ -52,5 +51,10 @@ public class GridCell : MonoBehaviour
         UnitDragHandler.Instance.shopElement.GetComponent<ShopElement>().Recharge();
         UnitDragHandler.Instance.shopElement = null;
         return true;
+    }
+    public void RemoveTurret()
+    {
+        unitPlaced = false;
+        unit = null;
     }
 }

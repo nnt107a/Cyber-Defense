@@ -6,7 +6,7 @@ public class UIHealth : MonoBehaviour
     [SerializeField] private TextMeshProUGUI healthAmount;
     private void Start()
     {
-        UpdateHealthUI(GameManager.Instance.health);
+        UpdateHealthUI(GameManager.Instance.maxHealth);
         GameManager.Instance.OnHealthChanged += UpdateHealthUI;
     }
     private void OnDestroy()

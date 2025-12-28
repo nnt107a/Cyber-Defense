@@ -42,6 +42,26 @@ MonoBehaviour:
     m_Localized: START
     m_Metadata:
       m_Items: []
+  - m_Id: 1608283935285248
+    m_Localized: SETTING
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1608337681096704
+    m_Localized: MUSIC
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1608540916097024
+    m_Localized: SOUND EFFECT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1613899072348160
+    m_Localized: EXIT
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1614116962246656
+    m_Localized: PLAY
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []
