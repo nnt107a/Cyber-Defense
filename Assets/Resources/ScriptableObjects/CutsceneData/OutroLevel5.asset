@@ -14,19 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CutsceneData
   lines:
   - speakerIcon: {fileID: 9184683540041684037, guid: a1bfe8228758dec42960a9220933ffd3, type: 3}
-    text: This is my sajds dn  ad asjdasdnsa djandakjndaj dnsajkdansjdasndaks najk
-      da sdsd s
+    text: Log Entry #Final.
   - speakerIcon: {fileID: -3358647591155879279, guid: 3cf94bad25a735849818f383972dc6f6, type: 3}
-    text: aDd sad sadaw q qww eg re ert grt grhr hrt htr This is my sajds dn  ad
-      asjdasdnsa djandakjndaj dnsajkdansjdasndaks najk da sdsd s
+    text: Vorrath has been neutralized. The swarm is gone.
   - speakerIcon: {fileID: 8856822166903049042, guid: 8bb7d48340457b14aab7878f790df828, type: 3}
-    text: aDd sad sadaw q qww eg re ert grt grhr hrt htr This is my sajds dn  ad
-      asjdasdnsa djandakjndaj dnsajkdansjdasndaks najk da sdsd  This is my sajds
-      dn  ad asjdasdnsa djandakjndaj dnsajkdansjdasndaks najk da sdsd s
+    text: "The E-Core\u2026 unstable, but contained."
   - speakerIcon: {fileID: 21300000, guid: 42544a43522a672408a0cf8cb5455bec, type: 3}
-    text: aDd sad sadaw q qww eg re ert grt grhr hrt htr This is my sajds dn  ad
-      asjdasdnsa djandakjndaj dnsajkdansjdasndaks najk da sdsd  This is my sajds
-      dn  ad asjdasdnsa djandakjndaj dnsajkdansjdasndaks najk da sdsd s This is my
-      sajds dn  ad asjdasdnsa djandakjndaj dnsajkdansjdasndaks najk da sdsd sThis
-      is my sajds dn  ad asjdasdnsa djandakjndaj dnsajkdansjdasndaks najk da sdsd
-      s
+    text: This facility will never be safe again.
+  - speakerIcon: {fileID: 21300000, guid: 42544a43522a672408a0cf8cb5455bec, type: 3}
+    text: "But the world outside\u2026 will live."
+  - speakerIcon: {fileID: 21300000, guid: 42544a43522a672408a0cf8cb5455bec, type: 3}
+    text: For now.
