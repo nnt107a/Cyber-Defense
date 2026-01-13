@@ -16,7 +16,10 @@ public class Book : MonoBehaviour {
     public Canvas canvas;
     [SerializeField]
     RectTransform BookPanel;
-    public Sprite background;
+    [Header("Cover Settings")]
+    public Sprite backgroundFront; // Kéo ảnh bìa trước (Book_0) vào đây
+    public Sprite backgroundBack;  // Kéo ảnh bìa sau (Book_1) vào đây
+    public Image backgroundImage;  // Kéo GameObject có chứa Image Background vào đây
     public Sprite[] bookPages;
     public bool interactable=true;
     public bool enableShadowEffect=true;
@@ -281,7 +284,6 @@ public class Book : MonoBehaviour {
         mode = FlipMode.RightToLeft;
         f = point;
 
-
         NextPageClip.rectTransform.pivot = new Vector2(0, 0.12f);
         ClippingPlane.rectTransform.pivot = new Vector2(1, 0.35f);
 
@@ -289,15 +291,21 @@ public class Book : MonoBehaviour {
         Left.rectTransform.pivot = new Vector2(0, 0);
         Left.transform.position = RightNext.transform.position;
         Left.transform.eulerAngles = new Vector3(0, 0, 0);
-        Left.sprite = (currentPage < bookPages.Length) ? bookPages[currentPage] : background;
+
+        // --- SỬA Ở DÒNG DƯỚI ĐÂY (Thay background -> backgroundBack) ---
+        Left.sprite = (currentPage < bookPages.Length) ? bookPages[currentPage] : backgroundBack; 
+        
         Left.transform.SetAsFirstSibling();
         
         Right.gameObject.SetActive(true);
         Right.transform.position = RightNext.transform.position;
         Right.transform.eulerAngles = new Vector3(0, 0, 0);
-        Right.sprite = (currentPage < bookPages.Length - 1) ? bookPages[currentPage + 1] : background;
 
-        RightNext.sprite = (currentPage < bookPages.Length - 2) ? bookPages[currentPage + 2] : background;
+        // --- SỬA Ở DÒNG DƯỚI ĐÂY (Thay background -> backgroundBack) ---
+        Right.sprite = (currentPage < bookPages.Length - 1) ? bookPages[currentPage + 1] : backgroundBack;
+
+        // --- SỬA Ở DÒNG DƯỚI ĐÂY (Thay background -> backgroundBack) ---
+        RightNext.sprite = (currentPage < bookPages.Length - 2) ? bookPages[currentPage + 2] : backgroundBack;
 
         LeftNext.transform.SetAsFirstSibling();
         if (enableShadowEffect) Shadow.gameObject.SetActive(true);
@@ -329,9 +337,12 @@ public class Book : MonoBehaviour {
         Left.rectTransform.pivot = new Vector2(1, 0);
         Left.transform.position = LeftNext.transform.position;
         Left.transform.eulerAngles = new Vector3(0, 0, 0);
-        Left.sprite = (currentPage >= 2) ? bookPages[currentPage - 2] : background;
 
-        LeftNext.sprite = (currentPage >= 3) ? bookPages[currentPage - 3] : background;
+        // --- SỬA Ở DÒNG DƯỚI ĐÂY (Thay background -> backgroundFront) ---
+        Left.sprite = (currentPage >= 2) ? bookPages[currentPage - 2] : backgroundFront;
+
+        // --- SỬA Ở DÒNG DƯỚI ĐÂY (Thay background -> backgroundFront) ---
+        LeftNext.sprite = (currentPage >= 3) ? bookPages[currentPage - 3] : backgroundFront;
 
         RightNext.transform.SetAsFirstSibling();
         if (enableShadowEffect) ShadowLTR.gameObject.SetActive(true);
@@ -366,8 +377,36 @@ public class Book : MonoBehaviour {
     Coroutine currentCoroutine;
     void UpdateSprites()
     {
-        LeftNext.sprite= (currentPage > 0 && currentPage <= bookPages.Length) ? bookPages[currentPage-1] : background;
-        RightNext.sprite=(currentPage>=0 &&currentPage<bookPages.Length) ? bookPages[currentPage] : background;
+        // --- LOGIC CHO TRANG BÊN TRÁI (LEFT) ---
+        // Nếu không có trang (đang ở đầu sách) -> hiển thị Bìa Trước (backgroundFront)
+        // Nếu có trang -> hiển thị trang tương ứng (bookPages[currentPage-1])
+        Left.sprite = (currentPage > 0 && currentPage <= bookPages.Length) ? bookPages[currentPage - 1] : backgroundFront;
+        LeftNext.sprite = (currentPage > 0 && currentPage <= bookPages.Length) ? bookPages[currentPage - 1] : backgroundFront;
+
+        // --- LOGIC CHO TRANG BÊN PHẢI (RIGHT) ---
+        // Nếu không có trang (đang ở cuối sách) -> hiển thị Bìa Sau (backgroundBack)
+        // Nếu có trang -> hiển thị trang tương ứng (bookPages[currentPage])
+        Right.sprite = (currentPage >= 0 && currentPage < bookPages.Length) ? bookPages[currentPage] : backgroundBack;
+        RightNext.sprite = (currentPage >= 0 && currentPage < bookPages.Length) ? bookPages[currentPage] : backgroundBack;
+
+        // --- LOGIC ĐỔI BÌA NỀN (Code thêm ở bước trước) ---
+        // Phần này giữ nguyên để cập nhật cái nền bên dưới quyển sách
+        if (backgroundImage != null)
+        {
+            if (currentPage <= 0)
+            {
+                backgroundImage.sprite = backgroundFront;
+            }
+            else if (currentPage >= bookPages.Length)
+            {
+                backgroundImage.sprite = backgroundBack;
+            }
+            else
+            {
+                // Khi đang đọc sách (ở giữa), hiển thị bìa sau lót ở dưới
+                backgroundImage.sprite = backgroundBack; 
+            }
+        }
     }
     public void TweenForward()
     {
