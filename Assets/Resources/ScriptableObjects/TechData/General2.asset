@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efcb6901c8957a048bb859e8753fe1fb, type: 3}
+  m_Name: General2
+  m_EditorClassIdentifier: Assembly-CSharp::TechData
+  TechName: General 2
+  TechDescription: Increase max health of turrets by 10%
+  techType: 0
+  bonuses:
+  - targetType: 1
+    statType: 3
+    value: 0.1
+    isPercentage: 1
+  techIcon: {fileID: 623849741, guid: 132358e9bf26b60458b731bf001e31db, type: 3}
+  eCrystalRequired: 100
+  prerequisites:
+  - {fileID: 11400000, guid: 854a3c296513a4b43b00056fa72ce372, type: 2}

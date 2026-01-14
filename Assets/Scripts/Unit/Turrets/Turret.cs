@@ -2,12 +2,15 @@ using UnityEngine;
 
 public class Turret : MonoBehaviour
 {
+    [Header("Settings")]
+    public TurretType turretType;
     [SerializeField] public TurretData turretData;
     [SerializeField] protected Transform firePoint;
     [SerializeField] protected Transform floatingTextPoint;
 
     protected Animator animator;
     protected float currentHealth;
+    protected float currentDamage;
     protected float attackTimer = 0f;
     protected float attackInterval;
     protected int laneIndex = -1;
@@ -16,8 +19,25 @@ public class Turret : MonoBehaviour
     protected virtual void Awake()
     {
         animator = GetComponent<Animator>();
-        attackInterval = 1.0f / turretData.attackSpeed;
-        currentHealth = turretData.maxHealth;
+        UpdateStats();
+    }
+    public void UpdateStats()
+    {
+        // Calculation with Tech bonuses
+        float damageMult = TechManager.Instance.GetStatMultiplier(turretType, StatType.AttackDamage);
+        float damageFlat = TechManager.Instance.GetFlatBonus(turretType, StatType.AttackDamage);
+
+        currentDamage = (turretData.attackDamage + damageFlat) * damageMult;
+
+        float healthMult = TechManager.Instance.GetStatMultiplier( turretType, StatType.MaxHealth);
+        float healthFlat = TechManager.Instance.GetFlatBonus(turretType, StatType.MaxHealth);
+
+        currentHealth = (turretData.maxHealth + healthFlat) * healthMult;
+
+        float speedMult = TechManager.Instance.GetStatMultiplier(turretType, StatType.AttackSpeed);
+        attackInterval = 1.0f / speedMult / turretData.attackSpeed;
+
+        Debug.Log($"{gameObject.name} Stats Updated: Dmg={currentDamage}, AttackInterval={attackInterval}, Health={currentHealth}");
     }
     protected virtual void Update()
     {
@@ -61,7 +81,7 @@ public class Turret : MonoBehaviour
     {
         attackTimer = 0f;
         GameObject go = ObjectPool.Instance.Spawn(turretData.projectilePrefab, firePoint.position, Quaternion.identity);
-        go.GetComponent<Projectile>().Init(turretData.projectilePrefab, turretData.attackDamage, this);
+        go.GetComponent<Projectile>().Init(turretData.projectilePrefab, currentDamage, this);
     }
     public void TakeDamage(float damage)
     {
@@ -81,4 +101,5 @@ public class Turret : MonoBehaviour
     {
         gridCell.OnMouseDown();
     }
+
 }
