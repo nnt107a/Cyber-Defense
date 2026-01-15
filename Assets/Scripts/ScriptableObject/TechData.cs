@@ -14,6 +14,7 @@ public enum StatType
     AttackDamage,
     AttackSpeed,
     MaxHealth,
+    Cost,
     All,
 }
 
@@ -23,6 +24,8 @@ public enum TurretType
     Cannon,
     Trap,
     Support,
+    Physical,
+    Elemental,
 }
 
 [Serializable]
@@ -45,5 +48,41 @@ public class TechData : ScriptableObject
     public Sprite techIcon;
     public int eCrystalRequired = 50;
     public TechData[] prerequisites = Array.Empty<TechData>();
+
+    private void OnValidate()
+    {
+        if (bonuses == null)
+            return;
+
+        foreach (var bonus in bonuses)
+        {
+            if (!IsStatValidForType(techType, bonus.statType))
+            {
+                Debug.LogError(
+                    $"[DATA ERROR] Tech '{name}' is belongs to '{techType}' but is assigned stat '{bonus.statType}' is not valid!"
+                );
+            }
+        }
+    }
+
+    private bool IsStatValidForType(TechType type, StatType stat)
+    {
+        switch (type)
+        {
+            case TechType.General:
+                // Chỉ cho phép các stat này
+                return stat == StatType.MaxHealth
+                    || stat == StatType.Cost
+                    || stat == StatType.AttackSpeed
+                    || stat == StatType.All;
+
+            case TechType.Special:
+                // Chỉ cho phép các stat này
+                return stat == StatType.AttackDamage;
+
+            default:
+                return false;
+        }
+    }
 
 }

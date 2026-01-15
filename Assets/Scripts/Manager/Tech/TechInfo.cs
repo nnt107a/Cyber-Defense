@@ -7,7 +7,7 @@ public class TechInfo : MonoBehaviour
     private TechData techData;
     [SerializeField] private TextMeshProUGUI techNameText;
     [SerializeField] private TextMeshProUGUI techDescriptionText;
-    [SerializeField] private TextMeshProUGUI techCostText;
+    [SerializeField] private GameObject techCost;
     [SerializeField] private GameObject unlockButton;
 
     void Start()
@@ -19,7 +19,7 @@ public class TechInfo : MonoBehaviour
             {
                 if (TechManager.Instance.TryResearch(techData))
                 {
-                    techCostText.GetComponentInParent<Transform>().gameObject.SetActive(false);
+                    techCost.SetActive(false);
                     unlockButton.SetActive(false);
                 }
             });
@@ -40,6 +40,8 @@ public class TechInfo : MonoBehaviour
         else
         {
             unlockButton.SetActive(true);
+            techCost.SetActive(true);
+            techCost.GetComponentInChildren<TextMeshProUGUI>().text = techData.eCrystalRequired.ToString();
             if (TechManager.Instance.CanUnlock(techData))
             {
                 unlockButton.GetComponent<Button>().interactable = true;
@@ -56,11 +58,11 @@ public class TechInfo : MonoBehaviour
     {
         if (TechManager.Instance.IsEnoughECrystal(techData))
         {
-            techCostText.color = Color.white;
+            techCost.GetComponentInChildren<TextMeshProUGUI>().color = Color.white;
         }
         else
         {
-            techCostText.color = Color.red;
+            techCost.GetComponentInChildren<TextMeshProUGUI>().color = Color.red;
         }
     }
 }

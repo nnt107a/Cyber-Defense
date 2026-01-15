@@ -10,17 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: efcb6901c8957a048bb859e8753fe1fb, type: 3}
-  m_Name: General2
+  m_Name: Special1
   m_EditorClassIdentifier: Assembly-CSharp::TechData
-  TechName: General 2
-  TechDescription: Increase max health of core reactor by 10%
-  techType: 0
+  TechName: Special 1
+  TechDescription: Increase physical damage of cannon turrets by 10
+  techType: 1
   bonuses:
-  - targetType: 3
-    statType: 3
-    value: 0.1
-    isPercentage: 1
-  techIcon: {fileID: 623849741, guid: 132358e9bf26b60458b731bf001e31db, type: 3}
-  eCrystalRequired: 100
-  prerequisites:
-  - {fileID: 11400000, guid: 854a3c296513a4b43b00056fa72ce372, type: 2}
+  - targetType: 4
+    statType: 1
+    value: 10
+    isPercentage: 0
+  techIcon: {fileID: 21300000, guid: 5aa0d71d789c93a468898d8acfcf2a09, type: 3}
+  eCrystalRequired: 50
+  prerequisites: []

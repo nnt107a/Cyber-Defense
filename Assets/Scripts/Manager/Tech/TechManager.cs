@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEditor.Localization.Plugins.XLIFF.V20;
 using UnityEngine;
@@ -147,7 +148,7 @@ public class TechManager : MonoBehaviour
         return true;
     }
 
-    public float GetStatMultiplier(TurretType turretType, StatType statType)
+    public float GetStatMultiplier(TurretType[] turretTypes, StatType statType)
     {
         float totalPercent = 0f;
 
@@ -156,7 +157,7 @@ public class TechManager : MonoBehaviour
             foreach (var bonus in tech.bonuses)
             {
                 if (
-                    (bonus.targetType == TurretType.All || bonus.targetType == turretType)
+                    (bonus.targetType == TurretType.All || turretTypes.Contains(bonus.targetType))
                     && bonus.statType == statType
                 )
                 {
@@ -169,7 +170,7 @@ public class TechManager : MonoBehaviour
         return 1f + totalPercent;
     }
 
-    public float GetFlatBonus(TurretType turretType, StatType statType)
+    public float GetFlatBonus(TurretType[] turretTypes, StatType statType)
     {
         float totalFlat = 0f;
         foreach (var tech in unlockedTechs)
@@ -177,7 +178,7 @@ public class TechManager : MonoBehaviour
             foreach (var bonus in tech.bonuses)
             {
                 if (
-                    (bonus.targetType == TurretType.All || bonus.targetType == turretType)
+                    (bonus.targetType == TurretType.All || turretTypes.Contains(bonus.targetType))
                     && bonus.statType == statType
                 )
                 {
@@ -189,13 +190,6 @@ public class TechManager : MonoBehaviour
         return totalFlat;
     }
 
-    public void CloseTechTree()
-    {
-        if (techTree.activeSelf)
-        {
-            techTree.SetActive(false);
-        }
-    }
 }
 
 [System.Serializable]

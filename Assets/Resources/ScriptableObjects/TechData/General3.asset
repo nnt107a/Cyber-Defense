@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efcb6901c8957a048bb859e8753fe1fb, type: 3}
   m_Name: General3
   m_EditorClassIdentifier: Assembly-CSharp::TechData
-  TechName: General3
+  TechName: General 3
   TechDescription: Increase attack speed by 1%
   techType: 0
   bonuses:

@@ -19,3 +19,4 @@ MonoBehaviour:
   projectilePrefab: {fileID: 5092122808900462814, guid: 83d5e68c53bf4a64cae37b53007c4540, type: 3}
   eCoreCost: 100
   rechargeTime: 8
+  turretTypes: 0100000005000000

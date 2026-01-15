@@ -12,4 +12,5 @@ public class TurretData : ScriptableObject
     public GameObject projectilePrefab;
     public int eCoreCost = 50;
     public float rechargeTime = 10f;
+    public TurretType[] turretTypes;
 }

@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: General1
   m_EditorClassIdentifier: Assembly-CSharp::TechData
   TechName: General 1
-  TechDescription: Increase Attack Damage of turrets by 50
+  TechDescription: Increase Max health of cannon turrets by 20
   techType: 0
   bonuses:
-  - targetType: 0
-    statType: 1
-    value: 50
+  - targetType: 1
+    statType: 3
+    value: 20
     isPercentage: 0
   techIcon: {fileID: -1730254177, guid: 132358e9bf26b60458b731bf001e31db, type: 3}
   eCrystalRequired: 50

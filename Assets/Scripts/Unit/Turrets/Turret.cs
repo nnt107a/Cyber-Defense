@@ -3,7 +3,6 @@ using UnityEngine;
 public class Turret : MonoBehaviour
 {
     [Header("Settings")]
-    public TurretType turretType;
     [SerializeField] public TurretData turretData;
     [SerializeField] protected Transform firePoint;
     [SerializeField] protected Transform floatingTextPoint;
@@ -24,17 +23,17 @@ public class Turret : MonoBehaviour
     public void UpdateStats()
     {
         // Calculation with Tech bonuses
-        float damageMult = TechManager.Instance.GetStatMultiplier(turretType, StatType.AttackDamage);
-        float damageFlat = TechManager.Instance.GetFlatBonus(turretType, StatType.AttackDamage);
+        float damageMult = TechManager.Instance.GetStatMultiplier(turretData.turretTypes, StatType.AttackDamage);
+        float damageFlat = TechManager.Instance.GetFlatBonus(turretData.turretTypes, StatType.AttackDamage);
 
         currentDamage = (turretData.attackDamage + damageFlat) * damageMult;
 
-        float healthMult = TechManager.Instance.GetStatMultiplier( turretType, StatType.MaxHealth);
-        float healthFlat = TechManager.Instance.GetFlatBonus(turretType, StatType.MaxHealth);
+        float healthMult = TechManager.Instance.GetStatMultiplier( turretData.turretTypes, StatType.MaxHealth);
+        float healthFlat = TechManager.Instance.GetFlatBonus(turretData.turretTypes, StatType.MaxHealth);
 
         currentHealth = (turretData.maxHealth + healthFlat) * healthMult;
 
-        float speedMult = TechManager.Instance.GetStatMultiplier(turretType, StatType.AttackSpeed);
+        float speedMult = TechManager.Instance.GetStatMultiplier(turretData.turretTypes, StatType.AttackSpeed);
         attackInterval = 1.0f / speedMult / turretData.attackSpeed;
 
         Debug.Log($"{gameObject.name} Stats Updated: Dmg={currentDamage}, AttackInterval={attackInterval}, Health={currentHealth}");
