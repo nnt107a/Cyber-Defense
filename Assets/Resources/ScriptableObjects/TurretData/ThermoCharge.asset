@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eaab8eb3dc6ad394b99cfec4f19dfccc, type: 3}
-  m_Name: BlastflameBattery
+  m_Name: ThermoCharge
   m_EditorClassIdentifier: Assembly-CSharp::TurretData
-  turretPrefab: {fileID: 1239614873695953708, guid: 353aed5ce4ff7904e962026e7bd77f29, type: 3}
-  maxHealth: 150
-  attackDamage: 30
-  attackSpeed: 0.4
-  projectilePrefab: {fileID: 236253976257718966, guid: 548b94ca59ddf1249be2f69a2959e194, type: 3}
-  eCoreCost: 100
-  rechargeTime: 8
+  turretPrefab: {fileID: 8739097755812656010, guid: 84a90db8c6fa74d4289c6da7a4882080, type: 3}
+  maxHealth: 50
+  attackDamage: 200
+  attackSpeed: 1
+  projectilePrefab: {fileID: 0}
+  eCoreCost: 50
+  rechargeTime: 30
   activationDelay: 10
   radius: 1
-  turretIcon: {fileID: 3683603313324779622, guid: a3600f54cb59fff4cb4cadc8d4978bd1, type: 3}
+  turretIcon: {fileID: -1735720959, guid: 0d1900842a52fea42adfc2fca40af565, type: 3}

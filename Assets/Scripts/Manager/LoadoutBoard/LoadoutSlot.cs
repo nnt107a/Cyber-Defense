@@ -12,7 +12,7 @@ public class LoadoutSlot : MonoBehaviour
     void Start()
     {
         icon.sprite =
-            turretData.turretPrefab.GetComponent<SpriteRenderer>().sprite;
+            turretData.turretIcon;
         eCoreCost.text = turretData.eCoreCost.ToString();
 
         GetComponent<Button>().onClick.AddListener(OnClick);
