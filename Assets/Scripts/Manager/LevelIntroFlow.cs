@@ -15,8 +15,6 @@ public class LevelIntroFlow : MonoBehaviour
     [SerializeField] LoadoutEnemyPreviewSpawner previewSpawner;
 
     [SerializeField] private CutscenePlayer cutscenePlayer;
-    [SerializeField] private CutsceneData introCutsceneData;
-    [SerializeField] private CutsceneData outroCutsceneData;
     public Action OnLevelCompleted;
 
     [SerializeField] private float cameraMoveTime = 1.2f;
@@ -31,14 +29,14 @@ public class LevelIntroFlow : MonoBehaviour
         GameManager.Instance.OnLevelCompleted += HandleLevelCompleted;
         GameManager.Instance.isLevelOnGoing = false;
         WaveManager.Instance.levelData = GameManager.Instance.allLevelDatas[GameManager.Instance.currentLevelIndex];
-        if (introCutsceneData != null)
+        if (WaveManager.Instance.levelData.introCutscene != null)
         {
             cutscenePlayer.onCutsceneFinished.RemoveAllListeners();
             cutscenePlayer.onCutsceneFinished.AddListener(() =>
             {
                 StartCoroutine(IntroSequence());
             });
-            cutscenePlayer.Play(introCutsceneData);
+            cutscenePlayer.Play(WaveManager.Instance.levelData.introCutscene);
         }
         else
         {
@@ -104,14 +102,14 @@ public class LevelIntroFlow : MonoBehaviour
     }
     private void HandleLevelCompleted()
     {
-        if (outroCutsceneData != null)
+        if (WaveManager.Instance.levelData.outroCutscene != null)
         {
             cutscenePlayer.onCutsceneFinished.RemoveAllListeners();
             cutscenePlayer.onCutsceneFinished.AddListener(() =>
             {
                 OnLevelCompleted?.Invoke();
             });
-            cutscenePlayer.Play(outroCutsceneData);
+            cutscenePlayer.Play(WaveManager.Instance.levelData.outroCutscene);
         }
         else
         {
