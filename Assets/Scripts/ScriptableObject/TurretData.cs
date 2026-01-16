@@ -15,4 +15,5 @@ public class TurretData : ScriptableObject
     public float activationDelay = 10f;
     public float radius = 1f;
     public Sprite turretIcon;
+    public EffectData specialEffect;
 }
