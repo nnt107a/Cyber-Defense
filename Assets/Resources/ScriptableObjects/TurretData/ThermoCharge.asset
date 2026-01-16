@@ -21,4 +21,4 @@ MonoBehaviour:
   rechargeTime: 30
   activationDelay: 10
   radius: 1
-  turretIcon: {fileID: -1735720959, guid: 0d1900842a52fea42adfc2fca40af565, type: 3}
+  turretIcon: {fileID: 21300000, guid: cf94212e83216574eac9c40c5ef1e667, type: 3}
