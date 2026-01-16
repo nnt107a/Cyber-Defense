@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f0270995b78b08499239e6f7c22adc3, type: 3}
+  m_Name: IntroLevel4
+  m_EditorClassIdentifier: Assembly-CSharp::CutsceneData
+  lines:
+  - speakerIcon: {fileID: 0}
+    text: Alert. Energy overload detected.
+  - speakerIcon: {fileID: 0}
+    text: "The main grid can\u2019t hold much longer."
+  - speakerIcon: {fileID: 0}
+    text: Some systems will shut down intermittently.
+  - speakerIcon: {fileID: 0}
+    text: The creatures will sense the weakness.
+  - speakerIcon: {fileID: 0}
+    text: "Venom Spire. Void Resonator. I\u2019ll adapt\u2014just like they did."

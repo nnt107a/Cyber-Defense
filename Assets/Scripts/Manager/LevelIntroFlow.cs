@@ -1,10 +1,12 @@
 using DG.Tweening;
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class LevelIntroFlow : MonoBehaviour
 {
+    public static LevelIntroFlow Instance;
     [SerializeField] private CameraIntroController cameraController;
     [SerializeField] private LoadoutBoardController loadoutBoard;
     [SerializeField] private GameObject gameplayUI;
@@ -12,14 +14,34 @@ public class LevelIntroFlow : MonoBehaviour
     [SerializeField] private GameObject shopContainer; 
     [SerializeField] LoadoutEnemyPreviewSpawner previewSpawner;
 
+    [SerializeField] private CutscenePlayer cutscenePlayer;
+    public Action OnLevelCompleted;
+
     [SerializeField] private float cameraMoveTime = 1.2f;
 
     bool waitingForStart;
+    private void Awake()
+    {
+        Instance = this;
+    }
     void Start()
     {
+        GameManager.Instance.OnLevelCompleted += HandleLevelCompleted;
         GameManager.Instance.isLevelOnGoing = false;
         WaveManager.Instance.levelData = GameManager.Instance.allLevelDatas[GameManager.Instance.currentLevelIndex];
-        StartCoroutine(IntroSequence());
+        if (WaveManager.Instance.levelData.introCutscene != null)
+        {
+            cutscenePlayer.onCutsceneFinished.RemoveAllListeners();
+            cutscenePlayer.onCutsceneFinished.AddListener(() =>
+            {
+                StartCoroutine(IntroSequence());
+            });
+            cutscenePlayer.Play(WaveManager.Instance.levelData.introCutscene);
+        }
+        else
+        {
+            StartCoroutine(IntroSequence());
+        }
     }
 
     IEnumerator IntroSequence()
@@ -66,7 +88,7 @@ public class LevelIntroFlow : MonoBehaviour
         waitingForStart = false;
     }
 
-    void StartGameplay()
+    private void StartGameplay()
     {
         previewSpawner.Clear();
         GameManager.Instance.enemiesSpawnedCompletely = false;
@@ -77,5 +99,21 @@ public class LevelIntroFlow : MonoBehaviour
         gameplayUI.GetComponent<CanvasGroup>().DOFade(1f, 0.5f).From(0f);
         GameManager.Instance.Init();
         WaveManager.Instance.StartWaveSpawn();
+    }
+    private void HandleLevelCompleted()
+    {
+        if (WaveManager.Instance.levelData.outroCutscene != null)
+        {
+            cutscenePlayer.onCutsceneFinished.RemoveAllListeners();
+            cutscenePlayer.onCutsceneFinished.AddListener(() =>
+            {
+                OnLevelCompleted?.Invoke();
+            });
+            cutscenePlayer.Play(WaveManager.Instance.levelData.outroCutscene);
+        }
+        else
+        {
+            OnLevelCompleted?.Invoke();
+        }
     }
 }

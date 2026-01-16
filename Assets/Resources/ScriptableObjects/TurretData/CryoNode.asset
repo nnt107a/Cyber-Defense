@@ -10,15 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eaab8eb3dc6ad394b99cfec4f19dfccc, type: 3}
-  m_Name: BlastflameBattery
+  m_Name: CryoNode
   m_EditorClassIdentifier: Assembly-CSharp::TurretData
-  turretPrefab: {fileID: 1239614873695953708, guid: 353aed5ce4ff7904e962026e7bd77f29, type: 3}
-  maxHealth: 150
-  attackDamage: 30
-  attackSpeed: 0.4
-  projectilePrefab: {fileID: 236253976257718966, guid: 548b94ca59ddf1249be2f69a2959e194, type: 3}
-  eCoreCost: 100
-  rechargeTime: 8
+  turretPrefab: {fileID: 5060057203466303430, guid: 6f7b9000453d29d418325851ddd7e694, type: 3}
+  maxHealth: 50
+  attackDamage: 50
+  attackSpeed: 1
+  projectilePrefab: {fileID: 0}
+  eCoreCost: 25
+  rechargeTime: 30
   activationDelay: 10
   radius: 1
-  turretIcon: {fileID: 3683603313324779622, guid: a3600f54cb59fff4cb4cadc8d4978bd1, type: 3}
+  turretIcon: {fileID: 21300000, guid: cb97b7b759bae4a40a32669c6a04f8ce, type: 3}
+  specialEffect: {fileID: 11400000, guid: 3f9861fe59c258f478fa42127cc0c340, type: 2}

@@ -32,6 +32,10 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.newSize.y
       value: 2.04
       objectReference: {fileID: 0}
+    - target: {fileID: 509852780906634707, guid: f8e8c8f797d9978418782f5501442732, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4729886022953770773, guid: f8e8c8f797d9978418782f5501442732, type: 3}
       propertyPath: m_Name
       value: Cannon

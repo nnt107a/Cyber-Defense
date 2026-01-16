@@ -9,12 +9,12 @@ public class WinLoseUIButtonHandler : MonoBehaviour
     [SerializeField] private bool isWin = false;
     private void Start()
     {
-        GameManager.Instance.OnLevelCompleted += ShowOnWin;
+        LevelIntroFlow.Instance.OnLevelCompleted += ShowOnWin;
         GameManager.Instance.OnLevelLosed += ShowOnLose;
     }
     private void OnDestroy()
     {
-        GameManager.Instance.OnLevelCompleted -= ShowOnWin;
+        LevelIntroFlow.Instance.OnLevelCompleted -= ShowOnWin;
         GameManager.Instance.OnLevelLosed -= ShowOnLose;
     }
     private void ShowOnWin()
