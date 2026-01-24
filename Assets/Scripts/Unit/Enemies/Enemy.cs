@@ -195,6 +195,10 @@ public class Enemy : MonoBehaviour, IPoolable
 
     private void ChangeState(EnemyState newState)
     {
+        if (newState == EnemyState.stateAttack)
+        {
+            animator.SetBool("isRunning", false);
+        }
         currentState = newState;
     }
 }

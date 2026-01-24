@@ -61,6 +61,7 @@ public class CryoNode : Turret
 
     private void Explode(GameObject triggeringEnemy)
     {
+        SoundManager.Instance.PlayTrapExplodeSound();
         Enemy enemy = triggeringEnemy.GetComponent<Enemy>();
         Collider2D[] hits = Physics2D.OverlapCircleAll(
             transform.position,

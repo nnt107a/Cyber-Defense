@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: CoreReactor
   m_EditorClassIdentifier: Assembly-CSharp::TurretData
   turretPrefab: {fileID: 3552695032973166042, guid: 0cfd36ac19b220b4487869f92e3b447c, type: 3}
+  turretName: Core Reactor
   maxHealth: 75
   attackDamage: 50
   attackSpeed: 0.075
@@ -22,3 +23,4 @@ MonoBehaviour:
   activationDelay: 10
   radius: 1
   turretIcon: {fileID: 3416474554749380904, guid: 65c5cffcf7d18754da3fe1d84169bdd3, type: 3}
+  specialEffect: {fileID: 0}

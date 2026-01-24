@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Cannon
   m_EditorClassIdentifier: Assembly-CSharp::TurretData
   turretPrefab: {fileID: 818442344481266315, guid: d91b08a1692fefe48b0dac018e0e2334, type: 3}
+  turretName: Cannon
   maxHealth: 100
   attackDamage: 15
   attackSpeed: 1
@@ -22,3 +23,4 @@ MonoBehaviour:
   activationDelay: 10
   radius: 1
   turretIcon: {fileID: 4065643661873835231, guid: e936def3694503f458042b629743f17e, type: 3}
+  specialEffect: {fileID: 0}

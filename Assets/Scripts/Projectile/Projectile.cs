@@ -34,6 +34,7 @@ public class Projectile : MonoBehaviour, IPoolable
         }
         if (collision.CompareTag("Enemy"))
         {
+            SoundManager.Instance.PlayEnemiesHitSound();
             hasHit = true;
             Debug.Log("Projectile hit: " + collision.gameObject.name);
             GridCell enemyCell = Utils.GetGridCellAt(collision.transform.position);
