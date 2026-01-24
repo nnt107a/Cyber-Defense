@@ -13,10 +13,15 @@ MonoBehaviour:
   m_Name: VoidResonator
   m_EditorClassIdentifier: Assembly-CSharp::TurretData
   turretPrefab: {fileID: 7259009605057248777, guid: 9ca16e401be4c6d46a798a26d6d0a486, type: 3}
+  turretName: Void Resonator
   maxHealth: 100
   attackDamage: 30
   attackSpeed: 0.8
   projectilePrefab: {fileID: 5092122808900462814, guid: 83d5e68c53bf4a64cae37b53007c4540, type: 3}
   eCoreCost: 100
   rechargeTime: 8
+  activationDelay: 10
+  radius: 1
+  turretIcon: {fileID: -8148080150965001997, guid: e38b02b8a5bef3641b36705973b594ab, type: 3}
+  specialEffect: {fileID: 0}
   targetType: 0100000005000000

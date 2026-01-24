@@ -13,10 +13,15 @@ MonoBehaviour:
   m_Name: VenomSpire
   m_EditorClassIdentifier: Assembly-CSharp::TurretData
   turretPrefab: {fileID: 8833478785651476202, guid: 67f109d3f6ed192409334da1e7291a86, type: 3}
+  turretName: Venom Spire
   maxHealth: 150
   attackDamage: 25
   attackSpeed: 0.2
   projectilePrefab: {fileID: 6831558765175495513, guid: 135b026b845e9f9419e0ba5df71be508, type: 3}
   eCoreCost: 150
   rechargeTime: 10
+  activationDelay: 10
+  radius: 1
+  turretIcon: {fileID: 953458495345154289, guid: 923254033639e67428c88dfe2bac117a, type: 3}
+  specialEffect: {fileID: 0}
   targetType: 0100000005000000

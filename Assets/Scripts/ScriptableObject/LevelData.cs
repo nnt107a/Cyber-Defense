@@ -22,6 +22,8 @@ public class LevelData : ScriptableObject
 
         return total;
     }
+    public CutsceneData introCutscene;
+    public CutsceneData outroCutscene;
 }
 
 [System.Serializable]

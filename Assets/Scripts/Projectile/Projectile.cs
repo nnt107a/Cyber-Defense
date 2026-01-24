@@ -11,6 +11,7 @@ public class Projectile : MonoBehaviour, IPoolable
     protected GameObject prefabRef;
     protected bool alive = false;
     protected Turret initator;
+    protected bool hasHit = false;
 
     protected virtual void Update()
     {
@@ -27,8 +28,14 @@ public class Projectile : MonoBehaviour, IPoolable
     }
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
+        if (hasHit)
+        {
+            return;
+        }
         if (collision.CompareTag("Enemy"))
         {
+            SoundManager.Instance.PlayEnemiesHitSound();
+            hasHit = true;
             Debug.Log("Projectile hit: " + collision.gameObject.name);
             GridCell enemyCell = Utils.GetGridCellAt(collision.transform.position);
             /*if (enemyCell == null)
@@ -53,6 +60,7 @@ public class Projectile : MonoBehaviour, IPoolable
     {
         lifeTimer = 0f;
         alive = true;
+        hasHit = false;
     }
 
     public virtual void OnDespawn()

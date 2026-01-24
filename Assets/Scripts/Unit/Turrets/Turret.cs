@@ -75,6 +75,7 @@ public class Turret : MonoBehaviour
     {
         Debug.Log("Turret initiating attack.");
         animator.SetTrigger("attack");
+        SoundManager.Instance.PlayTurretShootSound();
     }
     protected virtual void Attack()
     {

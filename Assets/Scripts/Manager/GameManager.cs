@@ -109,4 +109,8 @@ public class GameManager : MonoBehaviour
     {
         OnGoToSetting?.Invoke();
     }
+    public void ShowWinUI()
+    {
+        OnLevelCompleted?.Invoke();
+    }
 }
