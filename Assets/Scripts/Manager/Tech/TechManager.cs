@@ -84,7 +84,13 @@ public class TechManager : MonoBehaviour
         eCrystalCount -= data.eCrystalRequired;
         OnTechUnlocked?.Invoke(eCrystalCount);
 
+        // Update game data in GameManager
+        GameManager.Instance.currentData.eCrystal = eCrystalCount;
+        GameManager.Instance.currentData.unlockedTechs = unlockedTechs.Select(t => t.name).ToList();
+
         UpdateVisuals();
+
+        GameManager.Instance.SaveToDisk();
     }
 
     public void UnselectTech(TechData data)
@@ -232,6 +238,26 @@ public class TechManager : MonoBehaviour
             }
         }
         return totalFlat;
+    }
+
+    public void SyncData(List<string> unlockedTechs, int eCrystal)
+    {
+        eCrystalCount = eCrystal;
+        
+        this.unlockedTechs.Clear();
+        TechData[] allTechs = Resources.LoadAll<TechData>("ScriptableObjects/TechData");
+        unlockedTechs.ForEach(id =>
+        {
+            TechData tech = allTechs.FirstOrDefault(t => t.name == id);
+            if (tech != null)
+            {
+                this.unlockedTechs.Add(tech);
+            }
+        });
+
+        Debug.Log("Synced Tech Data. Unlocked Techs Count: " + this.unlockedTechs.Count + ", E-Crystal: " + eCrystalCount);
+
+        UpdateVisuals();
     }
 
 }
