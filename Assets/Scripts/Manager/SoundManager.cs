@@ -10,6 +10,11 @@ public class SoundManager : MonoBehaviour
     [SerializeField] public AudioSource uiSource;
     [SerializeField] public AudioSource musicSource;
 
+    [Header("SFX Clips")]
+    public AudioClip turretShoot;
+    public AudioClip enemiesHit;
+    public AudioClip trapExplode;
+
     [Header("UI Clips")]
     public AudioClip uiClick;
     public AudioClip unitSlotClick;
@@ -50,7 +55,24 @@ public class SoundManager : MonoBehaviour
     public void PlaySFX(AudioClip clip)
     {
         if (clip == null) return;
+        if (SoundLimiter.Instance.CanPlay(clip, 3, 1f) == false)
+        {
+            return;
+        }
         sfxSource.PlayOneShot(clip);
+    }
+
+    public void PlayTurretShootSound()
+    {
+        PlaySFX(turretShoot);
+    }
+    public void PlayEnemiesHitSound()
+    {
+        PlaySFX(enemiesHit);
+    }
+    public void PlayTrapExplodeSound()
+    {
+        PlaySFX(trapExplode);
     }
 
     public void PlayMusic(AudioClip clip, bool loop = true)
