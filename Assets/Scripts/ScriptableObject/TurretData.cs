@@ -17,4 +17,5 @@ public class TurretData : ScriptableObject
     public float radius = 1f;
     public Sprite turretIcon;
     public EffectData specialEffect;
+    public TargetType[] targetType;
 }

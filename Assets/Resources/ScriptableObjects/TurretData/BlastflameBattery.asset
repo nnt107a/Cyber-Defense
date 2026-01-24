@@ -24,3 +24,4 @@ MonoBehaviour:
   radius: 1
   turretIcon: {fileID: 3683603313324779622, guid: a3600f54cb59fff4cb4cadc8d4978bd1, type: 3}
   specialEffect: {fileID: 0}
+  targetType: 0100000005000000
