@@ -17,17 +17,26 @@ public class TechManager : MonoBehaviour
     [SerializeField] private GameObject techTree;
 
     public Action<int> OnTechUnlocked;
-    [SerializeField] private int eCrystalCount = 200;
+    [SerializeField] private int eCrystalCount = 1000;
     public int ECrystalCount { get { return eCrystalCount;}}
     [SerializeField] private TextMeshProUGUI eCrystalText;
 
     void Awake()
     {
-        Instance = this;
         if (unlockedTechs == null)
             unlockedTechs = new List<TechData>();
 
         techNodes = GameObject.Find("TechNodeHolder").GetComponentsInChildren<TechNode>();
+        
+        if (Instance == null)
+        {
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
 
     }
 
@@ -148,7 +157,7 @@ public class TechManager : MonoBehaviour
         return true;
     }
 
-    public float GetStatMultiplier(TurretType[] turretTypes, StatType statType)
+    public float GetStatMultiplier(TargetType[] targetTypes, StatType statType)
     {
         float totalPercent = 0f;
 
@@ -157,7 +166,7 @@ public class TechManager : MonoBehaviour
             foreach (var bonus in tech.bonuses)
             {
                 if (
-                    (bonus.targetType == TurretType.All || turretTypes.Contains(bonus.targetType))
+                    (bonus.targetType == TargetType.All || targetTypes.Contains(bonus.targetType))
                     && bonus.statType == statType
                 )
                 {
@@ -170,7 +179,42 @@ public class TechManager : MonoBehaviour
         return 1f + totalPercent;
     }
 
-    public float GetFlatBonus(TurretType[] turretTypes, StatType statType)
+    public EffectBonus GetEffectBonus()
+    {
+        float slowEffectPercent = 0f;
+        float defenseReductionPercent = 0f;
+        float resistanceReductionPercent = 0f;
+
+        foreach (var tech in unlockedTechs)
+        {
+            foreach (var bonus in tech.bonuses)
+            {
+                switch (bonus.targetType)
+                {
+                    case TargetType.SlowEffect:
+                        slowEffectPercent += bonus.value;
+                        break;
+                    case TargetType.Defense:
+                        defenseReductionPercent += bonus.value;
+                        break;
+                    case TargetType.Resistance:
+                        resistanceReductionPercent += bonus.value;
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+
+        return new EffectBonus
+        {
+            slowEffectBonus = slowEffectPercent,
+            defenseReductionBonus = defenseReductionPercent,
+            resistanceReductionBonus = resistanceReductionPercent
+        };
+    }
+
+    public float GetFlatBonus(TargetType[] targetTypes, StatType statType)
     {
         float totalFlat = 0f;
         foreach (var tech in unlockedTechs)
@@ -178,7 +222,7 @@ public class TechManager : MonoBehaviour
             foreach (var bonus in tech.bonuses)
             {
                 if (
-                    (bonus.targetType == TurretType.All || turretTypes.Contains(bonus.targetType))
+                    (bonus.targetType == TargetType.All || targetTypes.Contains(bonus.targetType))
                     && bonus.statType == statType
                 )
                 {
@@ -197,4 +241,11 @@ public class TechUnlockPath
 {
     public TechData techData;
     public Image[] connectors;
+}
+
+public class EffectBonus
+{
+    public float slowEffectBonus;
+    public float defenseReductionBonus;
+    public float resistanceReductionBonus;
 }

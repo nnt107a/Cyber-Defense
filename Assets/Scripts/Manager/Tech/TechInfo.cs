@@ -36,6 +36,7 @@ public class TechInfo : MonoBehaviour
         if (TechManager.Instance.IsUnlocked(techData))
         {
             unlockButton.SetActive(false);
+            techCost.SetActive(false);
         }
         else
         {

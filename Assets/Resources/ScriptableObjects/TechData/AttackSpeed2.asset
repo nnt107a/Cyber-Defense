@@ -10,17 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: efcb6901c8957a048bb859e8753fe1fb, type: 3}
-  m_Name: General2
+  m_Name: AttackSpeed2
   m_EditorClassIdentifier: Assembly-CSharp::TechData
-  TechName: General 2
-  TechDescription: Increase max health of core reactor by 10%
+  TechName: Catalytic Enzymes
+  TechDescription: Injects aggressive catalysts into the Synthesizer. Reduces biomass
+    processing time by 1%.
   techType: 0
   bonuses:
   - targetType: 3
-    statType: 3
-    value: 0.1
+    statType: 2
+    value: 0.01
     isPercentage: 1
-  techIcon: {fileID: 623849741, guid: 132358e9bf26b60458b731bf001e31db, type: 3}
-  eCrystalRequired: 100
+  techIcon: {fileID: 21300000, guid: 8ea3e46938e041f4a8abb8200dc90159, type: 3}
+  eCrystalRequired: 125
   prerequisites:
   - {fileID: 11400000, guid: 854a3c296513a4b43b00056fa72ce372, type: 2}
+  - {fileID: 11400000, guid: 08ad0c713fe766641b4a1b94b706ccd0, type: 2}
+  - {fileID: 11400000, guid: 06a8e91e8ebf92a48bfe4e7f953298cd, type: 2}

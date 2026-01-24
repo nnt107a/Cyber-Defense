@@ -11,14 +11,13 @@ public enum TechState
 public class TechNode : MonoBehaviour
 {
     [Header("UI Components")]
-    public Image backgroundImage;
     public Image techIconImage;
     public Button nodeButton;
     public Image borderGlowImage;
+    public Image overlayImage;
     [Header("Settings - Colors")]
-    public Material techLockedMaterial;
     public Color colorLocked = Color.gray;
-    public Color colorAvailable = Color.cyan;
+    public Color colorResearched = Color.cyan;
     public Color colorResearchedGlow = Color.yellow;
 
     [Header("Data")]
@@ -45,14 +44,11 @@ public class TechNode : MonoBehaviour
         switch (currentState)
         {
             case TechState.Locked:
-                backgroundImage.material = techLockedMaterial;
-                techIconImage.material = techLockedMaterial;
-                techIconImage.color = Color.gray;
+                overlayImage.color = colorLocked;
                 break;
 
             case TechState.Available:
-                techIconImage.color = Color.white;
-                backgroundImage.material = null;
+                overlayImage.color = Color.clear;
                 if (borderGlowImage != null)
                 {
                     borderGlowImage.gameObject.SetActive(true);
@@ -63,9 +59,7 @@ public class TechNode : MonoBehaviour
                 break;
 
             case TechState.Researched:
-                backgroundImage.material = null;
-                techIconImage.material = null;
-                techIconImage.color = Color.white;
+                overlayImage.color = colorResearched;
                 if (borderGlowImage != null)
                 {
                     borderGlowImage.gameObject.SetActive(true);

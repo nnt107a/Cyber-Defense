@@ -10,17 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: efcb6901c8957a048bb859e8753fe1fb, type: 3}
-  m_Name: Special3
+  m_Name: ResistanceReduction1
   m_EditorClassIdentifier: Assembly-CSharp::TechData
-  TechName: Special 3
-  TechDescription: Increase elemental damage of cannon turrets by 10
+  TechName: Cellular Destabilizer
+  TechDescription: Viruses designed to weaken mutant immune systems. Penetrates 1%
+    of Chemical Resistance.
   techType: 1
   bonuses:
-  - targetType: 5
-    statType: 1
-    value: 15
-    isPercentage: 0
-  techIcon: {fileID: 21300000, guid: e32b8056f5f2eb741bec42f791c7f1b5, type: 3}
-  eCrystalRequired: 75
+  - targetType: 7
+    statType: 5
+    value: 0.01
+    isPercentage: 1
+  techIcon: {fileID: -1756047590, guid: 132358e9bf26b60458b731bf001e31db, type: 3}
+  eCrystalRequired: 125
   prerequisites:
   - {fileID: 11400000, guid: bd48dde380a0f6846bb63ee68af11ac9, type: 2}
+  - {fileID: 11400000, guid: 6eaa813aac021874f98515636702eb1f, type: 2}
+  - {fileID: 11400000, guid: 857cc425eafda884198ee85fd48ee743, type: 2}

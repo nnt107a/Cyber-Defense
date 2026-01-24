@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: efcb6901c8957a048bb859e8753fe1fb, type: 3}
-  m_Name: Special1
+  m_Name: PhysicalDamage1
   m_EditorClassIdentifier: Assembly-CSharp::TechData
-  TechName: Special 1
-  TechDescription: Increase physical damage of cannon turrets by 10
+  TechName: High-Velocity Rivets
+  TechDescription: Modifies industrial tools to fire construction rivets. Increases
+    Physical Damage by 10.
   techType: 1
   bonuses:
   - targetType: 4

@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: efcb6901c8957a048bb859e8753fe1fb, type: 3}
-  m_Name: General4
+  m_Name: ElementalDamage1
   m_EditorClassIdentifier: Assembly-CSharp::TechData
-  TechName: General 4
-  TechDescription: Decrease cost of turrets by 10
-  techType: 0
+  TechName: Acidic Compound Mix
+  TechDescription: Enriches the chemical payload with corrosive acids. Increases
+    Chemical Damage by 10.
+  techType: 1
   bonuses:
-  - targetType: 0
-    statType: 4
-    value: -10
+  - targetType: 5
+    statType: 1
+    value: 15
     isPercentage: 0
-  techIcon: {fileID: 21300000, guid: 4217838d18d06c04fbb38361be7b975f, type: 3}
-  eCrystalRequired: 50
+  techIcon: {fileID: 21300000, guid: e32b8056f5f2eb741bec42f791c7f1b5, type: 3}
+  eCrystalRequired: 75
   prerequisites:
-  - {fileID: 11400000, guid: 854a3c296513a4b43b00056fa72ce372, type: 2}
-  - {fileID: 11400000, guid: 08ad0c713fe766641b4a1b94b706ccd0, type: 2}
+  - {fileID: 11400000, guid: bd48dde380a0f6846bb63ee68af11ac9, type: 2}

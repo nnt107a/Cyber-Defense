@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: efcb6901c8957a048bb859e8753fe1fb, type: 3}
-  m_Name: General3
+  m_Name: AttackSpeed1
   m_EditorClassIdentifier: Assembly-CSharp::TechData
-  TechName: General 3
-  TechDescription: Increase attack speed by 1%
+  TechName: Hydraulic Bypass
+  TechDescription: Removes safety limiters on turret motors. Increases Attack Speed
+    by 1%.
   techType: 0
   bonuses:
   - targetType: 1

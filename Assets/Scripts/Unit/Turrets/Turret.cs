@@ -23,17 +23,17 @@ public class Turret : MonoBehaviour
     public void UpdateStats()
     {
         // Calculation with Tech bonuses
-        float damageMult = TechManager.Instance.GetStatMultiplier(turretData.turretTypes, StatType.AttackDamage);
-        float damageFlat = TechManager.Instance.GetFlatBonus(turretData.turretTypes, StatType.AttackDamage);
+        float damageMult = TechManager.Instance.GetStatMultiplier(turretData.targetType, StatType.AttackDamage);
+        float damageFlat = TechManager.Instance.GetFlatBonus(turretData.targetType, StatType.AttackDamage);
 
         currentDamage = (turretData.attackDamage + damageFlat) * damageMult;
 
-        float healthMult = TechManager.Instance.GetStatMultiplier( turretData.turretTypes, StatType.MaxHealth);
-        float healthFlat = TechManager.Instance.GetFlatBonus(turretData.turretTypes, StatType.MaxHealth);
+        float healthMult = TechManager.Instance.GetStatMultiplier( turretData.targetType, StatType.MaxHealth);
+        float healthFlat = TechManager.Instance.GetFlatBonus(turretData.targetType, StatType.MaxHealth);
 
         currentHealth = (turretData.maxHealth + healthFlat) * healthMult;
 
-        float speedMult = TechManager.Instance.GetStatMultiplier(turretData.turretTypes, StatType.AttackSpeed);
+        float speedMult = TechManager.Instance.GetStatMultiplier(turretData.targetType, StatType.AttackSpeed);
         attackInterval = 1.0f / speedMult / turretData.attackSpeed;
 
         Debug.Log($"{gameObject.name} Stats Updated: Dmg={currentDamage}, AttackInterval={attackInterval}, Health={currentHealth}");

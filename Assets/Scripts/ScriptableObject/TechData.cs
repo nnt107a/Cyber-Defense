@@ -15,23 +15,28 @@ public enum StatType
     AttackSpeed,
     MaxHealth,
     Cost,
+    Effect,
     All,
 }
 
-public enum TurretType
+public enum TargetType
 {
     All,
-    Cannon,
+    Shoot,
     Trap,
     Support,
     Physical,
     Elemental,
+    SlowEffect,
+    Resistance,
+    Defense,
+
 }
 
 [Serializable]
 public class TechBonus
 {
-    public TurretType targetType;
+    public TargetType targetType;
     public StatType statType;
     public float value;
     public bool isPercentage;
@@ -78,7 +83,8 @@ public class TechData : ScriptableObject
 
             case TechType.Special:
                 // Chỉ cho phép các stat này
-                return stat == StatType.AttackDamage;
+                return stat == StatType.AttackDamage
+                    || stat == StatType.Effect;
 
             default:
                 return false;
