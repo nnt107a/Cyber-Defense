@@ -1,9 +1,10 @@
+using System;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NewTurretData", menuName = "Turret/TurretData")]
+[Serializable]
+[CreateAssetMenu(fileName = "NewTurretData", menuName = "ScriptableObjects/TurretData", order = 1)]
 public class TurretData : ScriptableObject
 {
-
     public GameObject turretPrefab;
     public string turretName;
     public float maxHealth = 100f;
