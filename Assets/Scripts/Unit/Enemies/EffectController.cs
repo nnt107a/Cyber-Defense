@@ -86,7 +86,7 @@ public class EffectController : MonoBehaviour
             enemy.GetComponent<SpriteRenderer>().color = Color.deepSkyBlue;
         }
 
-        CurrentSlowMultiplier = 1f - strongestSlow + effectBonus.slowEffectBonus;
+        CurrentSlowMultiplier = 1f - strongestSlow - effectBonus.slowEffectBonus;
 
         statusEffectHandler?.PlaySlowEffect(strongestSlow > 0f);
     }
