@@ -1,16 +1,26 @@
 using UnityEngine;
+using UnityEngine.UI;
 
-public class UIBookDescriptionButton : MonoBehaviour
+public class UIBookDescriptionTurretButton : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    [Header("Gán Panel chứa thông tin vào đây")]
+    public GameObject turretBookPanel; 
+
+    private Button btn;
+
     void Start()
     {
-        
+        btn = GetComponent<Button>();
+        // Khi click nút này sẽ gọi hàm OpenBook
+        btn.onClick.AddListener(OpenBook);
     }
 
-    // Update is called once per frame
-    void Update()
+    void OpenBook()
     {
-        
+        if(turretBookPanel != null)
+        {
+            turretBookPanel.SetActive(true);
+            // Có thể thêm âm thanh mở sách ở đây
+        }
     }
 }
