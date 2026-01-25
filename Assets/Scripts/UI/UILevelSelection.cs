@@ -21,6 +21,7 @@ public class UILevelSelection : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        SoundManager.Instance.PlayMusic(true);
     }
 
     void Start()

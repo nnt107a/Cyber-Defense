@@ -619,6 +619,8 @@ MonoBehaviour:
   sfxSource: {fileID: 812214387}
   uiSource: {fileID: 812214386}
   musicSource: {fileID: 812214385}
+  mainMenuMusic: {fileID: 8300000, guid: 4ecfe4cf62aae2d418d3dcfab66919c7, type: 3}
+  inMatchMusic: {fileID: 8300000, guid: f11e1b3daa8f8d74b9ac1c627a80bc7d, type: 3}
   turretShoot: {fileID: 8300000, guid: 740775f6e821d034ab2ddc686a3ccb9c, type: 3}
   enemiesHit: {fileID: 8300000, guid: 61a46e935df40af42a54f82fcba88d05, type: 3}
   trapExplode: {fileID: 8300000, guid: 0b19df190028dd54aa94f41f306c2f8c, type: 3}
@@ -2008,6 +2010,10 @@ MonoBehaviour:
   maxHealth: 5
   enemiesSpawnedCompletely: 0
   isTransitioningAfterChoosingLoadout: 0
+  currentData:
+    eCrystal: 0
+    unlockedTechs: []
+    currentLevelIndex: 0
 --- !u!4 &4388769165678771817
 Transform:
   m_ObjectHideFlags: 0

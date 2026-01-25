@@ -10,6 +10,10 @@ public class SoundManager : MonoBehaviour
     [SerializeField] public AudioSource uiSource;
     [SerializeField] public AudioSource musicSource;
 
+    [Header("Music Clips")]
+    public AudioClip mainMenuMusic;
+    public AudioClip inMatchMusic;
+
     [Header("SFX Clips")]
     public AudioClip turretShoot;
     public AudioClip enemiesHit;
@@ -75,11 +79,12 @@ public class SoundManager : MonoBehaviour
         PlaySFX(trapExplode);
     }
 
-    public void PlayMusic(AudioClip clip, bool loop = true)
+    public void PlayMusic(bool mainMenu = false, bool loop = true)
     {
-        if (clip == null) return;
-
-        musicSource.clip = clip;
+        AudioClip temp = mainMenu ? mainMenuMusic : inMatchMusic;
+        if (musicSource.clip == temp && musicSource.isPlaying)
+            return;
+        musicSource.clip = temp;
         musicSource.loop = loop;
         musicSource.Play();
     }
@@ -93,5 +98,7 @@ public class SoundManager : MonoBehaviour
         sfxSource.volume = PlayerPrefs.GetFloat("SFXVolume", 0.5f);
         uiSource.volume = PlayerPrefs.GetFloat("UIVolume", 0.5f);
         musicSource.volume = PlayerPrefs.GetFloat("MusicVolume", 0.5f);
+
+        PlayMusic(true);
     }
 }
