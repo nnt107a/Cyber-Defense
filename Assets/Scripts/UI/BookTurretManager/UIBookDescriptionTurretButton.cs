@@ -3,35 +3,35 @@ using UnityEngine.UI;
 
 public class UIBookDescriptionTurretButton : MonoBehaviour
 {
-    [Header("Components")]
-    public Button btnFrame;        // Nút bấm (đóng vai trò là cái khung)
-    public Image iconImage;        // Ảnh bên trong (Con của nút)
+    [Header("Dữ liệu trụ cho nút này")]
+    public TurretData turretData; // Kéo file data trụ vào đây
 
-    private TurretData myData;     // Dữ liệu của trụ mà nút này đang giữ
-    private UIBookManager bookManager; // Tham chiếu đến quản lý
+    [Header("Tham chiếu")]
+    [SerializeField] private Image buttonIconImage; // Ảnh trên nút
+    [SerializeField] private UIBookManager bookManager; // Kéo UIBookManager vào
 
-    // Hàm này được gọi từ Manager khi tạo nút
-    public void Setup(TurretData data, UIBookManager manager)
+    private void Start()
     {
-        myData = data;
-        bookManager = manager;
-
-        // Gán hình ảnh từ data vào Image con
-        if (data.turretIcon != null)
+        // Tự động gán ảnh cho nút nếu có data
+        if (turretData != null && buttonIconImage != null)
         {
-            iconImage.sprite = data.turretIcon;
-            // Đảm bảo icon giữ đúng tỷ lệ
-            iconImage.preserveAspect = true; 
+            buttonIconImage.sprite = turretData.turretIcon; // Lấy icon từ data
         }
 
-        // Lắng nghe sự kiện click
-        btnFrame.onClick.RemoveAllListeners();
-        btnFrame.onClick.AddListener(OnButtonClick);
+        // Bắt sự kiện click
+        GetComponent<Button>().onClick.AddListener(DisplayInfo);
     }
 
-    void OnButtonClick()
+    void DisplayInfo()
     {
-        // Khi click, bảo manager hiển thị thông tin của myData
-        bookManager.ShowTurretInfo(myData);
+        if (bookManager != null && turretData != null)
+        {
+            // GỌI HÀM UpdateTurretInfo (Khớp với bên UIBookManager)
+            bookManager.UpdateTurretInfo(turretData);
+        }
+        else
+        {
+            Debug.LogWarning("Chưa gán BookManager hoặc TurretData cho nút: " + gameObject.name);
+        }
     }
 }

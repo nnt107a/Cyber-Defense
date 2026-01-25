@@ -1,66 +1,34 @@
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro; // Sử dụng TextMeshPro
-using System.Collections.Generic;
+using TMPro;
 
 public class UIBookManager : MonoBehaviour
 {
-    [Header("Data Source")]
-    public List<TurretData> allTurrets; // Kéo thả 8 file Data vào đây
+    [Header("Nơi hiển thị thông tin")]
+    public Image displayIcon;
+    public TextMeshProUGUI displayNameText;
+    public TextMeshProUGUI displayDescriptionText;
+    
+    [Header("Nơi hiển thị chỉ số")]
+    public TextMeshProUGUI displayDamageText;
+    public TextMeshProUGUI displayRangeText;
+    public TextMeshProUGUI displayFireRateText;
+    public TextMeshProUGUI displayCostText;
 
-    [Header("Left Side - List Generation")]
-    public Transform contentContainer;  // Nơi chứa các nút (Content của ScrollView)
-    public UIBookDescriptionTurretButton buttonPrefab; // Prefab nút bấm ta sẽ tạo ở Bước 4
-
-    [Header("Right Side - Detail View")]
-    public TextMeshProUGUI nameText;
-    public TextMeshProUGUI descriptionText;
-    public Image previewImage;          // Ảnh lớn hiển thị chi tiết
-    public TextMeshProUGUI statsText;   // Hiển thị các chỉ số (Damage, Range...)
-
-    private void Start()
+    // Hàm này được gọi từ các nút bấm
+    public void UpdateTurretInfo(TurretData data)
     {
-        GenerateButtons();
+        if (data == null) return;
 
-        // Mặc định hiển thị thông tin trụ đầu tiên khi mở sách
-        if (allTurrets.Count > 0)
-        {
-            ShowTurretInfo(allTurrets[0]);
-        }
-    }
+        // Cập nhật hình ảnh và tên
+        if (displayIcon != null) displayIcon.sprite = data.turretIcon;
+        if (displayNameText != null) displayNameText.text = data.turretName;
+        if (displayDescriptionText != null) displayDescriptionText.text = data.description;
 
-    // Tạo ra các nút dựa trên list data
-    void GenerateButtons()
-    {
-        // Xóa các nút cũ (nếu có) để tránh trùng lặp
-        foreach (Transform child in contentContainer)
-        {
-            Destroy(child.gameObject);
-        }
-
-        // Tạo nút mới
-        foreach (TurretData data in allTurrets)
-        {
-            UIBookDescriptionTurretButton newBtn = Instantiate(buttonPrefab, contentContainer);
-            newBtn.Setup(data, this);
-        }
-    }
-
-    // Hàm hiển thị thông tin chi tiết (Được gọi từ nút con)
-    public void ShowTurretInfo(TurretData data)
-    {
-        // Cập nhật text
-        nameText.text = data.turretName;
-        descriptionText.text = data.description;
-        
-        // Cập nhật ảnh lớn
-        previewImage.sprite = data.turretIcon;
-        previewImage.preserveAspect = true;
-
-        // Cập nhật chỉ số (Bạn có thể trình bày đẹp hơn tùy ý)
-        statsText.text = $"Sát thương: {data.damage}\n" +
-                         $"Tầm bắn: {data.range}\n" +
-                         $"Tốc độ bắn: {data.fireRate}\n" +
-                         $"Giá: {data.cost}";
+        // Cập nhật các chỉ số (Lưu ý: Tên biến đã khớp với TurretData mới)
+        if (displayDamageText != null) displayDamageText.text = "DMG: " + data.attackDamage.ToString();
+        if (displayRangeText != null) displayRangeText.text = "Range: " + data.range.ToString();
+        if (displayFireRateText != null) displayFireRateText.text = "Speed: " + data.attackSpeed.ToString();
+        if (displayCostText != null) displayCostText.text = "Cost: " + data.eCoreCost.ToString();
     }
 }
