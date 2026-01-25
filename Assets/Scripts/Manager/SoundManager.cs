@@ -10,6 +10,15 @@ public class SoundManager : MonoBehaviour
     [SerializeField] public AudioSource uiSource;
     [SerializeField] public AudioSource musicSource;
 
+    [Header("Music Clips")]
+    public AudioClip mainMenuMusic;
+    public AudioClip inMatchMusic;
+
+    [Header("SFX Clips")]
+    public AudioClip turretShoot;
+    public AudioClip enemiesHit;
+    public AudioClip trapExplode;
+
     [Header("UI Clips")]
     public AudioClip uiClick;
     public AudioClip unitSlotClick;
@@ -50,14 +59,32 @@ public class SoundManager : MonoBehaviour
     public void PlaySFX(AudioClip clip)
     {
         if (clip == null) return;
+        if (SoundLimiter.Instance.CanPlay(clip, 3, 1f) == false)
+        {
+            return;
+        }
         sfxSource.PlayOneShot(clip);
     }
 
-    public void PlayMusic(AudioClip clip, bool loop = true)
+    public void PlayTurretShootSound()
     {
-        if (clip == null) return;
+        PlaySFX(turretShoot);
+    }
+    public void PlayEnemiesHitSound()
+    {
+        PlaySFX(enemiesHit);
+    }
+    public void PlayTrapExplodeSound()
+    {
+        PlaySFX(trapExplode);
+    }
 
-        musicSource.clip = clip;
+    public void PlayMusic(bool mainMenu = false, bool loop = true)
+    {
+        AudioClip temp = mainMenu ? mainMenuMusic : inMatchMusic;
+        if (musicSource.clip == temp && musicSource.isPlaying)
+            return;
+        musicSource.clip = temp;
         musicSource.loop = loop;
         musicSource.Play();
     }
@@ -71,5 +98,7 @@ public class SoundManager : MonoBehaviour
         sfxSource.volume = PlayerPrefs.GetFloat("SFXVolume", 0.5f);
         uiSource.volume = PlayerPrefs.GetFloat("UIVolume", 0.5f);
         musicSource.volume = PlayerPrefs.GetFloat("MusicVolume", 0.5f);
+
+        PlayMusic(true);
     }
 }

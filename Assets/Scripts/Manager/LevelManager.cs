@@ -8,6 +8,7 @@ public class LevelManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        SoundManager.Instance.PlayMusic(false);
     }
 
     [SerializeField] private int eCoreCountInit = 100;

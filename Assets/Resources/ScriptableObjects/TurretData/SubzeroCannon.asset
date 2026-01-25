@@ -13,9 +13,15 @@ MonoBehaviour:
   m_Name: SubzeroCannon
   m_EditorClassIdentifier: Assembly-CSharp::TurretData
   turretPrefab: {fileID: 3057636564204210297, guid: c3256d5c9a59e0f45bafaeb84e1f0e70, type: 3}
+  turretName: Subzero Cannon
   maxHealth: 100
   attackDamage: 25
   attackSpeed: 0.75
   projectilePrefab: {fileID: 2462159358173782720, guid: 4f27c07f47977f740b6f32a329992064, type: 3}
   eCoreCost: 75
   rechargeTime: 8
+  activationDelay: 10
+  radius: 1
+  turretIcon: {fileID: -3994109659079745030, guid: e054b265b974b614f8b8f701560d4940, type: 3}
+  specialEffect: {fileID: 0}
+  targetType: 0100000005000000

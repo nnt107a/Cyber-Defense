@@ -13,9 +13,15 @@ MonoBehaviour:
   m_Name: BlastflameBattery
   m_EditorClassIdentifier: Assembly-CSharp::TurretData
   turretPrefab: {fileID: 1239614873695953708, guid: 353aed5ce4ff7904e962026e7bd77f29, type: 3}
+  turretName: Blastflame Battery
   maxHealth: 150
   attackDamage: 30
   attackSpeed: 0.4
   projectilePrefab: {fileID: 236253976257718966, guid: 548b94ca59ddf1249be2f69a2959e194, type: 3}
   eCoreCost: 100
   rechargeTime: 8
+  activationDelay: 10
+  radius: 1
+  turretIcon: {fileID: 3683603313324779622, guid: a3600f54cb59fff4cb4cadc8d4978bd1, type: 3}
+  specialEffect: {fileID: 0}
+  targetType: 0100000005000000

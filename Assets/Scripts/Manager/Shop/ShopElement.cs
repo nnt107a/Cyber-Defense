@@ -69,7 +69,7 @@ public class ShopElement : MonoBehaviour
         rechargeTimer = rechargeTime;
 
         GetComponent<Image>().sprite =
-            data.turretPrefab.GetComponent<SpriteRenderer>().sprite;
+            data.turretIcon;
 
         towerCostText.text = data.eCoreCost.ToString();
     }

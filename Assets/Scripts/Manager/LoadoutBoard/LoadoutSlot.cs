@@ -8,12 +8,14 @@ public class LoadoutSlot : MonoBehaviour
     public Image icon;
     public TextMeshProUGUI eCoreCost;
     public Image selectedOverlay;
+    public TextMeshProUGUI turretName;
 
     void Start()
     {
         icon.sprite =
-            turretData.turretPrefab.GetComponent<SpriteRenderer>().sprite;
+            turretData.turretIcon;
         eCoreCost.text = turretData.eCoreCost.ToString();
+        turretName.text = turretData.turretName;
 
         GetComponent<Button>().onClick.AddListener(OnClick);
         Refresh();

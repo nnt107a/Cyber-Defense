@@ -578,6 +578,7 @@ GameObject:
   m_Component:
   - component: {fileID: 812214383}
   - component: {fileID: 812214384}
+  - component: {fileID: 812214388}
   - component: {fileID: 812214387}
   - component: {fileID: 812214386}
   - component: {fileID: 812214385}
@@ -618,6 +619,11 @@ MonoBehaviour:
   sfxSource: {fileID: 812214387}
   uiSource: {fileID: 812214386}
   musicSource: {fileID: 812214385}
+  mainMenuMusic: {fileID: 8300000, guid: 4ecfe4cf62aae2d418d3dcfab66919c7, type: 3}
+  inMatchMusic: {fileID: 8300000, guid: f11e1b3daa8f8d74b9ac1c627a80bc7d, type: 3}
+  turretShoot: {fileID: 8300000, guid: 740775f6e821d034ab2ddc686a3ccb9c, type: 3}
+  enemiesHit: {fileID: 8300000, guid: 61a46e935df40af42a54f82fcba88d05, type: 3}
+  trapExplode: {fileID: 8300000, guid: 0b19df190028dd54aa94f41f306c2f8c, type: 3}
   uiClick: {fileID: 8300000, guid: fba58df703df3ec498297cdbbc2e1741, type: 3}
   unitSlotClick: {fileID: 8300000, guid: 377902d93a66bb14e960d6c50db46722, type: 3}
   unitPlacedRemoved: {fileID: 8300000, guid: 8369b9cb9ac756545894756bdbfc2860, type: 3}
@@ -912,6 +918,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &812214388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812214382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddb71e91d61ccea42a251f4d9642c244, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SoundLimiter
 --- !u!1 &915910563
 GameObject:
   m_ObjectHideFlags: 0
@@ -1986,12 +2004,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
   isLevelOnGoing: 0
   allLevelDatas:
-  - {fileID: 11400000, guid: a3f7cb6577b07584cbbce6af6df81b47, type: 2}
   - {fileID: 11400000, guid: c4937cb68cffeff43904bd6088f8c2da, type: 2}
+  - {fileID: 11400000, guid: a3f7cb6577b07584cbbce6af6df81b47, type: 2}
   currentLevelIndex: 0
   maxHealth: 5
   enemiesSpawnedCompletely: 0
   isTransitioningAfterChoosingLoadout: 0
+  currentData:
+    eCrystal: 0
+    unlockedTechs: []
+    currentLevelIndex: 0
 --- !u!4 &4388769165678771817
 Transform:
   m_ObjectHideFlags: 0

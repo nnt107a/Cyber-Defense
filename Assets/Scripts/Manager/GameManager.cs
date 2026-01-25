@@ -22,6 +22,8 @@ public class GameManager : MonoBehaviour
 
     public bool enemiesSpawnedCompletely = false;
     public bool isTransitioningAfterChoosingLoadout = false;
+
+    public SaveData currentData;
     private void Awake()
     {
         enemiesInLane = new HashSet<Enemy>[GridManager.height];
@@ -36,7 +38,16 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        currentData = BinarySaveSystem.Load();
+        Debug.Log("Data loaded: E-Crystal = " + currentData.eCrystal + ", Unlocked Techs = " + currentData.unlockedTechs.Count);
     }
+
+    void Start()
+    {
+        ApplyDataToManagers();
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
@@ -108,5 +119,23 @@ public class GameManager : MonoBehaviour
     public void GoToSetting()
     {
         OnGoToSetting?.Invoke();
+    }
+    public void ShowWinUI()
+    {
+        OnLevelCompleted?.Invoke();
+    }
+
+    public void SaveToDisk()
+    {
+        BinarySaveSystem.Save(currentData);
+        Debug.Log("Save data to disk!");
+    }
+
+    public void ApplyDataToManagers()
+    {
+
+        TechManager.Instance.SyncData(currentData.unlockedTechs, currentData.eCrystal);
+
+        // LevelManager.Instance.currentLevelIndex = data.currentLevelIndex;
     }
 }

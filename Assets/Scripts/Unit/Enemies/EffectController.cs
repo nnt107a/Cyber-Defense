@@ -22,12 +22,17 @@ public class EffectController : MonoBehaviour
     public float CurrentSlowMultiplier { get; private set; } = 1f;
     public float TotalDefenseReduction { get; private set; } = 0f;
     public float TotalResistanceReduction { get; private set; } = 0f;
+
+    private EffectBonus effectBonus;
     
     private StatusEffectHandler statusEffectHandler;
     private void Awake()
     {
         statusEffectHandler = GetComponent<StatusEffectHandler>();
+        effectBonus = TechManager.Instance.GetEffectBonus();
+        Debug.Log("Effect Bonus - Slow: " + effectBonus.slowEffectBonus + ", Defense Reduction: " + effectBonus.defenseReductionBonus + ", Resistance Reduction: " + effectBonus.resistanceReductionBonus);
     }
+
     public void ApplyEffect(EffectData data, Turret turret)
     {
         ActiveEffect effect = new ActiveEffect();
@@ -35,7 +40,7 @@ public class EffectController : MonoBehaviour
         if (activeEffects.Exists(e => e.data.effectType == data.effectType && e.instanceId == effect.instanceId))
         {
             var existingEffect = activeEffects.Find(e => e.data.effectType == data.effectType && e.instanceId == effect.instanceId);
-            existingEffect.expirationTime = Time.time + data.duration;
+            existingEffect.expirationTime = Time.time + data.duration; // bonus duration
             RecalculateStats();
             return;
         }
@@ -81,7 +86,7 @@ public class EffectController : MonoBehaviour
             enemy.GetComponent<SpriteRenderer>().color = Color.deepSkyBlue;
         }
 
-        CurrentSlowMultiplier = 1f - strongestSlow;
+        CurrentSlowMultiplier = 1f - strongestSlow - effectBonus.slowEffectBonus;
 
         statusEffectHandler?.PlaySlowEffect(strongestSlow > 0f);
     }
@@ -95,11 +100,11 @@ public class EffectController : MonoBehaviour
             switch (debuff.data.effectType)
             {
                 case EffectType.DefenseReduction:
-                    TotalDefenseReduction += debuff.data.effectValue;
+                    TotalDefenseReduction += debuff.data.effectValue + effectBonus.defenseReductionBonus;
                     break;
 
                 case EffectType.ResistanceReduction:
-                    TotalResistanceReduction += debuff.data.effectValue;
+                    TotalResistanceReduction += debuff.data.effectValue + effectBonus.resistanceReductionBonus;
                     break;
             }
         }
