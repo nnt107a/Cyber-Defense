@@ -8,11 +8,22 @@ public class UIWikiButton : MonoBehaviour
 
     private void Start()
     {
-        button.onClick.AddListener(wikiBoard.Show);
+        button.onClick.AddListener(HandleWikiBoard);
     }
 
     private void OnDestroy()
     {
-        button.onClick.RemoveListener(wikiBoard.Show);
+        button.onClick.RemoveListener(HandleWikiBoard);
+    }
+    private void HandleWikiBoard()
+    {
+        if (wikiBoard.gameObject.activeInHierarchy)
+        {
+            wikiBoard.Hide();
+        }
+        else
+        {
+            wikiBoard.Show();
+        }
     }
 }

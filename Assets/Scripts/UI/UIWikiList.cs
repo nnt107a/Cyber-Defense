@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIWikiList : MonoBehaviour
 {
@@ -7,6 +8,13 @@ public class UIWikiList : MonoBehaviour
     public UIWikiElement selectedElement = null;
     public GameObject detailsPanel;
     public TextMeshProUGUI descriptionText;
+    public Image elementIcon;
+    public TextMeshProUGUI nameText;
+    public TextMeshProUGUI healthText;
+    public TextMeshProUGUI attackText;
+    public TextMeshProUGUI attackSpeedText;
+    public TextMeshProUGUI speedText;
+    public TextMeshProUGUI costText;
     public bool isEnemyList = false;
     private void OnEnable()
     {
@@ -32,10 +40,26 @@ public class UIWikiList : MonoBehaviour
         if (isEnemyList && enemyData != null)
         {
             descriptionText.text = enemyData.description;
+            elementIcon.sprite = enemyData.enemyIcon;
+            nameText.text = enemyData.enemyName;
+            healthText.text = enemyData.maxHealth.ToString();
+            attackText.text = enemyData.attackDamage.ToString();
+            attackSpeedText.text = enemyData.attackSpeed.ToString();
+            speedText.text = enemyData.moveSpeed.ToString();
+            speedText.transform.parent.gameObject.SetActive(true);
+            costText.transform.parent.gameObject.SetActive(false);
         }
         else if (!isEnemyList && turretData != null)
         {
             descriptionText.text = turretData.description;
+            elementIcon.sprite = turretData.turretIcon;
+            nameText.text = turretData.turretName;
+            healthText.text = turretData.maxHealth.ToString();
+            attackText.text = turretData.attackDamage.ToString();
+            attackSpeedText.text = turretData.attackSpeed.ToString();
+            costText.text = turretData.eCoreCost.ToString();
+            costText.transform.parent.gameObject.SetActive(true);
+            speedText.transform.parent.gameObject.SetActive(false);
         }
     }
     public void SelectFaction(bool isTurret)

@@ -16,7 +16,7 @@ MonoBehaviour:
   turretName: Core Reactor
   maxHealth: 75
   attackDamage: 50
-  attackSpeed: 0.075
+  attackSpeed: 0.1
   projectilePrefab: {fileID: 0}
   eCoreCost: 50
   rechargeTime: 6
