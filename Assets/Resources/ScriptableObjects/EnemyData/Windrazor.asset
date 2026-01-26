@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Windrazor
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
   enemyPrefab: {fileID: 7624256713184337812, guid: 9bda1447b98143f4fbc90cd0552e9c43, type: 3}
+  enemyIcon: {fileID: 21300000, guid: f930bb88c3ebf0f4fbf4d227ce484093, type: 3}
+  enemyName: Windrazor
   maxHealth: 90
   moveSpeed: 1.2
   attackDamage: 40
@@ -20,3 +22,8 @@ MonoBehaviour:
   physicalResistance: 0.1
   magicalResistance: 0.1
   eCoreDrop: 50
+  description: "Windrazor evolved from airborne microorganisms used in atmospheric
+    filtration systems. Energy surges altered their cellular structure, granting
+    them razor-sharp motion control. They hunt by riding pressure waves, slicing
+    targets before they can react. Their presence marks areas where the lab\u2019s
+    air systems completely collapsed."

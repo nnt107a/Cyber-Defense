@@ -24,3 +24,9 @@ MonoBehaviour:
   radius: 1
   turretIcon: {fileID: 21300000, guid: cb97b7b759bae4a40a32669c6a04f8ce, type: 3}
   specialEffect: {fileID: 11400000, guid: 3f9861fe59c258f478fa42127cc0c340, type: 2}
+  targetType: 
+  description: CryoNodes originated from cryogenic stasis research conducted on deep-space
+    vessels. Their purpose was to halt biological processes indefinitely during interstellar
+    travel. When containment breaches became common, researchers adapted the technology
+    for emergency suppression. What was once meant to preserve life is now used to
+    immobilize it.

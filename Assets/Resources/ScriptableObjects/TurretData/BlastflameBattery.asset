@@ -25,3 +25,9 @@ MonoBehaviour:
   turretIcon: {fileID: 3683603313324779622, guid: a3600f54cb59fff4cb4cadc8d4978bd1, type: 3}
   specialEffect: {fileID: 0}
   targetType: 0100000005000000
+  description: The Blastflame Battery was developed during the Frontier Purge, when
+    conventional weapons failed to contain rapidly mutating biomass. Scientists repurposed
+    industrial plasma furnaces into compact, automated defense units. Early prototypes
+    were unstable, often consuming their own power cores in spectacular failures.
+    Modern versions retain that raw destructive heritage, refined but never fully
+    tamed.

@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Emberwolf
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
   enemyPrefab: {fileID: 7679583117026828654, guid: a53c91b71b6c6344087ad7c661f8bef8, type: 3}
+  enemyIcon: {fileID: 21300000, guid: 973d3192363c7154bb64ca9963523d43, type: 3}
+  enemyName: Emberwolf
   maxHealth: 120
   moveSpeed: 0.8
   attackDamage: 30
@@ -20,3 +22,9 @@ MonoBehaviour:
   physicalResistance: 0.25
   magicalResistance: 0.25
   eCoreDrop: 50
+  description: "Emberwolf originated from a genetically enhanced security organism
+    designed for high-temperature environments. When the containment fields failed,
+    its metabolism fused with volatile energy residue from the reactors. The creature\u2019s
+    internal heat never dissipates, forcing it into a constant state of aggression.
+    What remains resembles neither animal nor machine, but a living furnace driven
+    by instinct."

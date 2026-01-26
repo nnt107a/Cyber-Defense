@@ -18,4 +18,5 @@ public class TurretData : ScriptableObject
     public Sprite turretIcon;
     public EffectData specialEffect;
     public TargetType[] targetType;
+    public string description;
 }

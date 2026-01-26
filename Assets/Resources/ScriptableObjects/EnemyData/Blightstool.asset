@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Blightstool
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
   enemyPrefab: {fileID: 2838149179291942230, guid: 731f1b85c90d24f47a3ece94fe0f411d, type: 3}
+  enemyIcon: {fileID: 21300000, guid: cdd403fa7d0be304dbdbb1e76f8ae400, type: 3}
+  enemyName: Blighstool
   maxHealth: 150
   moveSpeed: 0.4
   attackDamage: 70
@@ -20,3 +22,8 @@ MonoBehaviour:
   physicalResistance: 0.1
   magicalResistance: 0.25
   eCoreDrop: 50
+  description: "Blightstool was once a harmless fungal culture engineered to recycle
+    biological waste. Exposure to unstable E-Core radiation caused the organism to
+    develop neural clusters and aggressive growth patterns. It now spreads by releasing
+    corrosive spores that rewrite nearby organic matter. Researchers believe Blightstool
+    no longer follows any natural survival instinct\u2014only expansion."

@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Vorrath
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
   enemyPrefab: {fileID: 5126731720254174242, guid: b413d373160f7d643baada8bc095d15f, type: 3}
+  enemyIcon: {fileID: 21300000, guid: e1e41edc4e5cd4b489f36427fbdb940b, type: 3}
+  enemyName: Vorrath
   maxHealth: 350
   moveSpeed: 0.8
   attackDamage: 50
@@ -20,3 +22,7 @@ MonoBehaviour:
   physicalResistance: 0.25
   magicalResistance: 0.1
   eCoreDrop: 50
+  description: "Vorrath was never meant to exist. It is the result of multiple failed
+    experiments merging around the E-Core\u2019s central chamber. Unlike other mutations,
+    Vorrath demonstrates strategic thinking and territorial dominance. Many researchers
+    believe the disaster did not create Vorrath\u2014it awakened it."

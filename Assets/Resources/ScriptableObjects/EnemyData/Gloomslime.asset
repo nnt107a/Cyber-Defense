@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Gloomslime
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
   enemyPrefab: {fileID: 796101051078232427, guid: 6c3fa2c80ffaec148b3768a1ed1b28d4, type: 3}
+  enemyIcon: {fileID: 21300000, guid: 0a6a3c51e82215e489149e1c2740ea7b, type: 3}
+  enemyName: Gloomslime
   maxHealth: 100
   moveSpeed: 0.8
   attackDamage: 40
@@ -20,3 +22,8 @@ MonoBehaviour:
   physicalResistance: 0.1
   magicalResistance: 0.1
   eCoreDrop: 50
+  description: "Gloomslime began as a synthetic microorganism meant to absorb radiation
+    safely. Instead, it adapted\u2014developing collective intelligence across its
+    amorphous body. Prolonged exposure to darkness and energy flux caused it to produce
+    hallucinogenic emissions. Scientists fear Gloomslime is still evolving, learning
+    from every encounter."

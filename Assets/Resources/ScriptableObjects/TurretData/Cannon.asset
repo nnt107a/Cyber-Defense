@@ -25,3 +25,8 @@ MonoBehaviour:
   turretIcon: {fileID: 4065643661873835231, guid: e936def3694503f458042b629743f17e, type: 3}
   specialEffect: {fileID: 0}
   targetType: 0100000004000000
+  description: "The Cannon is one of the earliest automated defense systems still
+    in active service. Originally mass-produced for orbital facilities and off-world
+    colonies, its design prioritized reliability over innovation. While newer technologies
+    emerged, the Cannon endured due to its simplicity and adaptability. It has become
+    a symbol of humanity\u2019s first attempts at automated survival."
