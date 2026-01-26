@@ -26,6 +26,14 @@ public class UILevelSelection : MonoBehaviour
 
     void Start()
     {
+        // 1. Đọc dữ liệu level đã mở khóa từ PlayerPrefs
+        // Nếu chưa có dữ liệu thì mặc định là 0 (Level 1)
+        int unlockedLevel = PlayerPrefs.GetInt("UnlockedLevel", 0);
+        
+        // Cập nhật biến currentLevelIndex của script này bằng dữ liệu đã lưu
+        currentLevelIndex = unlockedLevel;
+
+        // 2. Hiển thị các level đã mở khóa
         ShowUnlockedLevelsImmediate();
         StartCoroutine(AnimateNewLevelUnlock(0.5f));
     }
@@ -34,12 +42,26 @@ public class UILevelSelection : MonoBehaviour
     {
         for (int i = 0; i < currentLevelIndex; i++)
         {
-            levelPaths[i].levelButton.gameObject.SetActive(true);
-
-            if (levelPaths[i].pathLine != null)
+            if (i <= currentLevelIndex)
             {
-                levelPaths[i].pathLine.gameObject.SetActive(true);
-                levelPaths[i].pathLine.fillAmount = 1f;
+                // Hiển thị Level Button
+                levelPaths[i].levelButton.gameObject.SetActive(true);
+
+                // Hiển thị đường nối (Path Line) nếu có
+                if (levelPaths[i].pathLine != null)
+                {
+                    levelPaths[i].pathLine.gameObject.SetActive(true);
+                    levelPaths[i].pathLine.fillAmount = 1f;
+                }
+            }
+            else
+            {
+                // Ẩn các Level chưa mở
+                levelPaths[i].levelButton.gameObject.SetActive(false);
+                if (levelPaths[i].pathLine != null)
+                {
+                    levelPaths[i].pathLine.gameObject.SetActive(false);
+                }
             }
         }
     }

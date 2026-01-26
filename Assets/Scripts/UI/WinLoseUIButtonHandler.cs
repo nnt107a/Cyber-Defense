@@ -53,8 +53,11 @@ public class WinLoseUIButtonHandler : MonoBehaviour
     }
     public void NextLevel()
     {
-        GameManager.Instance.currentLevelIndex = Mathf.Min(GameManager.Instance.currentLevelIndex + 1,
-            GameManager.Instance.allLevelDatas.Length - 1);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        // 1. Gọi GameManager để mở khóa level tiếp theo
+        GameManager.Instance.UnlockNextLevel();
+
+        // 2. Chuyển về màn hình chọn level (LevelSelect)
+        // Đảm bảo tên Scene trong Build Settings là "LevelSelect" (hoặc tên bạn đặt)
+        SceneManager.LoadScene("LevelSelect");
     }
 }
