@@ -40,23 +40,31 @@ public class UILevelSelection : MonoBehaviour
 
     private void ShowUnlockedLevelsImmediate()
     {
-        for (int i = 0; i < currentLevelIndex; i++)
+        // SỬA LỖI Ở ĐÂY: Thêm "levelPaths.Count" vào giữa
+        for (int i = 0; i <= currentLevelIndex; i++) 
         {
-            if (i <= currentLevelIndex)
+            // 1. Gán số thứ tự cho nút (để khi bấm vào nút này, Game Manager biết là level mấy)
+            var btnScript = levelPaths[i].levelButton.GetComponent<UILoadLevelButton>();
+            if (btnScript != null)
             {
-                // Hiển thị Level Button
+                btnScript.levelIndex = i; // Gán index: Level 1 là 0, Level 2 là 1...
+            }
+
+            // 2. Logic Hiển thị / Ẩn
+            // Nếu i nhỏ hơn hoặc bằng level hiện tại đang mở -> Hiển thị
+            if (i <= currentLevelIndex) 
+            {
                 levelPaths[i].levelButton.gameObject.SetActive(true);
 
-                // Hiển thị đường nối (Path Line) nếu có
                 if (levelPaths[i].pathLine != null)
                 {
                     levelPaths[i].pathLine.gameObject.SetActive(true);
                     levelPaths[i].pathLine.fillAmount = 1f;
                 }
             }
+            // Nếu i lớn hơn -> Ẩn (Level chưa mở)
             else
             {
-                // Ẩn các Level chưa mở
                 levelPaths[i].levelButton.gameObject.SetActive(false);
                 if (levelPaths[i].pathLine != null)
                 {

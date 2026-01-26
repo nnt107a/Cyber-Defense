@@ -1,5 +1,6 @@
 using DG.Tweening;
 using UnityEngine;
+using UnityEngine.SceneManagement; 
 
 public class UILoadLevelButton : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class UILoadLevelButton : MonoBehaviour
     private string gameSceneName="SampleScene";
     [SerializeField]
     private GameObject levelIndicator;
+    [HideInInspector] public int levelIndex;
 
     public void Show()
     {
@@ -39,6 +41,7 @@ public class UILoadLevelButton : MonoBehaviour
 
     public void loadLevel()
     {
+        GameManager.Instance.currentLevelIndex = levelIndex;
         UnityEngine.SceneManagement.SceneManager.LoadScene(gameSceneName);
     }
 
