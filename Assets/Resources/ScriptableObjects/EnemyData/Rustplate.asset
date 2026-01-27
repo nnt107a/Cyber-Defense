@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Rustplate
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
   enemyPrefab: {fileID: 4700680802654681910, guid: e1991f8f683b7464683e159a8e88de34, type: 3}
+  enemyIcon: {fileID: 21300000, guid: a2b3eb6ba65690347a25a95053760734, type: 3}
+  enemyName: Rustplate
   maxHealth: 200
   moveSpeed: 0.4
   attackDamage: 20
@@ -20,3 +22,8 @@ MonoBehaviour:
   physicalResistance: 0.4
   magicalResistance: 0.1
   eCoreDrop: 50
+  description: "Rustplate was once a maintenance drone coated with adaptive bio-alloy.
+    When organic matter fused with its chassis during the disaster, the alloy began
+    growing instead of corroding. The creature\u2019s armor continuously regenerates,
+    fed by ambient metal and debris. It is a fusion of abandoned machinery and uncontrolled
+    biological adaptation."

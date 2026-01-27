@@ -2,6 +2,7 @@ using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 
 [System.Serializable]
 public class SaveData
@@ -9,7 +10,7 @@ public class SaveData
     public int eCrystal = 0;
     public List<string> unlockedTechs = new List<string>();
     public int currentLevelIndex = 0;
-
+    public List<TurretSaveData> turretSaveDatas = new List<TurretSaveData>();
 }
 
 public static class BinarySaveSystem
@@ -44,15 +45,35 @@ public static class BinarySaveSystem
             }
             catch
             {
-                Debug.LogError("Failed to load save data. The file may be corrupted. Creating a new save data.");
+                Debug.LogWarning("Failed to load save data. The file may be corrupted. Creating a new save data.");
                 stream.Close();
                 return new SaveData();
             }
         }
         else
         {
-            return new SaveData();
+            Debug.Log("Save file does not exist at path: " + path + ". Creating new save file with default data.");
+            SaveData defaultData = CreateDefaultSaveData();
+            Save(defaultData);
+            return defaultData;
         }
+    }
+
+    private static SaveData CreateDefaultSaveData()
+    {
+        SaveData defaultData = new SaveData();
+        // Customize default data here
+        defaultData.eCrystal = 100;
+        defaultData.unlockedTechs = new List<string>();
+        defaultData.currentLevelIndex = 0;
+        defaultData.turretSaveDatas = new List<TurretSaveData>();
+        int i = 0;
+        foreach (var turret in GameManager.Instance.turretDatas)
+        {
+            TurretSaveData turretSaveData = new TurretSaveData(turret.GetInstanceID(), 1, i++ < 2 ? true : false);
+            defaultData.turretSaveDatas.Add(turretSaveData);
+        }
+        return defaultData;
     }
 
     public static void DeleteSave()

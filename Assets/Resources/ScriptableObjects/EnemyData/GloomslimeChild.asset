@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: GloomslimeChild
   m_EditorClassIdentifier: Assembly-CSharp::EnemyData
   enemyPrefab: {fileID: 4538286258434966499, guid: 629258ea9306768438bc3c38a5c9c316, type: 3}
+  enemyName: Gloomslime Child
   maxHealth: 50
   moveSpeed: 0.4
   attackDamage: 20

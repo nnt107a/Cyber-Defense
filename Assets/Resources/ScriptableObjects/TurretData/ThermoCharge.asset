@@ -24,3 +24,8 @@ MonoBehaviour:
   radius: 1
   turretIcon: {fileID: 21300000, guid: cf94212e83216574eac9c40c5ef1e667, type: 3}
   specialEffect: {fileID: 0}
+  targetType: 
+  description: Thermo Charges were initially developed for asteroid mining and controlled
+    demolitions. Their ability to release massive heat in confined spaces made them
+    ideal for industrial use. After the outbreak, their design was hastily modified
+    for defensive deployment. The line between tool and weapon vanished almost overnight.

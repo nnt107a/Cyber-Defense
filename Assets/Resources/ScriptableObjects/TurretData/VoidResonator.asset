@@ -25,3 +25,8 @@ MonoBehaviour:
   turretIcon: {fileID: -8148080150965001997, guid: e38b02b8a5bef3641b36705973b594ab, type: 3}
   specialEffect: {fileID: 0}
   targetType: 0100000005000000
+  description: "Void Resonators emerged from forbidden research into spatial instability
+    and energy resonance. Initial experiments resulted in unexplained disappearances
+    and data corruption. The project was officially terminated\u2014then quietly
+    revived under military authority. Each Resonator still operates on theories that
+    are not fully understood."

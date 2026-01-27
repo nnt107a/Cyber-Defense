@@ -16,7 +16,7 @@ MonoBehaviour:
   turretName: Core Reactor
   maxHealth: 75
   attackDamage: 50
-  attackSpeed: 0.075
+  attackSpeed: 0.1
   projectilePrefab: {fileID: 0}
   eCoreCost: 50
   rechargeTime: 6
@@ -25,3 +25,8 @@ MonoBehaviour:
   turretIcon: {fileID: 3416474554749380904, guid: 65c5cffcf7d18754da3fe1d84169bdd3, type: 3}
   specialEffect: {fileID: 0}
   targetType: 03000000
+  description: Core Reactors were never meant to be weapons. They were designed to
+    stabilize experimental E-Core generators during long-term research operations.
+    After the Collapse, engineers discovered their resonance fields could amplify
+    nearby systems. Today, Core Reactors stand as silent reminders that support infrastructure
+    often outlives its original purpose.

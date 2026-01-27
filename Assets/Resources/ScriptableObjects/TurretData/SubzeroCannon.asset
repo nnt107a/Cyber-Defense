@@ -25,3 +25,8 @@ MonoBehaviour:
   turretIcon: {fileID: -3994109659079745030, guid: e054b265b974b614f8b8f701560d4940, type: 3}
   specialEffect: {fileID: 0}
   targetType: 0100000005000000
+  description: The Subzero Cannon was born from military pressure to weaponize cryogenic
+    research. Unlike static freezing fields, it allowed precise delivery of extreme
+    cold across long distances. Early trials revealed unsettling side effects on
+    organic targets, leading to ethical disputes. Despite protests, production continued
+    under classified defense programs.

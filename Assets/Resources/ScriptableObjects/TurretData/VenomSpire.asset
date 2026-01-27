@@ -25,3 +25,8 @@ MonoBehaviour:
   turretIcon: {fileID: 953458495345154289, guid: 923254033639e67428c88dfe2bac117a, type: 3}
   specialEffect: {fileID: 0}
   targetType: 0100000005000000
+  description: Venom Spires trace their origins to biochemical waste processing facilities.
+    The spires were designed to neutralize toxic byproducts through controlled corrosion.
+    During containment failures, researchers observed their lethal effects on hostile
+    organisms. The technology was quickly repurposed, raising lasting questions about
+    chemical warfare ethics.

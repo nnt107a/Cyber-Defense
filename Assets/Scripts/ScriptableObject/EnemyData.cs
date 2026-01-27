@@ -6,6 +6,8 @@ using UnityEngine;
 public class EnemyData : ScriptableObject
 {
     public GameObject enemyPrefab;
+    public Sprite enemyIcon;
+    public string enemyName;
     public float maxHealth = 100f;
     public float moveSpeed = 2f;
     public float attackDamage = 10f;
@@ -13,4 +15,5 @@ public class EnemyData : ScriptableObject
     public float physicalResistance = 0f;
     public float magicalResistance = 0f;
     public int eCoreDrop = 50;
+    public string description;
 }

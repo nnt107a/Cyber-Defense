@@ -23,6 +23,8 @@ public class GameManager : MonoBehaviour
     public bool enemiesSpawnedCompletely = false;
     public bool isTransitioningAfterChoosingLoadout = false;
 
+    public TurretData[] turretDatas;
+
     public SaveData currentData;
     private void Awake()
     {
@@ -40,12 +42,8 @@ public class GameManager : MonoBehaviour
         }
 
         currentData = BinarySaveSystem.Load();
-        Debug.Log("Data loaded: E-Crystal = " + currentData.eCrystal + ", Unlocked Techs = " + currentData.unlockedTechs.Count);
-    }
 
-    void Start()
-    {
-        ApplyDataToManagers();
+        Debug.Log("Data loaded: E-Crystal = " + currentData.eCrystal + ", Unlocked Techs = " + currentData.unlockedTechs.Count + ", Current turret data: " + currentData.turretSaveDatas);
     }
 
     private void Update()
@@ -126,20 +124,24 @@ public class GameManager : MonoBehaviour
     }
 
     public void SaveToDisk()
-    {
+    {/*
+        currentData.turretSaveDatas = TurretManager.Instance.turretDatas;*/
         BinarySaveSystem.Save(currentData);
         Debug.Log("Save data to disk!");
     }
 
     public void ApplyDataToManagers()
     {
-
         TechManager.Instance.SyncData(currentData.unlockedTechs, currentData.eCrystal);
+        TurretManager.Instance.SyncData(currentData.turretSaveDatas);
 
         // LevelManager.Instance.currentLevelIndex = data.currentLevelIndex;
     }
+    public TurretSaveData GetTurretDataByID(int turretID)
+    {
+        return currentData.turretSaveDatas.Find(t => t.turretID == turretID);
     // Trong GameManager.cs
-
+    }
     public void UnlockNextLevel()
     {
         // Tính toán index của level tiếp theo
