@@ -15,6 +15,7 @@ public class TechManager : MonoBehaviour
     [SerializeField] private List<TechData> unlockedTechs;
     [SerializeField] private GameObject techInfoPanel;
     [SerializeField] private GameObject techTree;
+    [SerializeField] private GameObject techNodesHolder;
 
     public Action<int> OnTechUnlocked;
     [SerializeField] private int eCrystalCount = 1000;
@@ -26,7 +27,7 @@ public class TechManager : MonoBehaviour
         if (unlockedTechs == null)
             unlockedTechs = new List<TechData>();
 
-        techNodes = GameObject.Find("TechNodeHolder").GetComponentsInChildren<TechNode>();
+        techNodes = techNodesHolder.GetComponentsInChildren<TechNode>(true);
         
         if (Instance == null)
         {
@@ -44,6 +45,7 @@ public class TechManager : MonoBehaviour
     {
         SetUpNodes();
         UpdateVisuals();
+        GameManager.Instance.ApplyDataToManagers();
     }
 
     public bool IsUnlocked(TechData data)

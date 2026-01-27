@@ -43,11 +43,6 @@ public class GameManager : MonoBehaviour
         Debug.Log("Data loaded: E-Crystal = " + currentData.eCrystal + ", Unlocked Techs = " + currentData.unlockedTechs.Count);
     }
 
-    void Start()
-    {
-        ApplyDataToManagers();
-    }
-
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.R))
