@@ -15,34 +15,21 @@ MonoBehaviour:
   spawnEvents:
   - time: 7
     enemyPool:
-    - {fileID: 11400000, guid: 56ce6923c1fbe6b4b8f4e7c4b595b3a0, type: 2}
-    - {fileID: 11400000, guid: 67aeeb67f83c3454489dd238e6b9391a, type: 2}
+    - {fileID: 11400000, guid: 1d52684a8c1eafb458041eb8281ac27e, type: 2}
+    - {fileID: 11400000, guid: 186dd0d8a3d5d084791eb5ed36921db1, type: 2}
     allowDuplicate: 1
     randomLane: 1
     fixedLane: 0
     minLane: 0
     maxLane: 4
     randomCount: 0
-    fixedCount: 3
+    fixedCount: 4
     countRange: {x: 0, y: 0}
-    interval: 2
+    interval: 4
   - time: 20
     enemyPool:
-    - {fileID: 11400000, guid: 67aeeb67f83c3454489dd238e6b9391a, type: 2}
-    - {fileID: 11400000, guid: 56ce6923c1fbe6b4b8f4e7c4b595b3a0, type: 2}
-    allowDuplicate: 1
-    randomLane: 1
-    fixedLane: 0
-    minLane: 0
-    maxLane: 4
-    randomCount: 0
-    fixedCount: 3
-    countRange: {x: 0, y: 0}
-    interval: 0
-  - time: 35
-    enemyPool:
-    - {fileID: 11400000, guid: 67aeeb67f83c3454489dd238e6b9391a, type: 2}
-    - {fileID: 11400000, guid: 56ce6923c1fbe6b4b8f4e7c4b595b3a0, type: 2}
+    - {fileID: 11400000, guid: 1d52684a8c1eafb458041eb8281ac27e, type: 2}
+    - {fileID: 11400000, guid: 186dd0d8a3d5d084791eb5ed36921db1, type: 2}
     allowDuplicate: 1
     randomLane: 1
     fixedLane: 0
@@ -50,5 +37,18 @@ MonoBehaviour:
     maxLane: 4
     randomCount: 0
     fixedCount: 5
+    countRange: {x: 0, y: 0}
+    interval: 0
+  - time: 35
+    enemyPool:
+    - {fileID: 11400000, guid: 1d52684a8c1eafb458041eb8281ac27e, type: 2}
+    - {fileID: 11400000, guid: 186dd0d8a3d5d084791eb5ed36921db1, type: 2}
+    allowDuplicate: 1
+    randomLane: 1
+    fixedLane: 0
+    minLane: 0
+    maxLane: 4
+    randomCount: 0
+    fixedCount: 6
     countRange: {x: 0, y: 0}
     interval: 0
