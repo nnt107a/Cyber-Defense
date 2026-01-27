@@ -5,6 +5,7 @@ public class UIWikiButton : MonoBehaviour
 {
     [SerializeField] private Button button;
     [SerializeField] private WikiManager wikiBoard;
+    [SerializeField] private LoadoutBoardController techBoard;
 
     private void Start()
     {
@@ -24,6 +25,8 @@ public class UIWikiButton : MonoBehaviour
         else
         {
             wikiBoard.Show();
+            if (techBoard.gameObject.activeInHierarchy)
+                techBoard.Hide();
         }
     }
 }

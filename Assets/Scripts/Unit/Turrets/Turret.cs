@@ -31,7 +31,7 @@ public class Turret : MonoBehaviour
         float healthMult = TechManager.Instance.GetStatMultiplier( turretData.targetType, StatType.MaxHealth);
         float healthFlat = TechManager.Instance.GetFlatBonus(turretData.targetType, StatType.MaxHealth);
 
-        currentHealth = (turretData.maxHealth + healthFlat) * healthMult;
+        currentHealth = (turretData.maxHealth + healthFlat + (GameManager.Instance.GetTurretDataByID(turretData.GetInstanceID()).level - 1) * 5) * healthMult;
 
         float speedMult = TechManager.Instance.GetStatMultiplier(turretData.targetType, StatType.AttackSpeed);
         attackInterval = 1.0f / speedMult / turretData.attackSpeed;

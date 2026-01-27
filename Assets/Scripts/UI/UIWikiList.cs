@@ -15,6 +15,9 @@ public class UIWikiList : MonoBehaviour
     public TextMeshProUGUI attackSpeedText;
     public TextMeshProUGUI speedText;
     public TextMeshProUGUI costText;
+    public Button upgradeButton;
+    public TextMeshProUGUI upgradeCostText;
+    public TextMeshProUGUI levelText;
     public bool isEnemyList = false;
     private void OnEnable()
     {
@@ -48,18 +51,38 @@ public class UIWikiList : MonoBehaviour
             speedText.text = enemyData.moveSpeed.ToString();
             speedText.transform.parent.gameObject.SetActive(true);
             costText.transform.parent.gameObject.SetActive(false);
+            levelText.gameObject.SetActive(false);
+            upgradeButton.gameObject.SetActive(false);
+            upgradeButton.onClick.RemoveAllListeners();
         }
         else if (!isEnemyList && turretData != null)
         {
             descriptionText.text = turretData.description;
             elementIcon.sprite = turretData.turretIcon;
             nameText.text = turretData.turretName;
-            healthText.text = turretData.maxHealth.ToString();
+            healthText.text = (turretData.maxHealth + (GameManager.Instance.GetTurretDataByID(turretData.GetInstanceID()).level - 1) * 5).ToString();
             attackText.text = turretData.attackDamage.ToString();
             attackSpeedText.text = turretData.attackSpeed.ToString();
             costText.text = turretData.eCoreCost.ToString();
             costText.transform.parent.gameObject.SetActive(true);
             speedText.transform.parent.gameObject.SetActive(false);
+            levelText.gameObject.SetActive(true);
+            levelText.text = "Lv " + GameManager.Instance.GetTurretDataByID(turretData.GetInstanceID()).level.ToString();
+            upgradeButton.gameObject.SetActive(true);
+            upgradeCostText.text = turretData.eCoreCost.ToString();
+            upgradeButton.onClick.AddListener(() =>
+            {
+                if (TechManager.Instance.ECrystalCount < turretData.eCoreCost)
+                    return;
+                TechManager.Instance.SpendECrystal(turretData.eCoreCost);
+                //Upgrade turret and save
+                GameManager.Instance.GetTurretDataByID(turretData.GetInstanceID()).UpgradeLevel();
+                levelText.text = "Lv " + GameManager.Instance.GetTurretDataByID(turretData.GetInstanceID()).level.ToString();
+
+                healthText.text = (turretData.maxHealth + (GameManager.Instance.GetTurretDataByID(turretData.GetInstanceID()).level - 1) * 5).ToString();
+
+                GameManager.Instance.SaveToDisk();
+            });
         }
     }
     public void SelectFaction(bool isTurret)

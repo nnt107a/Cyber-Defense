@@ -261,7 +261,14 @@ public class TechManager : MonoBehaviour
 
         UpdateVisuals();
     }
-
+    public void SpendECrystal(int amount)
+    {
+        eCrystalCount -= amount;
+        eCrystalText.text = eCrystalCount.ToString();
+        // Update game data in GameManager
+        GameManager.Instance.currentData.eCrystal = eCrystalCount;
+        GameManager.Instance.SaveToDisk();
+    }
 }
 
 [System.Serializable]

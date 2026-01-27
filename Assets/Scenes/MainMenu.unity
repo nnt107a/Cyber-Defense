@@ -2010,6 +2010,15 @@ MonoBehaviour:
   maxHealth: 5
   enemiesSpawnedCompletely: 0
   isTransitioningAfterChoosingLoadout: 0
+  turretDatas:
+  - {fileID: 11400000, guid: 6ebe2dd268e31ce45966986f79625ea2, type: 2}
+  - {fileID: 11400000, guid: a9c82f641f8aa8d43b5ea69d1022af18, type: 2}
+  - {fileID: 11400000, guid: 94b726f2b45ea5f4b8346ed1a9ef0852, type: 2}
+  - {fileID: 11400000, guid: dc9974ff5e06f89459b8f2f91cfd8b09, type: 2}
+  - {fileID: 11400000, guid: 4028376edd74bd643a41867e9dc3c28a, type: 2}
+  - {fileID: 11400000, guid: 25a167f0cd993474cbe0d7d4b6ae5e1b, type: 2}
+  - {fileID: 11400000, guid: b7e3cd88f116eaa4c8e9881fce684243, type: 2}
+  - {fileID: 11400000, guid: 782045048dc8a09449ddd744e9e600a7, type: 2}
   currentData:
     eCrystal: 0
     unlockedTechs: []
