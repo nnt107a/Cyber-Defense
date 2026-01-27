@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: VenomSpire
   m_EditorClassIdentifier: Assembly-CSharp::TurretData
   turretPrefab: {fileID: 8833478785651476202, guid: 67f109d3f6ed192409334da1e7291a86, type: 3}
+  turretID: 6
   turretName: Venom Spire
   maxHealth: 150
   attackDamage: 25

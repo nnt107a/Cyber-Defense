@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: BlastflameBattery
   m_EditorClassIdentifier: Assembly-CSharp::TurretData
   turretPrefab: {fileID: 1239614873695953708, guid: 353aed5ce4ff7904e962026e7bd77f29, type: 3}
+  turretID: 2
   turretName: Blastflame Battery
   maxHealth: 150
   attackDamage: 30

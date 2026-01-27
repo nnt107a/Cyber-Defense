@@ -70,7 +70,7 @@ public static class BinarySaveSystem
         int i = 0;
         foreach (var turret in GameManager.Instance.turretDatas)
         {
-            TurretSaveData turretSaveData = new TurretSaveData(turret.GetInstanceID(), 1, i++ < 2 ? true : false);
+            TurretSaveData turretSaveData = new TurretSaveData(turret.turretID, 1, i++ < 2 ? true : false);
             defaultData.turretSaveDatas.Add(turretSaveData);
         }
         return defaultData;

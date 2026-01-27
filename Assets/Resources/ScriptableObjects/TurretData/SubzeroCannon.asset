@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: SubzeroCannon
   m_EditorClassIdentifier: Assembly-CSharp::TurretData
   turretPrefab: {fileID: 3057636564204210297, guid: c3256d5c9a59e0f45bafaeb84e1f0e70, type: 3}
+  turretID: 4
   turretName: Subzero Cannon
   maxHealth: 100
   attackDamage: 25

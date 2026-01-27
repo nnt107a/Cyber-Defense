@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: ThermoCharge
   m_EditorClassIdentifier: Assembly-CSharp::TurretData
   turretPrefab: {fileID: 8739097755812656010, guid: 84a90db8c6fa74d4289c6da7a4882080, type: 3}
+  turretID: 5
   turretName: Thermo Charge
   maxHealth: 50
   attackDamage: 200

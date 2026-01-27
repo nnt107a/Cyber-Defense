@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: CoreReactor
   m_EditorClassIdentifier: Assembly-CSharp::TurretData
   turretPrefab: {fileID: 3552695032973166042, guid: 0cfd36ac19b220b4487869f92e3b447c, type: 3}
+  turretID: 1
   turretName: Core Reactor
   maxHealth: 75
   attackDamage: 50

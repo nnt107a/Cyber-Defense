@@ -6,6 +6,7 @@ using UnityEngine;
 public class TurretData : ScriptableObject
 {
     public GameObject turretPrefab;
+    public int turretID;
     public string turretName;
     public float maxHealth = 100f;
     public float attackDamage = 10f;

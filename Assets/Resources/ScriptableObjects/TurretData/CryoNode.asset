@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: CryoNode
   m_EditorClassIdentifier: Assembly-CSharp::TurretData
   turretPrefab: {fileID: 5060057203466303430, guid: 6f7b9000453d29d418325851ddd7e694, type: 3}
+  turretID: 3
   turretName: Cryo Node
   maxHealth: 50
   attackDamage: 50
