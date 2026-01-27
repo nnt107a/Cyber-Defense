@@ -1337,7 +1337,7 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1001 &104198290
+--- !u!1001 &231717017
   m_GameObject: {fileID: 280247015}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1404,7 +1404,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68496d80eaa327d4a8a7d93bc65577fd, type: 3}
---- !u!1 &116837855
+--- !u!1 &1263790089
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1420,7 +1420,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &116837856
+--- !u!4 &1796128263
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1896,7 +1896,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 163852326}
   m_CullTransparentMesh: 1
---- !u!1 &169801678
+--- !u!1 &2014985414
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1915,7 +1915,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &169801679
+--- !u!224 &320881398
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2262,7 +2262,7 @@ MonoBehaviour:
   - levelName: 
     levelButton: {fileID: 4296986748964327277}
     pathLine: {fileID: 1707762766}
---- !u!4 &212333571
+--- !u!4 &1466590157
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2318,7 +2318,7 @@ RectTransform:
   m_AnchoredPosition: {x: 5, y: 38}
   m_SizeDelta: {x: 256, y: 256}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &241201244
+--- !u!114 &163960162
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2332,7 +2332,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UILoadLevelButton
   gameSceneName: SampleScene
   levelIndicator: {fileID: 1872510445}
---- !u!114 &241201245
+--- !u!114 &550849054
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2388,7 +2388,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &241201246
+--- !u!114 &1223558648
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2741,7 +2741,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UILoadLevelButton
   gameSceneName: SampleScene
   levelIndicator: {fileID: 1880000108}
---- !u!1001 &293108062
+--- !u!1001 &516772946
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -13043,7 +13043,7 @@ RectTransform:
   m_SizeDelta: {x: -0.26861572, y: -1.5170898}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1614157472
---- !u!114 &620353206
+--- !u!114 &504018440
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13058,7 +13058,7 @@ MonoBehaviour:
   gameSceneName: SampleScene
   levelIndicator: {fileID: 704967827}
   levelIndex: 0
---- !u!114 &620353207
+--- !u!114 &363558391
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13114,7 +13114,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &620353208
+--- !u!114 &250831608
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13494,7 +13494,7 @@ GameObject:
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!224 &1655101998
---- !u!224 &760769052
+--- !u!224 &1584965007
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13513,7 +13513,7 @@ RectTransform:
   m_AnchoredPosition: {x: -629.5, y: 40.500153}
   m_SizeDelta: {x: 218.25694, y: 10}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &760769053
+--- !u!114 &243789298
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13528,7 +13528,7 @@ MonoBehaviour:
   pointA: {fileID: 1972817227}
   pointB: {fileID: 828810117}
   lineWidth: 10
---- !u!114 &760769054
+--- !u!114 &1260606556
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13558,7 +13558,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!222 &760769055
+--- !u!222 &833638598
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13566,7 +13566,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 760769051}
   m_CullTransparentMesh: 1
---- !u!1 &827343034
+--- !u!1 &198093716
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13585,7 +13585,7 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!224 &827343035
+--- !u!224 &348582150
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -16260,7 +16260,7 @@ MonoBehaviour:
   gameSceneName: SampleScene
   levelIndicator: {fileID: 1167364410}
   levelIndex: 0
---- !u!114 &1731509947
+--- !u!114 &1180971571
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
