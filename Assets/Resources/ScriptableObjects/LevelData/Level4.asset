@@ -10,13 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e022d5270afc6464aa160d308256c817, type: 3}
-  m_Name: Level0
+  m_Name: Level4
   m_EditorClassIdentifier: Assembly-CSharp::LevelData
   waves:
-  - wave: {fileID: 11400000, guid: f6914c48554822c418674cfcd0d0e9d2, type: 2}
+  - wave: {fileID: 11400000, guid: f2bca7440ec309e48bd8be4468d8eacf, type: 2}
     intervalAfterWave: 2
-  - wave: {fileID: 11400000, guid: a7c779fcc4d06044b9d02307c1a025b4, type: 2}
-    intervalAfterWave: 2
-  previewEnemyCount: 5
+  - wave: {fileID: 11400000, guid: 76cd871bf57784c449c1b06c541c35dd, type: 2}
+    intervalAfterWave: 5
+  - wave: {fileID: 11400000, guid: 5c6d8d4f1765cf94d971f4f74452c480, type: 2}
+    intervalAfterWave: 1
+  - wave: {fileID: 11400000, guid: 8e2aa54f009b8de41bc2d0d5bae1f055, type: 2}
+    intervalAfterWave: 1
+  previewEnemyCount: 10
   introCutscene: {fileID: 11400000, guid: edbda8fca72f88d449c5448604438ca8, type: 2}
   outroCutscene: {fileID: 0}

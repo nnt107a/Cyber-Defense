@@ -26,20 +26,50 @@ public class UILevelSelection : MonoBehaviour
 
     void Start()
     {
+        // 1. Đọc dữ liệu level đã mở khóa từ PlayerPrefs
+        // Nếu chưa có dữ liệu thì mặc định là 0 (Level 1)
+        int unlockedLevel = PlayerPrefs.GetInt("UnlockedLevel", 0);
+        
+        // Cập nhật biến currentLevelIndex của script này bằng dữ liệu đã lưu
+        currentLevelIndex = unlockedLevel;
+
+        // 2. Hiển thị các level đã mở khóa
         ShowUnlockedLevelsImmediate();
         StartCoroutine(AnimateNewLevelUnlock(0.5f));
     }
 
     private void ShowUnlockedLevelsImmediate()
     {
-        for (int i = 0; i < currentLevelIndex; i++)
+        // SỬA LỖI Ở ĐÂY: Thêm "levelPaths.Count" vào giữa
+        for (int i = 0; i <= currentLevelIndex; i++) 
         {
-            levelPaths[i].levelButton.gameObject.SetActive(true);
-
-            if (levelPaths[i].pathLine != null)
+            // 1. Gán số thứ tự cho nút (để khi bấm vào nút này, Game Manager biết là level mấy)
+            var btnScript = levelPaths[i].levelButton.GetComponent<UILoadLevelButton>();
+            if (btnScript != null)
             {
-                levelPaths[i].pathLine.gameObject.SetActive(true);
-                levelPaths[i].pathLine.fillAmount = 1f;
+                btnScript.levelIndex = i; // Gán index: Level 1 là 0, Level 2 là 1...
+            }
+
+            // 2. Logic Hiển thị / Ẩn
+            // Nếu i nhỏ hơn hoặc bằng level hiện tại đang mở -> Hiển thị
+            if (i <= currentLevelIndex) 
+            {
+                levelPaths[i].levelButton.gameObject.SetActive(true);
+
+                if (levelPaths[i].pathLine != null)
+                {
+                    levelPaths[i].pathLine.gameObject.SetActive(true);
+                    levelPaths[i].pathLine.fillAmount = 1f;
+                }
+            }
+            // Nếu i lớn hơn -> Ẩn (Level chưa mở)
+            else
+            {
+                levelPaths[i].levelButton.gameObject.SetActive(false);
+                if (levelPaths[i].pathLine != null)
+                {
+                    levelPaths[i].pathLine.gameObject.SetActive(false);
+                }
             }
         }
     }

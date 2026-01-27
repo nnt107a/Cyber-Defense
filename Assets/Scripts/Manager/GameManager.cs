@@ -140,5 +140,27 @@ public class GameManager : MonoBehaviour
     public TurretSaveData GetTurretDataByID(int turretID)
     {
         return currentData.turretSaveDatas.Find(t => t.turretID == turretID);
+    // Trong GameManager.cs
+    }
+    public void UnlockNextLevel()
+    {
+        // Tính toán index của level tiếp theo
+        int nextLevelIndex = currentLevelIndex + 1;
+
+        // Kiểm tra xem có vượt quá tổng số level không
+        if (nextLevelIndex < allLevelDatas.Length)
+        {
+            // Lấy level đã mở khóa cao nhất hiện tại từ file save (mặc định là 0)
+            int currentUnlocked = PlayerPrefs.GetInt("UnlockedLevel", 0);
+
+            // Chỉ lưu nếu level mới này cao hơn level đã mở khóa trước đó
+            if (nextLevelIndex > currentUnlocked)
+            {
+                PlayerPrefs.SetInt("UnlockedLevel", nextLevelIndex);
+                PlayerPrefs.Save();
+                Debug.Log("Đã mở khóa Level: " + nextLevelIndex);
+            }
+        }
     }
 }
+
