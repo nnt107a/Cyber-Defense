@@ -386,7 +386,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39.85
+  m_fontSize: 18
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1015,7 +1015,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39.9
+  m_fontSize: 18
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1329,7 +1329,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39.75
+  m_fontSize: 18
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2005,7 +2005,10 @@ MonoBehaviour:
   isLevelOnGoing: 0
   allLevelDatas:
   - {fileID: 11400000, guid: c4937cb68cffeff43904bd6088f8c2da, type: 2}
+  - {fileID: 11400000, guid: 49f4994187d5050439419a22e0c6a766, type: 2}
   - {fileID: 11400000, guid: a3f7cb6577b07584cbbce6af6df81b47, type: 2}
+  - {fileID: 11400000, guid: 70b6db07d952e9a4ba456693bc23315b, type: 2}
+  - {fileID: 11400000, guid: ba624632c963b7f41a81d83f92de089c, type: 2}
   currentLevelIndex: 0
   maxHealth: 5
   enemiesSpawnedCompletely: 0

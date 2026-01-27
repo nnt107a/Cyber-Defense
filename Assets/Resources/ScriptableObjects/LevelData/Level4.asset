@@ -13,14 +13,14 @@ MonoBehaviour:
   m_Name: Level4
   m_EditorClassIdentifier: Assembly-CSharp::LevelData
   waves:
-  - wave: {fileID: 11400000, guid: 331a767970944f54cbc821ab46c8f945, type: 2}
+  - wave: {fileID: 11400000, guid: f2bca7440ec309e48bd8be4468d8eacf, type: 2}
     intervalAfterWave: 2
-  - wave: {fileID: 11400000, guid: 44e48e6247c147f4ea1539cfc42602f3, type: 2}
+  - wave: {fileID: 11400000, guid: 76cd871bf57784c449c1b06c541c35dd, type: 2}
     intervalAfterWave: 5
-  - wave: {fileID: 11400000, guid: 8e2aa54f009b8de41bc2d0d5bae1f055, type: 2}
+  - wave: {fileID: 11400000, guid: 5c6d8d4f1765cf94d971f4f74452c480, type: 2}
     intervalAfterWave: 1
   - wave: {fileID: 11400000, guid: 8e2aa54f009b8de41bc2d0d5bae1f055, type: 2}
     intervalAfterWave: 1
-  previewEnemyCount: 10
+  previewEnemyCount: 20
   introCutscene: {fileID: 11400000, guid: edbda8fca72f88d449c5448604438ca8, type: 2}
   outroCutscene: {fileID: 0}
