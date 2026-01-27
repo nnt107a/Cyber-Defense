@@ -21,6 +21,6 @@ MonoBehaviour:
     intervalAfterWave: 1
   - wave: {fileID: 11400000, guid: 8e2aa54f009b8de41bc2d0d5bae1f055, type: 2}
     intervalAfterWave: 1
-  previewEnemyCount: 20
+  previewEnemyCount: 10
   introCutscene: {fileID: 11400000, guid: edbda8fca72f88d449c5448604438ca8, type: 2}
   outroCutscene: {fileID: 0}
