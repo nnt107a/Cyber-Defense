@@ -1694,8 +1694,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26704b51acae6b240a6eb7b1a1fea3d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIConnector
-  pointA: {fileID: 56550870}
-  pointB: {fileID: 23376133}
+  pointA: {fileID: 0}
+  pointB: {fileID: 0}
   lineWidth: 10
 --- !u!114 &169801681
 MonoBehaviour:
@@ -1854,18 +1854,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 577140936}
-  - {fileID: 1972817227}
-  - {fileID: 1172473905}
-  - {fileID: 828810117}
-  - {fileID: 1661375540}
-  - {fileID: 1196355920}
-  - {fileID: 56550870}
-  - {fileID: 23376133}
-  - {fileID: 1855277106}
-  - {fileID: 887413263}
-  - {fileID: 327743675}
-  - {fileID: 516772947}
   m_Father: {fileID: 647533969}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2205,8 +2193,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26704b51acae6b240a6eb7b1a1fea3d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIConnector
-  pointA: {fileID: 1972817227}
-  pointB: {fileID: 828810117}
+  pointA: {fileID: 0}
+  pointB: {fileID: 0}
   lineWidth: 10
 --- !u!114 &250831608
 MonoBehaviour:
@@ -2288,7 +2276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26704b51acae6b240a6eb7b1a1fea3d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIConnector
-  pointA: {fileID: 1196355920}
+  pointA: {fileID: 0}
   pointB: {fileID: 0}
   lineWidth: 10
 --- !u!114 &257956343
@@ -5523,8 +5511,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26704b51acae6b240a6eb7b1a1fea3d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIConnector
-  pointA: {fileID: 1972817227}
-  pointB: {fileID: 1172473905}
+  pointA: {fileID: 0}
+  pointB: {fileID: 0}
   lineWidth: 10
 --- !u!114 &586705408
 MonoBehaviour:
@@ -5614,8 +5602,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26704b51acae6b240a6eb7b1a1fea3d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIConnector
-  pointA: {fileID: 828810117}
-  pointB: {fileID: 327743675}
+  pointA: {fileID: 0}
+  pointB: {fileID: 0}
   lineWidth: 10
 --- !u!222 &587965334
 CanvasRenderer:
@@ -7188,8 +7176,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26704b51acae6b240a6eb7b1a1fea3d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIConnector
-  pointA: {fileID: 1972817227}
-  pointB: {fileID: 828810117}
+  pointA: {fileID: 0}
+  pointB: {fileID: 0}
   lineWidth: 10
 --- !u!114 &760769054
 MonoBehaviour:
@@ -9092,8 +9080,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26704b51acae6b240a6eb7b1a1fea3d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIConnector
-  pointA: {fileID: 577140936}
-  pointB: {fileID: 1972817227}
+  pointA: {fileID: 0}
+  pointB: {fileID: 0}
   lineWidth: 10
 --- !u!114 &958696775
 MonoBehaviour:
@@ -11160,7 +11148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIConnector
   pointA: {fileID: 0}
-  pointB: {fileID: 887413263}
+  pointB: {fileID: 0}
   lineWidth: 10
 --- !u!114 &1208656926
 MonoBehaviour:
@@ -13905,7 +13893,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIConnector
   pointA: {fileID: 0}
-  pointB: {fileID: 1855277106}
+  pointB: {fileID: 0}
   lineWidth: 10
 --- !u!114 &1691670686
 MonoBehaviour:
@@ -15658,8 +15646,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26704b51acae6b240a6eb7b1a1fea3d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIConnector
-  pointA: {fileID: 1661375540}
-  pointB: {fileID: 1196355920}
+  pointA: {fileID: 0}
+  pointB: {fileID: 0}
   lineWidth: 10
 --- !u!114 &1862952804
 MonoBehaviour:
@@ -16331,8 +16319,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26704b51acae6b240a6eb7b1a1fea3d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIConnector
-  pointA: {fileID: 1661375540}
-  pointB: {fileID: 56550870}
+  pointA: {fileID: 0}
+  pointB: {fileID: 0}
   lineWidth: 10
 --- !u!114 &1925005140
 MonoBehaviour:
