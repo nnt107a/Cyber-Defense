@@ -60,6 +60,11 @@ public class UIWikiList : MonoBehaviour
             descriptionText.text = turretData.description;
             elementIcon.sprite = turretData.turretIcon;
             nameText.text = turretData.turretName;
+            Debug.Log("Health Text: " + healthText.text);
+            Debug.Log("Turret health: " + turretData.maxHealth);
+            Debug.Log("Turret ID: " + turretData.GetInstanceID());
+            Debug.Log("Turret: " + GameManager.Instance.GetTurretDataByID(turretData.GetInstanceID()));
+            Debug.Log("Turret level: " + GameManager.Instance.GetTurretDataByID(turretData.GetInstanceID()).level);
             healthText.text = (turretData.maxHealth + (GameManager.Instance.GetTurretDataByID(turretData.GetInstanceID()).level - 1) * 5).ToString();
             attackText.text = turretData.attackDamage.ToString();
             attackSpeedText.text = turretData.attackSpeed.ToString();
