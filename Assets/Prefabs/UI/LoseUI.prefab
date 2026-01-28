@@ -10,27 +10,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1369070542654892573, guid: ed57c9e58154ab9409dc6b1a8508356a, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1369070542654892573, guid: ed57c9e58154ab9409dc6b1a8508356a, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1369070542654892573, guid: ed57c9e58154ab9409dc6b1a8508356a, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 115.81
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1369070542654892573, guid: ed57c9e58154ab9409dc6b1a8508356a, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 115.81
       objectReference: {fileID: 0}
     - target: {fileID: 1369070542654892573, guid: ed57c9e58154ab9409dc6b1a8508356a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 314.2594
       objectReference: {fileID: 0}
     - target: {fileID: 1369070542654892573, guid: ed57c9e58154ab9409dc6b1a8508356a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -57.905
       objectReference: {fileID: 0}
     - target: {fileID: 2953315274328207339, guid: ed57c9e58154ab9409dc6b1a8508356a, type: 3}
       propertyPath: m_Name
@@ -118,51 +118,79 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4886565539416341076, guid: ed57c9e58154ab9409dc6b1a8508356a, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4886565539416341076, guid: ed57c9e58154ab9409dc6b1a8508356a, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4886565539416341076, guid: ed57c9e58154ab9409dc6b1a8508356a, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 115.81
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4886565539416341076, guid: ed57c9e58154ab9409dc6b1a8508356a, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 115.81
       objectReference: {fileID: 0}
     - target: {fileID: 4886565539416341076, guid: ed57c9e58154ab9409dc6b1a8508356a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 510.0694
       objectReference: {fileID: 0}
     - target: {fileID: 4886565539416341076, guid: ed57c9e58154ab9409dc6b1a8508356a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -57.905
       objectReference: {fileID: 0}
     - target: {fileID: 7244807897221928661, guid: ed57c9e58154ab9409dc6b1a8508356a, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7244807897221928661, guid: ed57c9e58154ab9409dc6b1a8508356a, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7244807897221928661, guid: ed57c9e58154ab9409dc6b1a8508356a, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 115.81
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7244807897221928661, guid: ed57c9e58154ab9409dc6b1a8508356a, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 115.81
       objectReference: {fileID: 0}
     - target: {fileID: 7244807897221928661, guid: ed57c9e58154ab9409dc6b1a8508356a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 118.4494
       objectReference: {fileID: 0}
     - target: {fileID: 7244807897221928661, guid: ed57c9e58154ab9409dc6b1a8508356a, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -57.905
+      objectReference: {fileID: 0}
+    - target: {fileID: 7676585070551366936, guid: ed57c9e58154ab9409dc6b1a8508356a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7676585070551366936, guid: ed57c9e58154ab9409dc6b1a8508356a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7676585070551366936, guid: ed57c9e58154ab9409dc6b1a8508356a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 548914171360435279}
+    - target: {fileID: 7676585070551366936, guid: ed57c9e58154ab9409dc6b1a8508356a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7676585070551366936, guid: ed57c9e58154ab9409dc6b1a8508356a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: GoHome
+      objectReference: {fileID: 0}
+    - target: {fileID: 7676585070551366936, guid: ed57c9e58154ab9409dc6b1a8508356a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: WinLoseUIButtonHandler, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7676585070551366936, guid: ed57c9e58154ab9409dc6b1a8508356a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 9164183503425548467, guid: ed57c9e58154ab9409dc6b1a8508356a, type: 3}
       propertyPath: m_StringReference.m_TableEntryReference.m_KeyId
@@ -173,3 +201,14 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed57c9e58154ab9409dc6b1a8508356a, type: 3}
+--- !u!114 &548914171360435279 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7941338472189016138, guid: ed57c9e58154ab9409dc6b1a8508356a, type: 3}
+  m_PrefabInstance: {fileID: 7614302483273606149}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0decfa69d102164ca62994dd03b28e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::WinLoseUIButtonHandler

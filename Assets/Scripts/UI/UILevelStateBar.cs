@@ -21,7 +21,7 @@ public class UILevelStateBar : MonoBehaviour
     }
     private void Start()
     {
-        WaveManager.Instance.OnWaveLastSpawnEvent += ActivateWave;
+        WaveManager.Instance.OnWaveFirstSpawnEvent += ActivateWave;
     }
     public void Build(LevelData level)
     {
@@ -30,22 +30,34 @@ public class UILevelStateBar : MonoBehaviour
         totalDuration = level.GetTotalDuration();
         float elapsed = 0f;
 
+        List<float> rawTimes = new List<float>();
+
         for (int i = 0; i < level.waves.Count; i++)
         {
-            elapsed += level.waves[i].wave.GetLastSpawnTime();
+            if (i > 0)
+            {
+                UILevelWaveMarker marker = Instantiate(markerPrefab, markerParent);
+                marker.Setup((elapsed + level.waves[i].wave.spawnEvents[0].time) / totalDuration, i == level.waves.Count - 1);
+                markers.Add(marker);
+            }
 
-            float normalizedTime = elapsed / totalDuration;
-
-            UILevelWaveMarker marker = Instantiate(markerPrefab, markerParent);
-            marker.Setup(normalizedTime, i == level.waves.Count - 1);
-            markers.Add(marker);
-
-            elapsed = elapsed - level.waves[i].wave.GetLastSpawnTime() + level.waves[i].wave.GetDuration();
+            elapsed = elapsed + level.waves[i].wave.GetDuration();
 
             if (i < level.waves.Count - 1)
                 elapsed += level.waves[i].intervalAfterWave;
         }
         time = 0f;
+
+        /*float duration = rawTimes[^1];
+
+        for (int i = 0; i < rawTimes.Count; i++)
+        {
+            float normalizedTime = rawTimes[i] / duration;
+
+            UILevelWaveMarker marker = Instantiate(markerPrefab, markerParent);
+            marker.Setup(normalizedTime, i == rawTimes.Count - 1);
+            markers.Add(marker);
+        }*/
     }
     private void Update()
     {
@@ -67,7 +79,7 @@ public class UILevelStateBar : MonoBehaviour
 
     public void ActivateWave(int index)
     {
-        markers[index].Activate();
+        markers[index - 1].Activate();
     }
 }
 
