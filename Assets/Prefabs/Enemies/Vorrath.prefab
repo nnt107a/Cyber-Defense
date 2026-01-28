@@ -118,6 +118,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Vorrath
   enemyData: {fileID: 11400000, guid: b64c91fa199197b4e8f9fcb068067d55, type: 2}
   effectController: {fileID: 1782268055335112743}
+  moveDistance: 1.5
+  minionPrefabs:
+  - {fileID: 7679583117026828654, guid: a53c91b71b6c6344087ad7c661f8bef8, type: 3}
+  - {fileID: 4700680802654681910, guid: e1991f8f683b7464683e159a8e88de34, type: 3}
+  - {fileID: 7624256713184337812, guid: 9bda1447b98143f4fbc90cd0552e9c43, type: 3}
+  - {fileID: 796101051078232427, guid: 6c3fa2c80ffaec148b3768a1ed1b28d4, type: 3}
+  - {fileID: 2838149179291942230, guid: 731f1b85c90d24f47a3ece94fe0f411d, type: 3}
+  summonInterval: 3
+  minSpawnCount: 1
+  maxSpawnCount: 2
+  mapMinY: -2.5
+  mapMaxY: 2.5
+  laneHeight: 1
 --- !u!114 &1782268055335112743
 MonoBehaviour:
   m_ObjectHideFlags: 0

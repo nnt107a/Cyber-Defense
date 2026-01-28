@@ -201,4 +201,8 @@ public class Enemy : MonoBehaviour, IPoolable
         }
         currentState = newState;
     }
+    public void SetLaneIndex(int index)
+    {
+        this.laneIndex = index;
+    }
 }
