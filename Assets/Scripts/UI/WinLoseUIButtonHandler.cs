@@ -45,7 +45,7 @@ public class WinLoseUIButtonHandler : MonoBehaviour
     }
     public void GoHome()
     {
-
+        SceneManager.LoadScene("LevelSelect");
     }
     public void PlayAgain()
     {
@@ -55,6 +55,7 @@ public class WinLoseUIButtonHandler : MonoBehaviour
     {
         // Chuyển về màn hình chọn level (LevelSelect)
         // Đảm bảo tên Scene trong Build Settings là "LevelSelect" (hoặc tên bạn đặt)
-        SceneManager.LoadScene("LevelSelect");
+        GameManager.Instance.currentLevelIndex++;
+        SceneManager.LoadScene("SampleScene");
     }
 }

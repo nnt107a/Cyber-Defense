@@ -45,7 +45,8 @@ public class UIPause : MonoBehaviour
     }
     public void GoHome()
     {
-
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("LevelSelect");
     }
     public void PlayAgain()
     {
