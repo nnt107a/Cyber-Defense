@@ -49,10 +49,6 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            SceneManager.LoadScene(0);
-        }
         if ((Time.frameCount & 31) == 0)
         {
             if (enemiesSpawnedCompletely && !EnemiesRemaining() && isLevelOnGoing)

@@ -13,7 +13,7 @@ public class LoadoutManager : MonoBehaviour
     
     public LoadoutSlot[] loadoutSlots;
 
-    private List<TurretData> selectedTurrets = new();
+    public List<TurretData> selectedTurrets = new();
 
     void Awake()
     {

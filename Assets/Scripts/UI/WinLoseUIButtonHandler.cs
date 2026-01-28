@@ -1,4 +1,5 @@
 using DG.Tweening;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,6 +8,7 @@ public class WinLoseUIButtonHandler : MonoBehaviour
     [SerializeField] private CanvasGroup panel;
     [SerializeField] private GameObject continueButton;
     [SerializeField] private bool isWin = false;
+    [SerializeField] private TextMeshProUGUI crystalRewardText;
     private void Start()
     {
         LevelIntroFlow.Instance.OnLevelCompleted += ShowOnWin;
@@ -21,6 +23,7 @@ public class WinLoseUIButtonHandler : MonoBehaviour
     {
         if (!isWin)
             return;
+        TechManager.Instance.SpendECrystal(-RewardManager.Instance.GetCrystalReward(true));
         if (GameManager.Instance.currentLevelIndex
             >= GameManager.Instance.allLevelDatas.Length - 1)
         {
@@ -28,12 +31,14 @@ public class WinLoseUIButtonHandler : MonoBehaviour
         }
         panel.interactable = true;
         panel.blocksRaycasts = true;
-        panel.DOFade(1f, 0.5f);
+        panel.DOFade(1f, 0.5f); 
+        crystalRewardText.text = RewardManager.Instance.GetCrystalReward(true).ToString();
     }
     private void ShowOnLose()
     {
         if (isWin)
             return;
+        TechManager.Instance.SpendECrystal(-RewardManager.Instance.GetCrystalReward(false));
         if (GameManager.Instance.currentLevelIndex
             >= GameManager.Instance.allLevelDatas.Length - 1)
         {
@@ -42,6 +47,7 @@ public class WinLoseUIButtonHandler : MonoBehaviour
         panel.interactable = true;
         panel.blocksRaycasts = true;
         panel.DOFade(1f, 0.5f);
+        crystalRewardText.text = RewardManager.Instance.GetCrystalReward(false).ToString();
     }
     public void GoHome()
     {

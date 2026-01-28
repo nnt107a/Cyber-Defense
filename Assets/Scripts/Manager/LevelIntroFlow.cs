@@ -85,6 +85,10 @@ public class LevelIntroFlow : MonoBehaviour
 
     public void OnStartButtonClicked()
     {
+        if (LoadoutManager.Instance.selectedTurrets.Count == 0)
+        {
+            return;
+        }
         waitingForStart = false;
     }
 
