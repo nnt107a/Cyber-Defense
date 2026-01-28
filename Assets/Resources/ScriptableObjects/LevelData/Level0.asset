@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Level0
   m_EditorClassIdentifier: Assembly-CSharp::LevelData
   waves:
-  - wave: {fileID: 11400000, guid: f6914c48554822c418674cfcd0d0e9d2, type: 2}
+  - wave: {fileID: 11400000, guid: c940283fbe1de64419c32eef6b1e9508, type: 2}
     intervalAfterWave: 2
-  - wave: {fileID: 11400000, guid: a7c779fcc4d06044b9d02307c1a025b4, type: 2}
+  - wave: {fileID: 11400000, guid: 7039f299a46e69741963693584288be3, type: 2}
     intervalAfterWave: 2
   previewEnemyCount: 5
   introCutscene: {fileID: 11400000, guid: edbda8fca72f88d449c5448604438ca8, type: 2}

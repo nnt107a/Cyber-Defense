@@ -33,6 +33,9 @@ public class LoadoutSlot : MonoBehaviour
 
     public void Refresh()
     {
+        bool unlocked = GameManager.Instance.GetTurretUnlockedStatus(turretData.turretID);
+        transform.Find("Image").gameObject.SetActive(!unlocked);
+        GetComponent<Button>().interactable = unlocked;
         selectedOverlay.enabled =
             LoadoutManager.Instance.IsSelected(turretData);
     }

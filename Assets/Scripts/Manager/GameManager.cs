@@ -66,6 +66,8 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1f);
         OnLevelCompleted?.Invoke();
+
+        UnlockNextLevel();
     }
     private bool EnemiesRemaining()
     {
@@ -164,6 +166,12 @@ public class GameManager : MonoBehaviour
                 Debug.Log($"Đã mở khóa level {nextLevelIndex} và lưu vào game_save.dat");
             }
         }
+        RewardManager.Instance.UnlockTurret(nextLevelIndex);
+    }
+    public bool GetTurretUnlockedStatus(int turretID)
+    {
+        TurretSaveData turretData = currentData.turretSaveDatas.Find(t => t.turretID == turretID);
+        return turretData != null && turretData.unlocked;
     }
 }
 

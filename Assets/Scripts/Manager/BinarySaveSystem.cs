@@ -11,6 +11,17 @@ public class SaveData
     public List<string> unlockedTechs = new List<string>();
     public int currentLevelIndex = 0;
     public List<TurretSaveData> turretSaveDatas = new List<TurretSaveData>();
+    public void UnlockTurret(int turretID)
+    {
+        foreach (var turretData in turretSaveDatas)
+        {
+            if (turretData.turretID == turretID)
+            {
+                turretData.unlocked = true;
+                return;
+            }
+        }
+    }
 }
 
 public static class BinarySaveSystem

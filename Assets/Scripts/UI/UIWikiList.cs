@@ -96,6 +96,14 @@ public class UIWikiList : MonoBehaviour
         {
             bool shouldShow = isTurret ? element.turretData != null : element.enemyData != null;
             element.gameObject.SetActive(shouldShow);
+            if (isTurret && element.turretData != null)
+            {
+                bool unlocked = GameManager.Instance.GetTurretUnlockedStatus(element.turretData.turretID);
+                element.transform.Find("Image").gameObject.SetActive(!unlocked);
+                element.GetComponent<Button>().interactable = unlocked;
+            }
+            element.selectedOverlay.enabled = false;
+
         }
         selectedElement = null;
         detailsPanel.SetActive(false);
