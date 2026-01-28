@@ -26,12 +26,17 @@ public class UILevelSelection : MonoBehaviour
 
     void Start()
     {
-        // 1. Đọc dữ liệu level đã mở khóa từ PlayerPrefs
-        // Nếu chưa có dữ liệu thì mặc định là 0 (Level 1)
-        int unlockedLevel = PlayerPrefs.GetInt("UnlockedLevel", 0);
-        
-        // Cập nhật biến currentLevelIndex của script này bằng dữ liệu đã lưu
-        currentLevelIndex = unlockedLevel;
+        // 1. Đọc dữ liệu level đã mở khóa từ GameManager (BinarySaveSystem) thay vì PlayerPrefs
+        if (GameManager.Instance != null && GameManager.Instance.currentData != null)
+        {
+            // Lấy dữ liệu từ file save đã load sẵn trong GameManager
+            currentLevelIndex = GameManager.Instance.currentData.currentLevelIndex;
+        }
+        else
+        {
+            // Fallback nếu chưa có data (mặc định level 0)
+            currentLevelIndex = 0; 
+        }
 
         // 2. Hiển thị các level đã mở khóa
         ShowUnlockedLevelsImmediate();

@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
         }
 
         currentData = BinarySaveSystem.Load();
+        
 
         Debug.Log("Data loaded: E-Crystal = " + currentData.eCrystal + ", Unlocked Techs = " + currentData.unlockedTechs.Count + ", Current turret data: " + currentData.turretSaveDatas);
     }
@@ -144,21 +145,23 @@ public class GameManager : MonoBehaviour
     }
     public void UnlockNextLevel()
     {
-        // Tính toán index của level tiếp theo
+        // Tính toán index của level tiếp theo dựa trên level vừa chơi
         int nextLevelIndex = currentLevelIndex + 1;
 
-        // Kiểm tra xem có vượt quá tổng số level không
+        // Kiểm tra xem có vượt quá tổng số level của game không
         if (nextLevelIndex < allLevelDatas.Length)
         {
-            // Lấy level đã mở khóa cao nhất hiện tại từ file save (mặc định là 0)
-            int currentUnlocked = PlayerPrefs.GetInt("UnlockedLevel", 0);
-
-            // Chỉ lưu nếu level mới này cao hơn level đã mở khóa trước đó
-            if (nextLevelIndex > currentUnlocked)
+            // Kiểm tra xem level tiếp theo có lớn hơn level đã mở khóa trong file save không
+            // (Để tránh trường hợp chơi lại level 1 mà reset tiến độ level 5)
+            if (nextLevelIndex > currentData.currentLevelIndex)
             {
-                PlayerPrefs.SetInt("UnlockedLevel", nextLevelIndex);
-                PlayerPrefs.Save();
-                Debug.Log("Đã mở khóa Level: " + nextLevelIndex);
+                // Cập nhật vào biến currentData
+                currentData.currentLevelIndex = nextLevelIndex;
+
+                // Lưu xuống file game_save.dat ngay lập tức
+                SaveToDisk();
+                
+                Debug.Log($"Đã mở khóa level {nextLevelIndex} và lưu vào game_save.dat");
             }
         }
     }
