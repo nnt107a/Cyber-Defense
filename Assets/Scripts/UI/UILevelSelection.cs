@@ -57,7 +57,7 @@ public class UILevelSelection : MonoBehaviour
 
             // 2. Logic Hiển thị / Ẩn
             // Nếu i nhỏ hơn hoặc bằng level hiện tại đang mở -> Hiển thị
-            if (i <= currentLevelIndex) 
+            if (i < currentLevelIndex) 
             {
                 levelPaths[i].levelButton.gameObject.SetActive(true);
 

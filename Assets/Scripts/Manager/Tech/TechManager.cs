@@ -9,25 +9,20 @@ using UnityEngine.UI;
 public class TechManager : MonoBehaviour
 {
     public static TechManager Instance;
-    public TechNode[] techNodes;
-    [SerializeField] TechUnlockPath[] techUnlockPaths;
 
+    [Header("Data")]
     [SerializeField] private List<TechData> unlockedTechs;
-    [SerializeField] private GameObject techInfoPanel;
-    [SerializeField] private GameObject techTree;
-    [SerializeField] private GameObject techNodesHolder;
-
-    public Action<int> OnTechUnlocked;
     [SerializeField] private int eCrystalCount = 1000;
+
+    public Action OnDataChanged;
+    public Action<int> OnTechUnlocked;
+    public Action<int> OnECrystalChanged;
     public int ECrystalCount { get { return eCrystalCount;}}
-    [SerializeField] private TextMeshProUGUI eCrystalText;
 
     void Awake()
     {
         if (unlockedTechs == null)
             unlockedTechs = new List<TechData>();
-
-        techNodes = techNodesHolder.GetComponentsInChildren<TechNode>(true);
         
         if (Instance == null)
         {
@@ -43,8 +38,6 @@ public class TechManager : MonoBehaviour
 
     void Start()
     {
-        SetUpNodes();
-        UpdateVisuals();
         GameManager.Instance.ApplyDataToManagers();
     }
 
@@ -85,75 +78,13 @@ public class TechManager : MonoBehaviour
 
         eCrystalCount -= data.eCrystalRequired;
         OnTechUnlocked?.Invoke(eCrystalCount);
+        OnDataChanged?.Invoke();
 
         // Update game data in GameManager
         GameManager.Instance.currentData.eCrystal = eCrystalCount;
         GameManager.Instance.currentData.unlockedTechs = unlockedTechs.Select(t => t.name).ToList();
 
-        UpdateVisuals();
-
         GameManager.Instance.SaveToDisk();
-    }
-
-    public void UnselectTech(TechData data)
-    {
-       techInfoPanel.SetActive(false);
-    }
-
-    private void SetUpNodes()
-    {
-        foreach (TechNode node in techNodes)
-        {
-            node.Setup(node.techData);
-        }
-    }
-
-    public void UpdateVisuals()
-    {
-        eCrystalText.text = eCrystalCount.ToString();
-
-        foreach (TechNode node in techNodes)
-        {
-            TechState stateToSet = CalculateState(node.techData);
-            node.SetState(stateToSet);
-        }
-
-        foreach (TechUnlockPath path in techUnlockPaths)
-        {
-            foreach (Image connector in path.connectors)
-            {
-                if (IsUnlocked(path.techData))
-                {
-                    connector.color = Color.white;
-                }
-                else
-                {
-                    connector.color = new Color(0.2f, 0.2f, 0.2f, 1f);
-                }
-            }
-        }
-    }
-
-    private TechState CalculateState(TechData data)
-    {
-        if (IsUnlocked(data))
-        {
-            return TechState.Researched;
-        }
-        if (CanUnlock(data))
-        {
-            return TechState.Available;
-        }
-        else
-        {
-            return TechState.Locked;
-        }
-    }
-
-    public void ShowTechInfo(TechData data)
-    {
-        techInfoPanel.SetActive(true);
-        techInfoPanel.GetComponent<TechInfo>().SetUp(data);
     }
 
     public bool TryResearch(TechData data)
@@ -259,12 +190,12 @@ public class TechManager : MonoBehaviour
 
         Debug.Log("Synced Tech Data. Unlocked Techs Count: " + this.unlockedTechs.Count + ", E-Crystal: " + eCrystalCount);
 
-        UpdateVisuals();
+        OnDataChanged?.Invoke();
     }
     public void SpendECrystal(int amount)
     {
         eCrystalCount -= amount;
-        eCrystalText.text = eCrystalCount.ToString();
+        OnECrystalChanged?.Invoke(eCrystalCount);
         // Update game data in GameManager
         GameManager.Instance.currentData.eCrystal = eCrystalCount;
         GameManager.Instance.SaveToDisk();
