@@ -9,6 +9,6 @@ public class SortingHandler : MonoBehaviour
     }
     private void LateUpdate()
     {
-        spriteRenderer.sortingOrder = Mathf.RoundToInt(transform.position.y * -10000 + transform.position.x * 100);
+        spriteRenderer.sortingOrder = Mathf.RoundToInt(transform.position.y * -2000 + transform.position.x * 100);
     }
 }
