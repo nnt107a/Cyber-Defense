@@ -6446,13 +6446,14 @@ GameObject:
   - component: {fileID: 647533967}
   - component: {fileID: 647533966}
   - component: {fileID: 647533965}
+  - component: {fileID: 647533970}
   m_Layer: 5
   m_Name: TechTreeUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &647533965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6541,6 +6542,47 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0.0000038146973, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &647533970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647533964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55c66d68610299640ae33d621e1603e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UITechTree
+  techNodes: []
+  techNodesHolder: {fileID: 176962167}
+  techInfoPanel: {fileID: 1638782214}
+  eCrystalText: {fileID: 2003450473}
+  techUnlockPaths:
+  - techData: {fileID: 11400000, guid: 854a3c296513a4b43b00056fa72ce372, type: 2}
+    connectors:
+    - {fileID: 958696775}
+  - techData: {fileID: 11400000, guid: 08ad0c713fe766641b4a1b94b706ccd0, type: 2}
+    connectors:
+    - {fileID: 586705408}
+    - {fileID: 760769054}
+  - techData: {fileID: 11400000, guid: bd48dde380a0f6846bb63ee68af11ac9, type: 2}
+    connectors:
+    - {fileID: 1862952804}
+    - {fileID: 1925005140}
+  - techData: {fileID: 11400000, guid: 6eaa813aac021874f98515636702eb1f, type: 2}
+    connectors:
+    - {fileID: 257956343}
+  - techData: {fileID: 11400000, guid: 857cc425eafda884198ee85fd48ee743, type: 2}
+    connectors:
+    - {fileID: 1691670686}
+    - {fileID: 1208656926}
+  - techData: {fileID: 11400000, guid: cb2472a79d1b9f7419e9e32b1a3615d7, type: 2}
+    connectors:
+    - {fileID: 169801681}
+  - techData: {fileID: 11400000, guid: 06a8e91e8ebf92a48bfe4e7f953298cd, type: 2}
+    connectors:
+    - {fileID: 587965335}
 --- !u!1 &691052177
 GameObject:
   m_ObjectHideFlags: 0
@@ -8692,9 +8734,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 635745089}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &886396255
@@ -9774,38 +9816,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f04e183cd6793b740ad2155b8ad0ccab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TechManager
-  techNodes: []
-  techUnlockPaths:
-  - techData: {fileID: 11400000, guid: 854a3c296513a4b43b00056fa72ce372, type: 2}
-    connectors:
-    - {fileID: 958696775}
-  - techData: {fileID: 11400000, guid: 08ad0c713fe766641b4a1b94b706ccd0, type: 2}
-    connectors:
-    - {fileID: 586705408}
-    - {fileID: 760769054}
-  - techData: {fileID: 11400000, guid: bd48dde380a0f6846bb63ee68af11ac9, type: 2}
-    connectors:
-    - {fileID: 1862952804}
-    - {fileID: 1925005140}
-  - techData: {fileID: 11400000, guid: 6eaa813aac021874f98515636702eb1f, type: 2}
-    connectors:
-    - {fileID: 257956343}
-  - techData: {fileID: 11400000, guid: 857cc425eafda884198ee85fd48ee743, type: 2}
-    connectors:
-    - {fileID: 1691670686}
-    - {fileID: 1208656926}
-  - techData: {fileID: 11400000, guid: cb2472a79d1b9f7419e9e32b1a3615d7, type: 2}
-    connectors:
-    - {fileID: 169801681}
-  - techData: {fileID: 11400000, guid: 06a8e91e8ebf92a48bfe4e7f953298cd, type: 2}
-    connectors:
-    - {fileID: 587965335}
   unlockedTechs: []
-  techInfoPanel: {fileID: 1638782214}
-  techTree: {fileID: 647533964}
-  techNodesHolder: {fileID: 176962167}
   eCrystalCount: 1000
-  eCrystalText: {fileID: 2003450473}
 --- !u!114 &995729796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17270,9 +17282,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 635745089}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 200, y: -50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2003450473

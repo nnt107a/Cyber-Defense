@@ -28,7 +28,16 @@ public class TechNode : MonoBehaviour
     {
         techIconImage.sprite = techData.techIcon;
         GetComponent<Button>()
-            .onClick.AddListener(() => TechManager.Instance.ShowTechInfo(techData));
+            .onClick.AddListener(() => OnClick());
+    }
+
+    public void OnClick()
+    {
+        UITechTree controller = FindObjectOfType<UITechTree>();
+        if (controller != null)
+        {
+            controller.OnTechNodeClicked(techData);
+        }
     }
 
     public void Setup(TechData data)
