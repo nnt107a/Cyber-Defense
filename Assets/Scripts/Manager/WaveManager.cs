@@ -15,7 +15,7 @@ public class WaveManager : MonoBehaviour
     private int currentWaveIndex;
 
     public Action<bool> OnWaveWarning; 
-    public event Action<int> OnWaveLastSpawnEvent;
+    public event Action<int> OnWaveFirstSpawnEvent;
     private bool newWaveStart = true;
     private void Awake()
     {
@@ -58,7 +58,7 @@ public class WaveManager : MonoBehaviour
 
         events.Sort((a, b) => a.time.CompareTo(b.time));
 
-        SpawnEvent lastEvent = events[events.Count - 1];
+        SpawnEvent firstEvent = events[0];
 
         while (eventIndex < events.Count)
         {
@@ -68,7 +68,7 @@ public class WaveManager : MonoBehaviour
 
             if (timer >= e.time)
             {
-                if (e == lastEvent)
+                if (e == firstEvent && currentWaveIndex > 0)
                 {
                     Debug.Log(
                         isFinalWave
@@ -82,7 +82,7 @@ public class WaveManager : MonoBehaviour
                     {
                         yield return null;
                     }
-                    OnWaveLastSpawnEvent?.Invoke(currentWaveIndex);
+                    OnWaveFirstSpawnEvent?.Invoke(currentWaveIndex);
                 }
                 StartCoroutine(SpawnEvent(e));
                 eventIndex++;

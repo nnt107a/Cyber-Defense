@@ -12,13 +12,14 @@ public class LevelData : ScriptableObject
     {
         float total = 0f;
 
-        for (int i = 0; i < waves.Count; i++)
+        for (int i = 0; i < waves.Count - 1; i++)
         {
             total += waves[i].wave.GetDuration();
 
             if (i < waves.Count - 1)
                 total += waves[i].intervalAfterWave;
         }
+        total += waves[waves.Count - 1].wave.spawnEvents[0].time;
 
         return total;
     }
