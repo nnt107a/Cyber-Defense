@@ -7,6 +7,8 @@ public class Turret : MonoBehaviour
     [SerializeField] protected Transform firePoint;
     [SerializeField] protected Transform floatingTextPoint;
 
+    public TurretEffectController effectController;
+
     protected Animator animator;
     protected float currentHealth;
     protected float currentDamage;
@@ -33,7 +35,7 @@ public class Turret : MonoBehaviour
 
         currentHealth = (turretData.maxHealth + healthFlat + (GameManager.Instance.GetTurretDataByID(turretData.turretID).level - 1) * 5) * healthMult;
 
-        float speedMult = TechManager.Instance.GetStatMultiplier(turretData.targetType, StatType.AttackSpeed);
+        float speedMult = TechManager.Instance.GetStatMultiplier(turretData.targetType, StatType.AttackSpeed) * effectController.CurrentSlowMultiplier;
         attackInterval = 1.0f / speedMult / turretData.attackSpeed;
 
         Debug.Log($"{gameObject.name} Stats Updated: Dmg={currentDamage}, AttackInterval={attackInterval}, Health={currentHealth}");

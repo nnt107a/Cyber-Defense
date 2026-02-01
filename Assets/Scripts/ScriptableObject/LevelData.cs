@@ -4,7 +4,8 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "ScriptableObjects/Level Data")]
 public class LevelData : ScriptableObject
 {
-    public List<WaveEntry> waves; 
+    public List<WaveEntry> waves;
+    public GameObject environmentalEffectPrefab;
     
     [Header("Loadout Preview")]
     public int previewEnemyCount = 10;

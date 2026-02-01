@@ -26,6 +26,10 @@ public class GameManager : MonoBehaviour
     public TurretData[] turretDatas;
 
     public SaveData currentData;
+
+    private float effectTimer = 0f;
+    private float effectInterval = 40f;
+
     private void Awake()
     {
         enemiesInLane = new HashSet<Enemy>[GridManager.height];
@@ -49,6 +53,20 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        GameObject currentEnvironmentalEffect = allLevelDatas[currentLevelIndex].environmentalEffectPrefab;
+        Debug.Log("Current Environmental Effect: " + (currentEnvironmentalEffect != null ? currentEnvironmentalEffect.name : "None"));
+        if (isLevelOnGoing && currentEnvironmentalEffect != null)
+        {
+            effectTimer += Time.deltaTime;
+            if (effectTimer > effectInterval)
+            {
+                Debug.Log("Spawning environmental effect: " + currentEnvironmentalEffect.name);
+                GameObject effectObj = ObjectPool.Instance.Spawn(currentEnvironmentalEffect, Vector3.zero, Quaternion.identity);
+                effectObj.GetComponent<OverloadEffect>().Init(currentEnvironmentalEffect);
+                effectTimer = 0f;
+            }
+        }
+
         if ((Time.frameCount & 31) == 0)
         {
             if (enemiesSpawnedCompletely && !EnemiesRemaining() && isLevelOnGoing)

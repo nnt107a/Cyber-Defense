@@ -624,6 +624,7 @@ MonoBehaviour:
   turretShoot: {fileID: 8300000, guid: 740775f6e821d034ab2ddc686a3ccb9c, type: 3}
   enemiesHit: {fileID: 8300000, guid: 61a46e935df40af42a54f82fcba88d05, type: 3}
   trapExplode: {fileID: 8300000, guid: 0b19df190028dd54aa94f41f306c2f8c, type: 3}
+  overloadWarning: {fileID: 8300000, guid: ff9f1940b3b6f2a48a1ef9a05b9d2dec, type: 3}
   uiClick: {fileID: 8300000, guid: fba58df703df3ec498297cdbbc2e1741, type: 3}
   unitSlotClick: {fileID: 8300000, guid: 377902d93a66bb14e960d6c50db46722, type: 3}
   unitPlacedRemoved: {fileID: 8300000, guid: 8369b9cb9ac756545894756bdbfc2860, type: 3}
@@ -1642,7 +1643,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
