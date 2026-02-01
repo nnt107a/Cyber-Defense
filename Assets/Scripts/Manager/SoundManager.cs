@@ -18,6 +18,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip turretShoot;
     public AudioClip enemiesHit;
     public AudioClip trapExplode;
+    public AudioClip overloadWarning;
 
     [Header("UI Clips")]
     public AudioClip uiClick;
@@ -77,6 +78,10 @@ public class SoundManager : MonoBehaviour
     public void PlayTrapExplodeSound()
     {
         PlaySFX(trapExplode);
+    }
+    public void PlayOverloadWarningSound()
+    {
+        PlaySFX(overloadWarning);
     }
 
     public void PlayMusic(bool mainMenu = false, bool loop = true)

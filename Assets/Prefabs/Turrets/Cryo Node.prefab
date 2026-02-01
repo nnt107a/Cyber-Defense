@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 8621126719644467904}
   - component: {fileID: 5118598701548604316}
   - component: {fileID: 4790400707451425282}
+  - component: {fileID: -6678373648405229991}
   m_Layer: 0
   m_Name: Cryo Node
   m_TagString: Untagged
@@ -208,3 +209,17 @@ MonoBehaviour:
   turretData: {fileID: 11400000, guid: dc9974ff5e06f89459b8f2f91cfd8b09, type: 2}
   firePoint: {fileID: 8785646773034639355}
   floatingTextPoint: {fileID: 8785646773034639355}
+  effectController: {fileID: -6678373648405229991}
+--- !u!114 &-6678373648405229991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5060057203466303430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e382ee97e93b7ff4c94933be248a8e7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TurretEffectController
+  turret: {fileID: 4790400707451425282}

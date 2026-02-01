@@ -107,6 +107,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 4729886022953770773, guid: f8e8c8f797d9978418782f5501442732, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5538375625878776813}
+    - targetCorrespondingSourceObject: {fileID: 4729886022953770773, guid: f8e8c8f797d9978418782f5501442732, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 737869253076326889}
   m_SourcePrefab: {fileID: 100100000, guid: f8e8c8f797d9978418782f5501442732, type: 3}
 --- !u!1 &818442344481266315 stripped
 GameObject:
@@ -128,6 +131,20 @@ MonoBehaviour:
   turretData: {fileID: 11400000, guid: 6ebe2dd268e31ce45966986f79625ea2, type: 2}
   firePoint: {fileID: 3243008170392332236}
   floatingTextPoint: {fileID: 2076353311592165172}
+  effectController: {fileID: 737869253076326889}
+--- !u!114 &737869253076326889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 818442344481266315}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e382ee97e93b7ff4c94933be248a8e7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TurretEffectController
+  turret: {fileID: 5538375625878776813}
 --- !u!4 &2076353311592165172 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6208474779488823978, guid: f8e8c8f797d9978418782f5501442732, type: 3}
