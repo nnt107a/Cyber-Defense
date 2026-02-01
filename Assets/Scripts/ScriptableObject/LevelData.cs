@@ -1,11 +1,16 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 [CreateAssetMenu(menuName = "ScriptableObjects/Level Data")]
 public class LevelData : ScriptableObject
 {
     public List<WaveEntry> waves;
     public GameObject environmentalEffectPrefab;
+    [Header("Visuals")]
+    public MapThemeData theme;
+    [HideInInspector]
+    public List<SavedTile> mapLayout = new List<SavedTile>();
     
     [Header("Loadout Preview")]
     public int previewEnemyCount = 10;
@@ -33,4 +38,11 @@ public class WaveEntry
 {
     public WaveData wave;
     public float intervalAfterWave = 5f;
+}
+
+[System.Serializable]
+public class SavedTile
+{
+    public Vector3Int position;
+    public TileBase tileAsset;
 }

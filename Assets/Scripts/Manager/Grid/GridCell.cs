@@ -6,6 +6,12 @@ public class GridCell : MonoBehaviour
     public int y;
     public bool unitPlaced = false;
     public GameObject unit;
+    private SpriteRenderer sr;
+    private MapThemeData currentTheme;
+    void Awake()
+    {
+        sr = GetComponent<SpriteRenderer>();
+    }
     public void OnMouseDown()
     {
         if (GameManager.Instance.isLevelOnGoing == false)
@@ -56,5 +62,11 @@ public class GridCell : MonoBehaviour
     {
         unitPlaced = false;
         unit = null;
+    }
+
+    public void UpdateTheme(MapThemeData theme, bool lightCell = true)
+    {
+        currentTheme = theme;
+        sr.sprite = lightCell ? currentTheme.lightCell : currentTheme.darkCell;
     }
 }

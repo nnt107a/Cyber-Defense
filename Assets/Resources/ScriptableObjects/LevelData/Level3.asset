@@ -22,6 +22,8 @@ MonoBehaviour:
   - wave: {fileID: 11400000, guid: 44a8209593d3af044b59c31313679ee4, type: 2}
     intervalAfterWave: 0
   environmentalEffectPrefab: {fileID: 1459855146553023631, guid: d2bc5a54284e4084e838351ffbc51dcc, type: 3}
+  theme: {fileID: 11400000, guid: f1d3b7cf167a13b4aa67c8082d298a3a, type: 2}
+  mapLayout: []
   previewEnemyCount: 10
   introCutscene: {fileID: 11400000, guid: d986c2e5183e9274593bcb2b654f2ffc, type: 2}
   outroCutscene: {fileID: 0}
