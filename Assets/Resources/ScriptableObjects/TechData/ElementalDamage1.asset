@@ -14,12 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TechData
   TechName: Acidic Compound Mix
   TechDescription: Enriches the chemical payload with corrosive acids. Increases
-    Chemical Damage by 10.
+    Elemental Damage by 10.
+  TechVNDescription: "L\xE0m gi\xE0u l\u01B0\u1EE3ng h\xF3a ch\u1EA5t b\u1EB1ng c\xE1c
+    axit \u0103n m\xF2n. T\u0103ng m\u1EE9c \u0111\u1ED9 t\u1EA5n c\xF4ng nguy\xEAn
+    t\u1ED1 l\xEAn 10."
   techType: 1
   bonuses:
   - targetType: 5
     statType: 1
-    value: 15
+    value: 10
     isPercentage: 0
   techIcon: {fileID: 21300000, guid: e32b8056f5f2eb741bec42f791c7f1b5, type: 3}
   eCrystalRequired: 75

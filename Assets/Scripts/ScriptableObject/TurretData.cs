@@ -20,4 +20,5 @@ public class TurretData : ScriptableObject
     public EffectData specialEffect;
     public TargetType[] targetType;
     public string description;
+    public string vnDescription;
 }

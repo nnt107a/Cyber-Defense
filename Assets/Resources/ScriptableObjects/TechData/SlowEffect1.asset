@@ -15,6 +15,9 @@ MonoBehaviour:
   TechName: Liquid Nitrogen Coolant
   TechDescription: Sprays industrial coolant to freeze muscle tissues. Increases
     Slow Effectiveness by 10%.
+  TechVNDescription: "Phun dung d\u1ECBch l\xE0m m\xE1t c\xF4ng nghi\u1EC7p \u0111\u1EC3
+    l\xE0m \u0111\xF4ng c\u1EE9ng m\xF4 c\u01A1. T\u0103ng hi\u1EC7u qu\u1EA3 l\xE0m
+    ch\u1EADm l\xEAn 10%."
   techType: 1
   bonuses:
   - targetType: 6

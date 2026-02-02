@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Cannon
   m_EditorClassIdentifier: Assembly-CSharp::TurretData
   turretPrefab: {fileID: 818442344481266315, guid: d91b08a1692fefe48b0dac018e0e2334, type: 3}
+  turretID: 0
   turretName: Cannon
   maxHealth: 100
   attackDamage: 15
@@ -30,3 +31,15 @@ MonoBehaviour:
     colonies, its design prioritized reliability over innovation. While newer technologies
     emerged, the Cannon endured due to its simplicity and adaptability. It has become
     a symbol of humanity\u2019s first attempts at automated survival."
+  vnDescription: "Cannon l\xE0 m\u1ED9t trong nh\u1EEFng h\u1EC7 th\u1ED1ng ph\xF2ng
+    th\u1EE7 t\u1EF1 \u0111\u1ED9ng \u0111\u1EDDi \u0111\u1EA7u v\u1EABn c\xF2n ho\u1EA1t
+    \u0111\u1ED9ng. Ban \u0111\u1EA7u \u0111\u01B0\u1EE3c s\u1EA3n xu\u1EA5t h\xE0ng
+    lo\u1EA1t cho c\xE1c c\u01A1 s\u1EDF tr\xEAn qu\u1EF9 \u0111\u1EA1o v\xE0 c\xE1c
+    thu\u1ED9c \u0111\u1ECBa ngo\xE0i Tr\xE1i \u0111\u1EA5t, thi\u1EBFt k\u1EBF c\u1EE7a
+    n\xF3 \u01B0u ti\xEAn \u0111\u1ED9 tin c\u1EADy h\u01A1n l\xE0 s\u1EF1 \u0111\u1ED5i
+    m\u1EDBi. M\u1EB7c d\xF9 c\xE1c c\xF4ng ngh\u1EC7 m\u1EDBi h\u01A1n \u0111\xE3
+    xu\u1EA5t hi\u1EC7n, Cannon v\u1EABn t\u1ED3n t\u1EA1i nh\u1EDD s\u1EF1 \u0111\u01A1n
+    gi\u1EA3n v\xE0 kh\u1EA3 n\u0103ng th\xEDch \u1EE9ng c\u1EE7a n\xF3. N\xF3 \u0111\xE3
+    tr\u1EDF th\xE0nh bi\u1EC3u t\u01B0\u1EE3ng cho nh\u1EEFng n\u1ED7 l\u1EF1c \u0111\u1EA7u
+    ti\xEAn c\u1EE7a nh\xE2n lo\u1EA1i trong vi\u1EC7c t\u1EF1 \u0111\u1ED9ng h\xF3a
+    \u0111\u1EC3 sinh t\u1ED3n."

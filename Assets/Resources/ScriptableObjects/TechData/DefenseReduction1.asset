@@ -15,6 +15,9 @@ MonoBehaviour:
   TechName: Armor-Dissolving Solvent
   TechDescription: Chemicals reacting with mutated chitin armor. Ignores 1% of Enemy
     Armor.
+  TechVNDescription: "C\xE1c ch\u1EA5t h\xF3a h\u1ECDc ph\u1EA3n \u1EE9ng v\u1EDBi
+    l\u1EDBp gi\xE1p b\u1ECB \u0111\u1ED9t bi\u1EBFn. B\u1ECF qua 1% gi\xE1p c\u1EE7a
+    k\u1EBB \u0111\u1ECBch."
   techType: 1
   bonuses:
   - targetType: 8

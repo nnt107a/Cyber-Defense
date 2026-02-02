@@ -15,6 +15,9 @@ MonoBehaviour:
   TechName: High-Velocity Rivets
   TechDescription: Modifies industrial tools to fire construction rivets. Increases
     Physical Damage by 10.
+  TechVNDescription: "\u0110i\u1EC1u ch\u1EC9nh c\xE1c c\xF4ng c\u1EE5 c\xF4ng nghi\u1EC7p
+    \u0111\u1EC3 b\u1EAFn \u0111inh t\xE1n x\xE2y d\u1EF1ng. T\u0103ng s\xE1t th\u01B0\u01A1ng
+    v\u1EADt l\xFD l\xEAn 10."
   techType: 1
   bonuses:
   - targetType: 4

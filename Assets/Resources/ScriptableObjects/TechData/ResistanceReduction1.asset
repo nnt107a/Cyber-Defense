@@ -15,6 +15,10 @@ MonoBehaviour:
   TechName: Cellular Destabilizer
   TechDescription: Viruses designed to weaken mutant immune systems. Penetrates 1%
     of Chemical Resistance.
+  TechVNDescription: "C\xE1c lo\u1EA1i virus \u0111\u01B0\u1EE3c thi\u1EBFt k\u1EBF
+    \u0111\u1EC3 l\xE0m suy y\u1EBFu h\u1EC7 mi\u1EC5n d\u1ECBch \u0111\u1ED9t bi\u1EBFn.
+    C\xF3 kh\u1EA3 n\u0103ng xuy\xEAn th\u1EE7ng 1% kh\u1EA3 n\u0103ng kh\xE1ng nguy\xEAn
+    t\u1ED1."
   techType: 1
   bonuses:
   - targetType: 7

@@ -15,6 +15,9 @@ MonoBehaviour:
   TechName: Reinforced Barricades
   TechDescription: Welds emergency bulkheads onto turret frames. Increases Max Durability
     by 20.
+  TechVNDescription: " H\xE0n c\xE1c v\xE1ch ng\u0103n kh\u1EA9n c\u1EA5p v\xE0o
+    khung th\xE1p ph\xE1o. T\u0103ng \u0111\u1ED9 b\u1EC1n t\u1ED1i \u0111a l\xEAn
+    20."
   techType: 0
   bonuses:
   - targetType: 1

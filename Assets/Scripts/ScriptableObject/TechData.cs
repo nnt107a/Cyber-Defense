@@ -48,6 +48,7 @@ public class TechData : ScriptableObject
 {
     public string TechName = "New Tech";
     public string TechDescription = "";
+    public string TechVNDescription = "";
     public TechType techType = TechType.General;
     public List<TechBonus> bonuses;
     public Sprite techIcon;

@@ -29,7 +29,7 @@ public class TechInfo : MonoBehaviour
     {
         this.techData = techData;
         techNameText.text = techData.TechName;
-        techDescriptionText.text = techData.TechDescription;
+        techDescriptionText.text = PlayerPrefs.GetInt("LocaleIndex", 0) == 0 ? techData.TechDescription : techData.TechVNDescription;
         unlockButton.GetComponentInChildren<TextMeshProUGUI>().color = Color.white;
         UpdateECrystalValidity(TechManager.Instance.ECrystalCount);
 

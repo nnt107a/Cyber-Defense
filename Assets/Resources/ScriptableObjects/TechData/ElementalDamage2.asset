@@ -15,11 +15,15 @@ MonoBehaviour:
   TechName: Volatile Reagents
   TechDescription: Refines the mixture of all energy and chemical payloads to their
     most unstable state. Increases Elemental Damage by 15.
+  TechVNDescription: "Tinh ch\u1EC9nh h\u1ED7n h\u1EE3p t\u1EA5t c\u1EA3 c\xE1c lo\u1EA1i
+    n\u0103ng l\u01B0\u1EE3ng v\xE0 h\xF3a ch\u1EA5t \u0111\u1EBFn tr\u1EA1ng th\xE1i
+    kh\xF4ng \u1ED5n \u0111\u1ECBnh nh\u1EA5t. T\u0103ng s\xE1t th\u01B0\u01A1ng
+    nguy\xEAn t\u1ED1 l\xEAn 15."
   techType: 1
   bonuses:
-  - targetType: 4
+  - targetType: 5
     statType: 1
-    value: 20
+    value: 15
     isPercentage: 0
   techIcon: {fileID: 21300000, guid: d3590afc6b555c44d8fcd6c5241012ab, type: 3}
   eCrystalRequired: 100

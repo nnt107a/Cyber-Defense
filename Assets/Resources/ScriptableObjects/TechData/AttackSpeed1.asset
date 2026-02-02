@@ -15,6 +15,9 @@ MonoBehaviour:
   TechName: Hydraulic Bypass
   TechDescription: Removes safety limiters on turret motors. Increases Attack Speed
     by 1%.
+  TechVNDescription: " Lo\u1EA1i b\u1ECF c\xE1c gi\u1EDBi h\u1EA1n an to\xE0n tr\xEAn
+    \u0111\u1ED9ng c\u01A1 th\xE1p ph\xE1o. T\u0103ng t\u1ED1c \u0111\u1ED9 t\u1EA5n
+    c\xF4ng l\xEAn 1%."
   techType: 0
   bonuses:
   - targetType: 1

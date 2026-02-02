@@ -42,7 +42,7 @@ public class UIWikiList : MonoBehaviour
         isEnemyList = enemyData != null;
         if (isEnemyList && enemyData != null)
         {
-            descriptionText.text = enemyData.description;
+            descriptionText.text = PlayerPrefs.GetInt("LocaleIndex", 0) == 0 ? enemyData.description : enemyData.vnDescription;
             elementIcon.sprite = enemyData.enemyIcon;
             nameText.text = enemyData.enemyName;
             healthText.text = enemyData.maxHealth.ToString();
@@ -57,7 +57,7 @@ public class UIWikiList : MonoBehaviour
         }
         else if (!isEnemyList && turretData != null)
         {
-            descriptionText.text = turretData.description;
+            descriptionText.text = PlayerPrefs.GetInt("LocaleIndex", 0) == 0 ? turretData.description : turretData.vnDescription;
             elementIcon.sprite = turretData.turretIcon;
             nameText.text = turretData.turretName;
             Debug.Log("Health Text: " + healthText.text);

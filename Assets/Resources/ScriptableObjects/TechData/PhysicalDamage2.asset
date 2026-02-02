@@ -15,6 +15,9 @@ MonoBehaviour:
   TechName: Hollow-Point Rounds
   TechDescription: Standard security ammo designed to mushroom on impact. Increases
     Physical Damage by 15.
+  TechVNDescription: " Lo\u1EA1i \u0111\u1EA1n an ninh ti\xEAu chu\u1EA9n \u0111\u01B0\u1EE3c
+    thi\u1EBFt k\u1EBF \u0111\u1EC3 n\u1EDF to khi va ch\u1EA1m. T\u0103ng s\xE1t
+    th\u01B0\u01A1ng v\u1EADt l\xFD l\xEAn 15."
   techType: 1
   bonuses:
   - targetType: 4

@@ -15,6 +15,10 @@ MonoBehaviour:
   TechName: Generator Hardened Casing
   TechDescription: Welds layers of reinforced scrap metal onto the reactor's frame
     to withstand attacks. Increases Core Reactor Max Health by 10%.
+  TechVNDescription: " H\xE0n c\xE1c l\u1EDBp kim lo\u1EA1i ph\u1EBF li\u1EC7u gia
+    c\u01B0\u1EDDng v\xE0o khung l\xF2 ph\u1EA3n \u1EE9ng \u0111\u1EC3 ch\u1ED1ng
+    l\u1EA1i c\xE1c cu\u1ED9c t\u1EA5n c\xF4ng. T\u0103ng 10% m\xE1u t\u1ED1i \u0111a
+    c\u1EE7a Core Reactor."
   techType: 0
   bonuses:
   - targetType: 3

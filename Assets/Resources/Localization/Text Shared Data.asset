@@ -59,6 +59,10 @@ MonoBehaviour:
     m_Key: TXT_PLAY
     m_Metadata:
       m_Items: []
+  - m_Id: 15524424508317696
+    m_Key: TXT_UPGRADE
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:

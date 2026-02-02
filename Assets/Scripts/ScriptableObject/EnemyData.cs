@@ -16,4 +16,5 @@ public class EnemyData : ScriptableObject
     public float magicalResistance = 0f;
     public int eCoreDrop = 50;
     public string description;
+    public string vnDescription;
 }

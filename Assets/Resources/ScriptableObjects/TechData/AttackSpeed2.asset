@@ -15,6 +15,9 @@ MonoBehaviour:
   TechName: Catalytic Enzymes
   TechDescription: Injects aggressive catalysts into the Synthesizer. Reduces biomass
     processing time by 1%.
+  TechVNDescription: "B\u01A1m c\xE1c ch\u1EA5t x\xFAc t\xE1c m\u1EA1nh v\xE0o thi\u1EBFt
+    b\u1ECB t\u1ED5ng h\u1EE3p. Gi\u1EA3m th\u1EDDi gian x\u1EED l\xFD sinh kh\u1ED1i
+    xu\u1ED1ng 1%."
   techType: 0
   bonuses:
   - targetType: 3
