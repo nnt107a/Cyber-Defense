@@ -12,6 +12,11 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("LevelSelect");
     }
 
+    public void GoToSetting()
+    {
+        GameManager.Instance.GoToSetting();
+    }
+
     // Update is called once per frame
     public void Exit()
     {

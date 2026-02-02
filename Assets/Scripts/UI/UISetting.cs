@@ -34,7 +34,7 @@ public class UISetting : MonoBehaviour
     }
     private void OnDestroy()
     {
-        GameManager.Instance.OnPause -= Show;
+        GameManager.Instance.OnGoToSetting -= Show;
     }
     private void Show()
     {
