@@ -16,7 +16,7 @@ MonoBehaviour:
   backgroundTile: {fileID: 11400000, guid: cd8813c65f0277d48a9bcb5a1ed7130a, type: 2}
   lightCell: {fileID: 21300000, guid: 92b797b9d3c213f4ea1383817ca2c332, type: 3}
   darkCell: {fileID: 21300000, guid: 1b7f2b9e29474bd4cb2b9639a19b8c2b, type: 3}
-  boundaryUpperLeftCorner: {fileID: 21300000, guid: 92b797b9d3c213f4ea1383817ca2c332, type: 3}
+  boundaryUpperLeftCorner: {fileID: 3529014308510652474, guid: a7b6213454e3f3a498d394301fd9d157, type: 3}
   boundaryLowerLeftCorner: {fileID: 402267518, guid: a7b6213454e3f3a498d394301fd9d157, type: 3}
   boundaryUpperRightCorner: {fileID: -174691214, guid: a7b6213454e3f3a498d394301fd9d157, type: 3}
   boundaryLowerRightCorner: {fileID: 1519766483, guid: a7b6213454e3f3a498d394301fd9d157, type: 3}

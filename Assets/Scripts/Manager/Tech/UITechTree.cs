@@ -9,8 +9,6 @@ public class UITechTree : MonoBehaviour
     [Header("UI References")]
     [SerializeField] private GameObject techNodesHolder;
     [SerializeField] private GameObject techInfoPanel;
-    [SerializeField] private TextMeshProUGUI eCrystalText;
-
     [SerializeField] TechUnlockPath[] techUnlockPaths;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -27,7 +25,6 @@ public class UITechTree : MonoBehaviour
         if (TechManager.Instance != null)
         {
             TechManager.Instance.OnDataChanged += UpdateVisuals;
-            TechManager.Instance.OnECrystalChanged += UpdateECrystalCount;
             UpdateVisuals();
         }
     }
@@ -37,14 +34,11 @@ public class UITechTree : MonoBehaviour
         if (TechManager.Instance != null)
         {
             TechManager.Instance.OnDataChanged -= UpdateVisuals;
-            TechManager.Instance.OnECrystalChanged -= UpdateECrystalCount;
         }
     }
 
     public void UpdateVisuals()
     {
-        if (eCrystalText != null)
-            eCrystalText.text = TechManager.Instance.ECrystalCount.ToString();
 
         foreach (TechNode node in techNodes)
         {
@@ -68,12 +62,6 @@ public class UITechTree : MonoBehaviour
                 }
             }
         }
-    }
-
-    public void UpdateECrystalCount(int newECrystalCount)
-    {
-        if (eCrystalText != null)
-            eCrystalText.text = newECrystalCount.ToString();
     }
 
     private TechState CalculateState(TechData data)
