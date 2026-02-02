@@ -13,13 +13,21 @@ MonoBehaviour:
   m_Name: IntroLevel5
   m_EditorClassIdentifier: Assembly-CSharp::CutsceneData
   lines:
-  - speakerIcon: {fileID: 0}
+  - speakerIcon: {fileID: -236619611796383025, guid: 929b384521a106348bd3402cf4a27fc6, type: 3}
     text: "This is it\u2026 the Lab Core."
-  - speakerIcon: {fileID: 0}
+    vnText: "Cu\u1ED1i c\xF9ng\u2026 L\xF5i Trung T\xE2m."
+  - speakerIcon: {fileID: -236619611796383025, guid: 929b384521a106348bd3402cf4a27fc6, type: 3}
     text: The original subject. The source of everything.
-  - speakerIcon: {fileID: 0}
+    vnText: "\u0110\u1ED1i t\u01B0\u1EE3ng th\xED nghi\u1EC7m ban \u0111\u1EA7u.
+      Ngu\u1ED3n g\u1ED1c c\u1EE7a t\u1EA5t c\u1EA3."
+  - speakerIcon: {fileID: -236619611796383025, guid: 929b384521a106348bd3402cf4a27fc6, type: 3}
     text: "Vorrath\u2026 You were never meant to evolve this far."
-  - speakerIcon: {fileID: 0}
+    vnText: "Vorrath\u2026 ng\u01B0\u01A1i ch\u01B0a bao gi\u1EDD \u0111\u01B0\u1EE3c
+      ph\xE9p ti\u1EBFn h\xF3a \u0111\u1EBFn m\u1EE9c n\xE0y."
+  - speakerIcon: {fileID: -236619611796383025, guid: 929b384521a106348bd3402cf4a27fc6, type: 3}
     text: The E-Core kept you alive.
-  - speakerIcon: {fileID: 0}
+    vnText: "E-Core \u0111\xE3 gi\u1EEF ng\u01B0\u01A1i s\u1ED1ng s\xF3t."
+  - speakerIcon: {fileID: -236619611796383025, guid: 929b384521a106348bd3402cf4a27fc6, type: 3}
     text: "Now I\u2019ll use it to end this."
+    vnText: "Gi\u1EDD th\xEC ch\xEDnh n\xF3\u2026 s\u1EBD k\u1EBFt th\xFAc m\u1ECDi
+      th\u1EE9."

@@ -3,6 +3,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using UnityEditor.Localization.Editor;
 
 public class CutscenePlayer : MonoBehaviour
 {
@@ -55,7 +56,7 @@ public class CutscenePlayer : MonoBehaviour
         if (typingRoutine != null)
             StopCoroutine(typingRoutine);
 
-        typingRoutine = StartCoroutine(TypeText(line.text));
+        typingRoutine = StartCoroutine(TypeText(PlayerPrefs.GetInt("LocaleIndex", 0) == 0 ? line.text : line.vnText));
     }
 
     IEnumerator TypeText(string text)
@@ -77,7 +78,7 @@ public class CutscenePlayer : MonoBehaviour
         if (isTyping)
         {
             StopCoroutine(typingRoutine);
-            dialogueText.text = data.lines[index].text;
+            dialogueText.text = PlayerPrefs.GetInt("LocaleIndex", 0) == 0 ? data.lines[index].text : data.lines[index].vnText;
             isTyping = false;
         }
         else

@@ -13,13 +13,21 @@ MonoBehaviour:
   m_Name: IntroLevel2
   m_EditorClassIdentifier: Assembly-CSharp::CutsceneData
   lines:
-  - speakerIcon: {fileID: 0}
+  - speakerIcon: {fileID: -236619611796383025, guid: 929b384521a106348bd3402cf4a27fc6, type: 3}
     text: "Lab Sector 2\u2026 the virus storage wing."
-  - speakerIcon: {fileID: 0}
+    vnText: "Khu Th\xED Nghi\u1EC7m 2\u2026 khu l\u01B0u tr\u1EEF virus."
+  - speakerIcon: {fileID: -236619611796383025, guid: 929b384521a106348bd3402cf4a27fc6, type: 3}
     text: The organisms here adapted faster than expected.
-  - speakerIcon: {fileID: 0}
+    vnText: "Nh\u1EEFng sinh v\u1EADt \u1EDF \u0111\xE2y th\xEDch nghi nhanh h\u01A1n
+      d\u1EF1 ki\u1EBFn."
+  - speakerIcon: {fileID: -236619611796383025, guid: 929b384521a106348bd3402cf4a27fc6, type: 3}
     text: Their movement patterns are different. Faster. More aggressive.
-  - speakerIcon: {fileID: 0}
+    vnText: "Chuy\u1EC3n \u0111\u1ED9ng c\u1EE7a ch\xFAng \u0111\xE3 thay \u0111\u1ED5i.
+      Nhanh h\u01A1n. Hung h\xE3n h\u01A1n."
+  - speakerIcon: {fileID: -236619611796383025, guid: 929b384521a106348bd3402cf4a27fc6, type: 3}
     text: "I\u2019ll need new defenses to slow them down."
-  - speakerIcon: {fileID: 0}
+    vnText: "T\xF4i c\u1EA7n nh\u1EEFng h\u1EC7 th\u1ED1ng ph\xF2ng th\u1EE7 m\u1EDBi
+      \u0111\u1EC3 l\xE0m ch\u1EADm ch\xFAng l\u1EA1i."
+  - speakerIcon: {fileID: -236619611796383025, guid: 929b384521a106348bd3402cf4a27fc6, type: 3}
     text: "Cryo systems\u2026 Subzero Cannon online."
+    vnText: "H\u1EC7 th\u1ED1ng Cryo\u2026 Subzero Cannon \u0111\xE3 s\u1EB5n s\xE0ng."

@@ -13,4 +13,6 @@ public class CutsceneLine
     public Sprite speakerIcon;
     [TextArea(3, 6)]
     public string text;
+    [TextArea(3, 6)]
+    public string vnText;
 }

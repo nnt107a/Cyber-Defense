@@ -13,13 +13,21 @@ MonoBehaviour:
   m_Name: IntroLevel3
   m_EditorClassIdentifier: Assembly-CSharp::CutsceneData
   lines:
-  - speakerIcon: {fileID: 0}
+  - speakerIcon: {fileID: -236619611796383025, guid: 929b384521a106348bd3402cf4a27fc6, type: 3}
     text: This sector was meant for counter-offensive research.
-  - speakerIcon: {fileID: 0}
+    vnText: "Khu v\u1EF1c n\xE0y \u0111\u01B0\u1EE3c thi\u1EBFt k\u1EBF cho nghi\xEAn
+      c\u1EE9u ph\u1EA3n c\xF4ng."
+  - speakerIcon: {fileID: -236619611796383025, guid: 929b384521a106348bd3402cf4a27fc6, type: 3}
     text: "Elemental turrets. Explosive traps. Risky\u2026 but effective."
-  - speakerIcon: {fileID: 0}
+    vnText: "Th\xE1p nguy\xEAn t\u1ED1. B\u1EABy n\u1ED5. Nguy hi\u1EC3m\u2026 nh\u01B0ng
+      hi\u1EC7u qu\u1EA3."
+  - speakerIcon: {fileID: -236619611796383025, guid: 929b384521a106348bd3402cf4a27fc6, type: 3}
     text: "If brute force is what they want\u2014"
-  - speakerIcon: {fileID: 0}
+    vnText: "N\u1EBFu b\u1EA1o l\u1EF1c l\xE0 th\u1EE9 ch\xFAng t\xECm ki\u1EBFm\u2014"
+  - speakerIcon: {fileID: -236619611796383025, guid: 929b384521a106348bd3402cf4a27fc6, type: 3}
     text: "\u2014then brute force is what they\u2019ll get."
-  - speakerIcon: {fileID: 0}
+    vnText: "\u2014th\xEC t\xF4i s\u1EBD cho ch\xFAng th\u1EA5y b\u1EA1o l\u1EF1c
+      th\u1EADt s\u1EF1."
+  - speakerIcon: {fileID: -236619611796383025, guid: 929b384521a106348bd3402cf4a27fc6, type: 3}
     text: Blastflame Battery and Thermo Charges are ready.
+    vnText: "Blastflame Battery v\xE0 Thermo Charge \u0111\xE3 s\u1EB5n s\xE0ng."

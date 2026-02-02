@@ -13,15 +13,24 @@ MonoBehaviour:
   m_Name: OutroLevel5
   m_EditorClassIdentifier: Assembly-CSharp::CutsceneData
   lines:
-  - speakerIcon: {fileID: 9184683540041684037, guid: a1bfe8228758dec42960a9220933ffd3, type: 3}
+  - speakerIcon: {fileID: -236619611796383025, guid: 929b384521a106348bd3402cf4a27fc6, type: 3}
     text: Log Entry #Final.
-  - speakerIcon: {fileID: -3358647591155879279, guid: 3cf94bad25a735849818f383972dc6f6, type: 3}
+    vnText: "Nh\u1EADt k\xFD th\xED nghi\u1EC7m\u2026 m\u1EE5c cu\u1ED1i."
+  - speakerIcon: {fileID: -236619611796383025, guid: 929b384521a106348bd3402cf4a27fc6, type: 3}
     text: Vorrath has been neutralized. The swarm is gone.
-  - speakerIcon: {fileID: 8856822166903049042, guid: 8bb7d48340457b14aab7878f790df828, type: 3}
+    vnText: "Vorrath \u0111\xE3 b\u1ECB v\xF4 hi\u1EC7u h\xF3a. B\u1EA7y qu\xE1i
+      v\u1EADt \u0111\xE3 bi\u1EBFn m\u1EA5t."
+  - speakerIcon: {fileID: -236619611796383025, guid: 929b384521a106348bd3402cf4a27fc6, type: 3}
     text: "The E-Core\u2026 unstable, but contained."
-  - speakerIcon: {fileID: 21300000, guid: 42544a43522a672408a0cf8cb5455bec, type: 3}
+    vnText: "E-Core\u2026 kh\xF4ng \u1ED5n \u0111\u1ECBnh, nh\u01B0ng \u0111\xE3
+      \u0111\u01B0\u1EE3c ki\u1EC3m so\xE1t."
+  - speakerIcon: {fileID: -236619611796383025, guid: 929b384521a106348bd3402cf4a27fc6, type: 3}
     text: This facility will never be safe again.
-  - speakerIcon: {fileID: 21300000, guid: 42544a43522a672408a0cf8cb5455bec, type: 3}
+    vnText: "N\u01A1i n\xE0y s\u1EBD kh\xF4ng bao gi\u1EDD an to\xE0n n\u1EEFa."
+  - speakerIcon: {fileID: -236619611796383025, guid: 929b384521a106348bd3402cf4a27fc6, type: 3}
     text: "But the world outside\u2026 will live."
-  - speakerIcon: {fileID: 21300000, guid: 42544a43522a672408a0cf8cb5455bec, type: 3}
+    vnText: "Nh\u01B0ng th\u1EBF gi\u1EDBi b\xEAn ngo\xE0i\u2026 s\u1EBD ti\u1EBFp
+      t\u1EE5c t\u1ED3n t\u1EA1i."
+  - speakerIcon: {fileID: -236619611796383025, guid: 929b384521a106348bd3402cf4a27fc6, type: 3}
     text: For now.
+    vnText: "\xCDt nh\u1EA5t\u2026 l\xE0 trong l\xFAc n\xE0y."

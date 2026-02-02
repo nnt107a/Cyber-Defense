@@ -13,27 +13,49 @@ MonoBehaviour:
   m_Name: IntroLevel1
   m_EditorClassIdentifier: Assembly-CSharp::CutsceneData
   lines:
-  - speakerIcon: {fileID: 9184683540041684037, guid: a1bfe8228758dec42960a9220933ffd3, type: 3}
+  - speakerIcon: {fileID: -236619611796383025, guid: 929b384521a106348bd3402cf4a27fc6, type: 3}
     text: "Log Entry #001\u2026 The experiment failed."
-  - speakerIcon: {fileID: -3358647591155879279, guid: 3cf94bad25a735849818f383972dc6f6, type: 3}
+    vnText: "Nh\u1EADt k\xFD th\xED nghi\u1EC7m #001\u2026 th\xED nghi\u1EC7m \u0111\xE3
+      th\u1EA5t b\u1EA1i."
+  - speakerIcon: {fileID: -236619611796383025, guid: 929b384521a106348bd3402cf4a27fc6, type: 3}
     text: E-Core reacted far beyond our projections. The containment field collapsed
       in seconds.
-  - speakerIcon: {fileID: 8856822166903049042, guid: 8bb7d48340457b14aab7878f790df828, type: 3}
-    text: E-Core reacted far beyond our projections. The containment field collapsed
-      in seconds.
-  - speakerIcon: {fileID: 21300000, guid: 42544a43522a672408a0cf8cb5455bec, type: 3}
+    vnText: "E-Core ph\u1EA3n \u1EE9ng v\u01B0\u1EE3t xa m\u1ECDi d\u1EF1 \u0111o\xE1n.
+      Tr\u01B0\u1EDDng giam gi\u1EEF s\u1EE5p \u0111\u1ED5 ch\u1EC9 trong v\xE0i
+      gi\xE2y."
+  - speakerIcon: {fileID: -236619611796383025, guid: 929b384521a106348bd3402cf4a27fc6, type: 3}
     text: "I remember the alarms. The surge. Then\u2026 nothing."
-  - speakerIcon: {fileID: 21300000, guid: 42544a43522a672408a0cf8cb5455bec, type: 3}
+    vnText: "T\xF4i nh\u1EDB ti\u1EBFng c\xF2i b\xE1o \u0111\u1ED9ng. C\xFA b\xF9ng
+      n\u1ED5. R\u1ED3i\u2026 kh\xF4ng c\xF2n g\xEC n\u1EEFa."
+  - speakerIcon: {fileID: -236619611796383025, guid: 929b384521a106348bd3402cf4a27fc6, type: 3}
     text: "When I woke up, the lab was in ruins. Most of the staff\u2026 gone."
-  - speakerIcon: {fileID: 21300000, guid: 42544a43522a672408a0cf8cb5455bec, type: 3}
+    vnText: "Khi t\u1EC9nh l\u1EA1i, ph\xF2ng th\xED nghi\u1EC7m ch\u1EC9 c\xF2n
+      l\xE0 \u0111\u1ED1ng \u0111\u1ED5 n\xE1t. H\u1EA7u h\u1EBFt m\u1ECDi ng\u01B0\u1EDDi\u2026
+      \u0111\xE3 bi\u1EBFn m\u1EA5t."
+  - speakerIcon: {fileID: -236619611796383025, guid: 929b384521a106348bd3402cf4a27fc6, type: 3}
+    text: "If the creatures escape this facility, the outside world won\u2019t survive."
+    vnText: "N\u1EBFu b\u1ECDn sinh v\u1EADt n\xE0y tho\xE1t ra ngo\xE0i, th\u1EBF
+      gi\u1EDBi b\xEAn ngo\xE0i s\u1EBD kh\xF4ng th\u1EC3 s\u1ED1ng s\xF3t."
+  - speakerIcon: {fileID: -236619611796383025, guid: 929b384521a106348bd3402cf4a27fc6, type: 3}
     text: "Emergency defense systems\u2026 online. I have to hold them here."
-  - speakerIcon: {fileID: 21300000, guid: 42544a43522a672408a0cf8cb5455bec, type: 3}
+    vnText: "H\u1EC7 th\u1ED1ng ph\xF2ng th\u1EE7 kh\u1EA9n c\u1EA5p\u2026 k\xEDch
+      ho\u1EA1t. T\xF4i ph\u1EA3i gi\u1EEF ch\xFAng l\u1EA1i \u1EDF \u0111\xE2y."
+  - speakerIcon: {fileID: 5542236995676148328, guid: 3bd9ba424eb75a548b612d0f45f37964, type: 3}
     text: Warning. Experimental subject breach detected.
-  - speakerIcon: {fileID: 21300000, guid: 42544a43522a672408a0cf8cb5455bec, type: 3}
+    vnText: "C\u1EA3nh b\xE1o. Ph\xE1t hi\u1EC7n \u0111\u1ED1i t\u01B0\u1EE3ng th\xED
+      nghi\u1EC7m v\u01B0\u1EE3t ng\u01B0\u1EE1ng ki\u1EC3m so\xE1t."
+  - speakerIcon: {fileID: -236619611796383025, guid: 929b384521a106348bd3402cf4a27fc6, type: 3}
     text: "So it begins\u2026"
-  - speakerIcon: {fileID: 21300000, guid: 42544a43522a672408a0cf8cb5455bec, type: 3}
+    vnText: "V\u1EADy l\xE0 b\u1EAFt \u0111\u1EA7u r\u1ED3i\u2026"
+  - speakerIcon: {fileID: -236619611796383025, guid: 929b384521a106348bd3402cf4a27fc6, type: 3}
     text: This sector still has power. I can activate automated turrets.
-  - speakerIcon: {fileID: 21300000, guid: 42544a43522a672408a0cf8cb5455bec, type: 3}
+    vnText: "Khu v\u1EF1c n\xE0y v\u1EABn c\xF2n \u0111i\u1EC7n. T\xF4i c\xF3 th\u1EC3
+      k\xEDch ho\u1EA1t c\xE1c th\xE1p ph\xF2ng th\u1EE7 t\u1EF1 \u0111\u1ED9ng."
+  - speakerIcon: {fileID: -236619611796383025, guid: 929b384521a106348bd3402cf4a27fc6, type: 3}
     text: "I\u2019ll start small. Just enough to stop it."
-  - speakerIcon: {fileID: 21300000, guid: 42544a43522a672408a0cf8cb5455bec, type: 3}
+    vnText: "B\u1EAFt \u0111\u1EA7u t\u1EEB quy m\xF4 nh\u1ECF th\xF4i. V\u1EEBa
+      \u0111\u1EE7 \u0111\u1EC3 ch\u1EB7n n\xF3 l\u1EA1i."
+  - speakerIcon: {fileID: -236619611796383025, guid: 929b384521a106348bd3402cf4a27fc6, type: 3}
     text: "Let\u2019s see if these things still remember how to fight."
+    vnText: "Xem xem\u2026 nh\u1EEFng h\u1EC7 th\u1ED1ng n\xE0y c\xF2n nh\u1EDB c\xE1ch
+      chi\u1EBFn \u0111\u1EA5u kh\xF4ng."

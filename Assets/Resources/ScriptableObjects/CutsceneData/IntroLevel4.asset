@@ -13,13 +13,18 @@ MonoBehaviour:
   m_Name: IntroLevel4
   m_EditorClassIdentifier: Assembly-CSharp::CutsceneData
   lines:
-  - speakerIcon: {fileID: 0}
+  - speakerIcon: {fileID: 5542236995676148328, guid: 3bd9ba424eb75a548b612d0f45f37964, type: 3}
     text: Alert. Energy overload detected.
-  - speakerIcon: {fileID: 0}
+    vnText: "C\u1EA3nh b\xE1o. Ph\xE1t hi\u1EC7n qu\xE1 t\u1EA3i n\u0103ng l\u01B0\u1EE3ng."
+  - speakerIcon: {fileID: -236619611796383025, guid: 929b384521a106348bd3402cf4a27fc6, type: 3}
     text: "The main grid can\u2019t hold much longer."
-  - speakerIcon: {fileID: 0}
-    text: Some systems will shut down intermittently.
-  - speakerIcon: {fileID: 0}
+    vnText: "L\u01B0\u1EDBi \u0111i\u1EC7n ch\xEDnh kh\xF4ng th\u1EC3 tr\u1EE5 \u0111\u01B0\u1EE3c
+      l\xE2u n\u1EEFa."
+  - speakerIcon: {fileID: -236619611796383025, guid: 929b384521a106348bd3402cf4a27fc6, type: 3}
     text: The creatures will sense the weakness.
-  - speakerIcon: {fileID: 0}
+    vnText: "B\u1ECDn sinh v\u1EADt s\u1EBD c\u1EA3m nh\u1EADn \u0111\u01B0\u1EE3c
+      \u0111i\u1EC3m y\u1EBFu n\xE0y."
+  - speakerIcon: {fileID: -236619611796383025, guid: 929b384521a106348bd3402cf4a27fc6, type: 3}
     text: "Venom Spire. Void Resonator. I\u2019ll adapt\u2014just like they did."
+    vnText: "Venom Spire. Void Resonator. T\xF4i s\u1EBD th\xEDch nghi\u2014gi\u1ED1ng
+      nh\u01B0 ch\xFAng."
