@@ -75,6 +75,7 @@ public class UIWikiList : MonoBehaviour
             levelText.text = "Lv " + GameManager.Instance.GetTurretDataByID(turretData.turretID).level.ToString();
             upgradeButton.gameObject.SetActive(true);
             upgradeCostText.text = turretData.eCoreCost.ToString();
+            upgradeButton.onClick.RemoveAllListeners();
             upgradeButton.onClick.AddListener(() =>
             {
                 if (TechManager.Instance.ECrystalCount < turretData.eCoreCost)
