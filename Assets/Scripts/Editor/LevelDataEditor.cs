@@ -25,7 +25,7 @@ public class LevelDataEditor : Editor
 
     private void SaveMap(LevelData data)
     {
-        Tilemap tilemap = GameObject.Find("Tilemap").GetComponent<Tilemap>();
+        Tilemap tilemap = GameObject.Find($"Tilemap {data.name}")?.GetComponent<Tilemap>();
 
         if (tilemap == null)
         {
