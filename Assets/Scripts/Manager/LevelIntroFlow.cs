@@ -44,7 +44,14 @@ public class LevelIntroFlow : MonoBehaviour
             StartCoroutine(IntroSequence());
         }
     }
-
+    private void OnDestroy()
+    {
+        GameManager.Instance.OnLevelCompleted -= HandleLevelCompleted;
+        if (WaveManager.Instance.levelData.introCutscene != null)
+        {
+            cutscenePlayer.onCutsceneFinished.RemoveAllListeners();
+        }
+    }
     IEnumerator IntroSequence()
     {
         gameplayUI.SetActive(false);
