@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Level4
   m_EditorClassIdentifier: Assembly-CSharp::MapThemeData
   themeName: Level 4
-  backgroundTile: {fileID: 0}
+  backgroundTile: {fileID: 11400000, guid: cd8813c65f0277d48a9bcb5a1ed7130a, type: 2}
   lightCell: {fileID: 21300000, guid: 92b797b9d3c213f4ea1383817ca2c332, type: 3}
   darkCell: {fileID: 21300000, guid: 1b7f2b9e29474bd4cb2b9639a19b8c2b, type: 3}
   boundaryUpperLeftCorner: {fileID: 21300000, guid: 92b797b9d3c213f4ea1383817ca2c332, type: 3}
