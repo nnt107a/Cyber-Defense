@@ -29,6 +29,7 @@ public class LevelIntroFlow : MonoBehaviour
         GameManager.Instance.OnLevelCompleted += HandleLevelCompleted;
         GameManager.Instance.isLevelOnGoing = false;
         WaveManager.Instance.levelData = GameManager.Instance.allLevelDatas[GameManager.Instance.currentLevelIndex];
+        GridManager.Instance.LoadMapVisuals(GameManager.Instance.allLevelDatas[GameManager.Instance.currentLevelIndex].theme);
         if (WaveManager.Instance.levelData.introCutscene != null)
         {
             cutscenePlayer.onCutsceneFinished.RemoveAllListeners();

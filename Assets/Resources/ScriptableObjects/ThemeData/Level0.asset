@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6909736bcaee7c45a43b00124570488, type: 3}
+  m_Name: Level0
+  m_EditorClassIdentifier: Assembly-CSharp::MapThemeData
+  themeName: Level 0
+  backgroundTile: {fileID: 11400000, guid: cd8813c65f0277d48a9bcb5a1ed7130a, type: 2}
+  lightCell: {fileID: 1155648751, guid: 8767605eca2ef65429adde6a57e8b85b, type: 3}
+  darkCell: {fileID: 622067224, guid: 8767605eca2ef65429adde6a57e8b85b, type: 3}
+  boundaryUpperLeftCorner: {fileID: 1197901964023934288, guid: 8767605eca2ef65429adde6a57e8b85b, type: 3}
+  boundaryLowerLeftCorner: {fileID: 622996611, guid: 8767605eca2ef65429adde6a57e8b85b, type: 3}
+  boundaryUpperRightCorner: {fileID: -938450361, guid: 8767605eca2ef65429adde6a57e8b85b, type: 3}
+  boundaryLowerRightCorner: {fileID: 241574678, guid: 8767605eca2ef65429adde6a57e8b85b, type: 3}
+  boundaryStraightUpper: {fileID: -1070169962, guid: 8767605eca2ef65429adde6a57e8b85b, type: 3}
+  boundaryStraightLower: {fileID: 1198238973, guid: 8767605eca2ef65429adde6a57e8b85b, type: 3}
+  boundaryStraightLeft: {fileID: -1329865260, guid: 8767605eca2ef65429adde6a57e8b85b, type: 3}
+  boundaryStraightRight: {fileID: 804449752, guid: 8767605eca2ef65429adde6a57e8b85b, type: 3}
