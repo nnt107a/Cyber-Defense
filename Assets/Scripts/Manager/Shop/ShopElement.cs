@@ -40,6 +40,7 @@ public class ShopElement : MonoBehaviour
                 Destroy(UnitDragHandler.Instance.dragPreview);
             }
             UnitDragHandler.Instance.BeginDrag(gameObject);
+            TutorialManager.Instance.OnClick_TutorialStep((int)TutorialSteps.ChooseTurret);
         });
         towerCostText.text = towerPrefab?.GetComponent<Turret>().turretData.eCoreCost.ToString();
     }

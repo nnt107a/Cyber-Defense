@@ -56,6 +56,7 @@ public class GridCell : MonoBehaviour
         LevelManager.Instance.ChangeECoreCount(-unit.GetComponent<Turret>().turretData.eCoreCost);
         UnitDragHandler.Instance.shopElement.GetComponent<ShopElement>().Recharge();
         UnitDragHandler.Instance.shopElement = null;
+        TutorialManager.Instance.OnClick_TutorialStep((int)TutorialSteps.PlaceTurret);
         return true;
     }
     public void RemoveTurret()

@@ -41,6 +41,7 @@ public class UILevelSelection : MonoBehaviour
         // 2. Hiển thị các level đã mở khóa
         ShowUnlockedLevelsImmediate();
         StartCoroutine(AnimateNewLevelUnlock(0.5f));
+        TutorialManager.Instance.ShowTutorial();
     }
 
     private void ShowUnlockedLevelsImmediate()

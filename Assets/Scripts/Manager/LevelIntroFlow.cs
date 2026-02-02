@@ -111,6 +111,7 @@ public class LevelIntroFlow : MonoBehaviour
         gameplayUI.GetComponent<CanvasGroup>().DOFade(1f, 0.5f).From(0f);
         GameManager.Instance.Init();
         WaveManager.Instance.StartWaveSpawn();
+        TutorialManager.Instance.OnClick_TutorialStep((int)TutorialSteps.SelectTurret);
     }
     private void HandleLevelCompleted()
     {

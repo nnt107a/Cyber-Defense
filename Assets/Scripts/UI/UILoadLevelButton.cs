@@ -43,6 +43,7 @@ public class UILoadLevelButton : MonoBehaviour
     {
         GameManager.Instance.currentLevelIndex = levelIndex;
         UnityEngine.SceneManagement.SceneManager.LoadScene(gameSceneName);
+        TutorialManager.Instance.OnClick_DisableTutorial();
     }
 
     private void OnDisable()

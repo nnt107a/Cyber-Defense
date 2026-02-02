@@ -29,6 +29,8 @@ public class LoadoutSlot : MonoBehaviour
             LoadoutManager.Instance.SelectTurret(turretData);
 
         Refresh();
+
+        TutorialManager.Instance.OnClick_DisableTutorial();
     }
 
     public void Refresh()

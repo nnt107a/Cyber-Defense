@@ -38,7 +38,10 @@ public class LoadoutBoardController : MonoBehaviour
                 .SetEase(Ease.OutBack)
         );
 
-        canvasGroup.DOFade(1f, 0.4f);
+        canvasGroup.DOFade(1f, 0.4f).OnComplete(() =>
+        {
+            TutorialManager.Instance.OnClick_TutorialStep((int)TutorialSteps.EnterLevel);
+        });
     }
 
     public void Hide()
