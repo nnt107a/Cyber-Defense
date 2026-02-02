@@ -12,12 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6909736bcaee7c45a43b00124570488, type: 3}
   m_Name: Level2
   m_EditorClassIdentifier: Assembly-CSharp::MapThemeData
-  themeName: 
+  themeName: Level 2
   backgroundTile: {fileID: 0}
-  lightCell: {fileID: 0}
-  darkCell: {fileID: 0}
-  boundaryUpperLeftCorner: {fileID: 0}
-  boundaryLowerLeftCorner: {fileID: 0}
-  boundaryLowerRightCorner: {fileID: 0}
-  boundaryUpperRightCorner: {fileID: 0}
-  boundaryStraight: {fileID: 0}
+  lightCell: {fileID: -99031714, guid: e10a2753fff56f645be4797d11773902, type: 3}
+  darkCell: {fileID: 786267832, guid: e10a2753fff56f645be4797d11773902, type: 3}
+  boundaryUpperLeftCorner: {fileID: 311232077, guid: ca44bef1cdda2bf428da9dc5d211b7ff, type: 3}
+  boundaryLowerLeftCorner: {fileID: -726199222, guid: ca44bef1cdda2bf428da9dc5d211b7ff, type: 3}
+  boundaryUpperRightCorner: {fileID: -2071378540, guid: ca44bef1cdda2bf428da9dc5d211b7ff, type: 3}
+  boundaryLowerRightCorner: {fileID: -51372948, guid: ca44bef1cdda2bf428da9dc5d211b7ff, type: 3}
+  boundaryStraightUpper: {fileID: 2062848185, guid: ca44bef1cdda2bf428da9dc5d211b7ff, type: 3}
+  boundaryStraightLower: {fileID: -1252030186, guid: ca44bef1cdda2bf428da9dc5d211b7ff, type: 3}
+  boundaryStraightLeft: {fileID: 1022467758, guid: ca44bef1cdda2bf428da9dc5d211b7ff, type: 3}
+  boundaryStraightRight: {fileID: 10127517, guid: ca44bef1cdda2bf428da9dc5d211b7ff, type: 3}
