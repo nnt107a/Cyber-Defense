@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6909736bcaee7c45a43b00124570488, type: 3}
   m_Name: Level1
   m_EditorClassIdentifier: Assembly-CSharp::MapThemeData
-  themeName: 
+  themeName: Level 1
   backgroundTile: {fileID: 0}
-  lightCell: {fileID: -99031714, guid: e10a2753fff56f645be4797d11773902, type: 3}
-  darkCell: {fileID: 786267832, guid: e10a2753fff56f645be4797d11773902, type: 3}
-  boundaryUpperLeftCorner: {fileID: 289814237026799603, guid: e10a2753fff56f645be4797d11773902, type: 3}
-  boundaryLowerLeftCorner: {fileID: -339685827, guid: e10a2753fff56f645be4797d11773902, type: 3}
-  boundaryUpperRightCorner: {fileID: -709685230, guid: e10a2753fff56f645be4797d11773902, type: 3}
-  boundaryLowerRightCorner: {fileID: -1269677284, guid: e10a2753fff56f645be4797d11773902, type: 3}
-  boundaryStraightUpper: {fileID: 2093020176, guid: e10a2753fff56f645be4797d11773902, type: 3}
-  boundaryStraightLower: {fileID: -1382262629, guid: e10a2753fff56f645be4797d11773902, type: 3}
-  boundaryStraightLeft: {fileID: 355520562, guid: e10a2753fff56f645be4797d11773902, type: 3}
-  boundaryStraightRight: {fileID: 583152851, guid: e10a2753fff56f645be4797d11773902, type: 3}
+  lightCell: {fileID: 1155648751, guid: 8767605eca2ef65429adde6a57e8b85b, type: 3}
+  darkCell: {fileID: 622067224, guid: 8767605eca2ef65429adde6a57e8b85b, type: 3}
+  boundaryUpperLeftCorner: {fileID: 1657734229, guid: 6adcbb1d3e182f04ab6236ff0d52d9b6, type: 3}
+  boundaryLowerLeftCorner: {fileID: 1138567084, guid: 6adcbb1d3e182f04ab6236ff0d52d9b6, type: 3}
+  boundaryUpperRightCorner: {fileID: 1560561662, guid: 6adcbb1d3e182f04ab6236ff0d52d9b6, type: 3}
+  boundaryLowerRightCorner: {fileID: 1600434428, guid: 6adcbb1d3e182f04ab6236ff0d52d9b6, type: 3}
+  boundaryStraightUpper: {fileID: 477451574, guid: 6adcbb1d3e182f04ab6236ff0d52d9b6, type: 3}
+  boundaryStraightLower: {fileID: -1477460357, guid: 6adcbb1d3e182f04ab6236ff0d52d9b6, type: 3}
+  boundaryStraightLeft: {fileID: 590291456, guid: 6adcbb1d3e182f04ab6236ff0d52d9b6, type: 3}
+  boundaryStraightRight: {fileID: 329120160, guid: 6adcbb1d3e182f04ab6236ff0d52d9b6, type: 3}

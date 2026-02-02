@@ -19,6 +19,9 @@ MonoBehaviour:
     intervalAfterWave: 5
   - wave: {fileID: 11400000, guid: 1fb82380fd177b54398edb5992a46ce4, type: 2}
     intervalAfterWave: 0
+  environmentalEffectPrefab: {fileID: 0}
+  theme: {fileID: 11400000, guid: 170a05f4fc12d1a4aa2cd55eb3c3db77, type: 2}
+  mapLayout: []
   previewEnemyCount: 10
   introCutscene: {fileID: 11400000, guid: 43052d6b70c3be644ad6d48097764cb5, type: 2}
   outroCutscene: {fileID: 0}
