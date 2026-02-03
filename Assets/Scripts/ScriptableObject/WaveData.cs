@@ -37,6 +37,7 @@ public class WaveData : ScriptableObject
                 lastTime = eventEndTime;
             }
         }
+        Debug.Log("Wave Duration: " + lastTime);
         return lastTime;
     }
 }

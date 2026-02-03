@@ -17,6 +17,10 @@ public class WaveManager : MonoBehaviour
     public Action<bool> OnWaveWarning; 
     public event Action<int> OnWaveFirstSpawnEvent;
     private bool newWaveStart = true;
+
+    private HashSet<int> activeSpawnEvents = new HashSet<int>();
+    private int spawnEventIdCounter = 0;
+
     private void Awake()
     {
         Instance = this;
@@ -24,10 +28,6 @@ public class WaveManager : MonoBehaviour
     public void StartWaveSpawn()
     {
         UILevelStateBar.Instance.Build(levelData);
-        UITextWarningEndWave.Instance.OnWaveWarningEnd += () =>
-        {
-            newWaveStart = true;
-        };
         StartCoroutine(RunLevel());
     }
 
@@ -41,16 +41,15 @@ public class WaveManager : MonoBehaviour
             bool isFinalWave =
                 currentWaveIndex == levelData.waves.Count - 1;
 
-            yield return StartCoroutine(RunWave(entry.wave, isFinalWave));
+            yield return StartCoroutine(RunWave(entry.wave, isFinalWave, currentWaveIndex));
 
             yield return new WaitForSeconds(entry.intervalAfterWave);
         }
         GameManager.Instance.enemiesSpawnedCompletely = true;
     }
 
-    IEnumerator RunWave(WaveData wave, bool isFinalWave)
+    IEnumerator RunWave(WaveData wave, bool isFinalWave, int currentWaveIndex)
     {
-        float timer = 0f;
         int eventIndex = 0;
 
         List<SpawnEvent> events =
@@ -62,40 +61,46 @@ public class WaveManager : MonoBehaviour
 
         while (eventIndex < events.Count)
         {
-            timer += Time.deltaTime;
-
             SpawnEvent e = events[eventIndex];
 
-            if (timer >= e.time)
+            yield return new WaitForSeconds(eventIndex == 0 ? e.time : e.time - events[eventIndex - 1].time);
+
+            if (e == firstEvent && currentWaveIndex > 0)
             {
-                if (e == firstEvent && currentWaveIndex > 0)
-                {
-                    Debug.Log(
-                        isFinalWave
-                        ? "⚠️ FINAL WAVE!"
-                        : "⚠️ HUGE WAVE!"
-                    );
+                Debug.Log(
+                    isFinalWave
+                    ? "⚠️ FINAL WAVE!"
+                    : "⚠️ HUGE WAVE!"
+                );
 
-                    OnWaveWarning?.Invoke(isFinalWave);
+                OnWaveWarning?.Invoke(isFinalWave);
 
-                    while (newWaveStart == false)
-                    {
-                        yield return null;
-                    }
-                    OnWaveFirstSpawnEvent?.Invoke(currentWaveIndex);
-                }
-                StartCoroutine(SpawnEvent(e));
-                eventIndex++;
-                if (eventIndex == events.Count - 1)
+                /*while (newWaveStart == false)
                 {
-                    newWaveStart = false;
-                }
+                    yield return null;
+                }*/
+                OnWaveFirstSpawnEvent?.Invoke(currentWaveIndex);
             }
 
+            int eventId = spawnEventIdCounter++;
+            activeSpawnEvents.Add(eventId);
+            StartCoroutine(SpawnEvent(e, eventId));
+
+            eventIndex++;
+            if (eventIndex == events.Count - 1)
+            {
+                newWaveStart = false;
+            }
+        }
+
+        // Wait for all spawn events to complete before finishing the wave
+        while (activeSpawnEvents.Count > 0)
+        {
             yield return null;
         }
     }
-    IEnumerator SpawnEvent(SpawnEvent e)
+
+    IEnumerator SpawnEvent(SpawnEvent e, int eventId)
     {
         int count = e.randomCount
             ? UnityEngine.Random.Range(e.countRange.x, e.countRange.y + 1)
@@ -113,9 +118,18 @@ public class WaveManager : MonoBehaviour
 
             SpawnEnemy(enemy, lane);
 
+            if (i == count - 1)
+            {
+                break;
+            }
+
             yield return new WaitForSeconds(e.interval);
         }
+        
+        newWaveStart = true;
+        activeSpawnEvents.Remove(eventId);
     }
+
     private void SpawnEnemy(EnemyData enemyData, int lane)
     {
         if (!GameManager.Instance.isLevelOnGoing)

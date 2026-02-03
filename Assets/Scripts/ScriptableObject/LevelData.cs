@@ -27,6 +27,8 @@ public class LevelData : ScriptableObject
         }
         total += waves[waves.Count - 1].wave.spawnEvents[0].time;
 
+        Debug.Log("Total Level Duration: " + total);
+
         return total;
     }
     public CutsceneData introCutscene;

@@ -39,6 +39,7 @@ public class UILevelStateBar : MonoBehaviour
                 UILevelWaveMarker marker = Instantiate(markerPrefab, markerParent);
                 marker.Setup((elapsed + level.waves[i].wave.spawnEvents[0].time) / totalDuration, i == level.waves.Count - 1);
                 markers.Add(marker);
+                Debug.Log($"Marker {i} at time {(elapsed + level.waves[i].wave.spawnEvents[0].time)} / {totalDuration}");
             }
 
             elapsed = elapsed + level.waves[i].wave.GetDuration();
